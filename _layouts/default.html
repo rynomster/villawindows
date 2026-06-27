@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    {% seo %}
+    {% feed_meta %}
+    <!-- Schema.org for AI & SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Villa Windows",
+      "image": "https://villawindows.co.nz/assets/images/villa-windows-blue.png",
+      "@id": "https://villawindows.co.nz",
+      "url": "https://villawindows.co.nz",
+      "telephone": "+6493201798",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "East Tamaki",
+        "addressLocality": "Auckland",
+        "addressRegion": "Auckland",
+        "postalCode": "2013",
+        "addressCountry": "NZ"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -36.9442,
+        "longitude": 174.8906
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "08:00",
+        "closes": "17:00"
+      }
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            Call Now: <a href="tel:+6493201798">09 320 1798</a>
+        </div>
+        <nav>
+            <div class="logo">
+                <a href="{{ '/' | relative_url }}"><img src="{{ '/assets/images/villa-windows-blue.png' | relative_url }}" alt="Villa Windows Logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="{{ '/' | relative_url }}">HOME</a></li>
+                <li><a href="{{ '/services' | relative_url }}">SERVICES</a></li>
+                <li><a href="{{ '/our-projects' | relative_url }}">OUR PROJECTS</a></li>
+                <li><a href="{{ '/faqs' | relative_url }}">FAQ’S</a></li>
+                <li><a href="{{ '/free-estimate' | relative_url }}">FREE ESTIMATE</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {{ content }}
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3>Villa Windows</h3>
+                <p>Specialists in Sash Windows and Timber Joinery. Retrofit double-glazing, repair and maintenance to timber joinery.</p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="{{ '/retrofit-double-glazing' | relative_url }}">Sash Windows Double-Glazing</a></li>
+                    <li><a href="{{ '/sash-windows-service-maintenance' | relative_url }}">Sash Windows Maintenance</a></li>
+                    <li><a href="{{ '/casement-windows-retrofit-double-glazing' | relative_url }}">Casement Windows Double-Glazing</a></li>
+                    <li><a href="{{ '/casement-windows-service-maintenance' | relative_url }}">Casement Windows Maintenance</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Contact</h3>
+                <p>Phone: 09 320 1798</p>
+                <p>Email: trevor@villawindows.co.nz</p>
+                <p>Auckland, New Zealand</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; {{ "now" | date: "%Y" }} Villa Windows. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
