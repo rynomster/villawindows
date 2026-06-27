@@ -1,12 +1,18 @@
 /* Basic Styles for Villa Windows Port */
 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+Pro:wght@400;600&display=swap');
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
+    font-family: 'Source Sans Pro', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7;
     margin: 0;
     padding: 0;
     color: #333;
     background-color: #fff;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
 }
 
 header {
@@ -120,7 +126,7 @@ main {
 }
 
 section {
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
 
 footer {
@@ -183,15 +189,22 @@ footer {
     display: inline-block;
     background: #0056b3;
     color: #fff;
-    padding: 12px 24px;
+    padding: 14px 30px;
     text-decoration: none;
     border-radius: 4px;
     font-weight: bold;
-    transition: background 0.3s;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 6px rgba(0,86,179,0.2);
 }
 
 .btn:hover {
     background: #004494;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,86,179,0.3);
 }
 
 .hero {
@@ -202,7 +215,8 @@ footer {
     background-size: cover;
     background-position: center;
     color: white;
-    padding: 100px 20px;
+    padding: 120px 20px;
+    margin-bottom: 40px;
 }
 
 .hero-content {
@@ -217,6 +231,7 @@ footer {
     align-items: center;
     gap: 40px;
     flex-wrap: wrap;
+    margin-bottom: 40px;
 }
 
 .about-us-content {
@@ -245,7 +260,7 @@ footer {
 
 .card {
     flex: 1;
-    min-width: 300px;
+    min-width: 280px;
     max-width: 380px;
     background: #fff;
     border: 1px solid #eee;
@@ -270,6 +285,11 @@ footer {
 
 .card h3 {
     margin: 0 15px 15px;
+    font-size: 1.1rem;
+    min-height: 2.4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .card p {
@@ -278,73 +298,162 @@ footer {
     color: #666;
 }
 
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
-}
-
-.form-group input, .form-group textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-.service-item {
+.contact-container {
     display: flex;
     gap: 40px;
-    align-items: center;
+    flex-wrap: wrap;
     margin-bottom: 60px;
-}
-
-.service-item:nth-child(even) {
-    flex-direction: row-reverse;
-}
-
-.service-image {
-    flex: 1;
-}
-
-.service-image img {
-    width: 100%;
+    background: #f9f9f9;
+    padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-.service-content {
+.contact-info {
     flex: 1;
+    min-width: 300px;
+}
+
+.contact-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.whatsapp-link {
+    display: inline-block;
+    background: #25D366;
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.whatsapp-link:hover {
+    background: #128C7E;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.feature-item {
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.feature-item h3 {
+    color: #0056b3;
+    margin-top: 0;
+    font-size: 1.1rem;
+    border-bottom: 2px solid #0056b3;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.cta-box {
+    background: #0056b3;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: 8px;
+    margin-top: 60px;
+}
+
+.cta-box .btn {
+    background: white;
+    color: #0056b3;
+    margin-top: 20px;
+}
+
+.cta-box .btn:hover {
+    background: #f0f0f0;
 }
 
 .project-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     margin-top: 30px;
 }
 
 .project-item {
     background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.project-item h3 {
+    margin-top: 15px;
+    font-size: 1rem;
+}
+
+.faq-list {
+    margin: 30px 0;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    background: #f9f9f9;
     padding: 20px;
     border-radius: 8px;
     border-left: 5px solid #0056b3;
 }
 
-.faq-item {
-    margin-bottom: 30px;
-    background: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-}
-
 .faq-item h3 {
     margin-top: 0;
     color: #0056b3;
+    font-size: 1.1rem;
+}
+
+/* Animations & Interactivity */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Lightbox Styles */
+#lightbox {
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 4px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.1);
+}
+
+.lightbox-trigger {
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.lightbox-trigger:hover {
+    opacity: 0.8;
 }
 
 /* Mobile Responsive Adjustments */
@@ -407,45 +516,10 @@ footer {
     }
 
     .hero {
-        padding: 40px 15px !important;
+        padding: 60px 15px !important;
     }
 
-    .hero div[style*="background: rgba"] {
-        padding: 15px !important;
-        width: 90%;
-    }
-
-    .about-us div[style*="display: flex"] {
-        flex-direction: column !important;
-    }
-
-    .about-us div {
-        min-width: 100% !important;
-    }
-
-    .footer-content {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    .footer-content div {
-        min-width: 100%;
-    }
-
-    main {
-        padding: 15px;
-    }
-
-    .service-cards {
-        gap: 20px;
-    }
-
-    .card {
-        min-width: 100%;
-    }
-
-    .service-item {
-        flex-direction: column !important;
-        gap: 20px;
+    .features-grid {
+        grid-template-columns: 1fr;
     }
 }
