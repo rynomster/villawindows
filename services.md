@@ -8,7 +8,7 @@ description: Explore our services including retrofit double glazing, sash window
 
 <div class="service-item">
     <div class="service-image">
-        <img src="{{ '/assets/images/Screenshot-2023-08-10-at-17.48.58-845x321.png' | relative_url }}" alt="Retrofit Double Glazing">
+        <img src="{{ '/assets/images/screenshot-retrofit-double-glazing.png' | relative_url }}" alt="Retrofit Double Glazing">
     </div>
     <div class="service-content">
         <h2>Sash Windows: Retrofit Double Glazing</h2>
@@ -19,7 +19,7 @@ description: Explore our services including retrofit double glazing, sash window
 
 <div class="service-item">
     <div class="service-image">
-        <img src="{{ '/assets/images/Screenshot-2023-08-10-at-18.09.52-845x321.png' | relative_url }}" alt="Sash Window Maintenance">
+        <img src="{{ '/assets/images/screenshot-service-maintenance.png' | relative_url }}" alt="Sash Window Maintenance">
     </div>
     <div class="service-content">
         <h2>Sash Windows: Service & Maintenance</h2>
@@ -30,7 +30,7 @@ description: Explore our services including retrofit double glazing, sash window
 
 <div class="service-item">
     <div class="service-image">
-        <img src="{{ '/assets/images/Casement-Window-Button.png' | relative_url }}" alt="Casement Windows">
+        <img src="{{ '/assets/images/casement-window-button.png' | relative_url }}" alt="Casement Windows">
     </div>
     <div class="service-content">
         <h2>Casement Windows: Retrofit Double-Glazing</h2>
@@ -41,7 +41,7 @@ description: Explore our services including retrofit double glazing, sash window
 
 <div class="service-item">
     <div class="service-image">
-        <img src="{{ '/assets/images/FRENCH-DOOR-2.png' | relative_url }}" alt="Casement Window Maintenance">
+        <img src="{{ '/assets/images/french-door-2.png' | relative_url }}" alt="Casement Window Maintenance">
     </div>
     <div class="service-content">
         <h2>Casement Windows: Service & Maintenance</h2>
