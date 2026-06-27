@@ -2,6 +2,16 @@
 layout: default
 title: Retrofit Double Glazing
 description: Learn how our retrofit double glazing process can improve your home's comfort while preserving its character.
+custom_schema:
+  "@context": "https://schema.org"
+  "@type": "Service"
+  "name": "Retrofit Double Glazing for Timber Windows"
+  "serviceType": "Window Retrofitting"
+  "provider":
+    "@type": "LocalBusiness"
+    "name": "Villa Windows"
+  "areaServed": "Auckland, NZ"
+  "description": "Retrofitting double glazed units into original timber window frames to improve insulation and reduce noise."
 ---
 
 <h1>Retrofit Double Glazing</h1>
