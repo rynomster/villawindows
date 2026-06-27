@@ -8,42 +8,77 @@
     {% feed_meta %}
     <!-- Schema.org for AI & SEO -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Villa Windows",
-      "image": "https://villawindows.co.nz/assets/images/villa-windows-blue.png",
-      "@id": "https://villawindows.co.nz",
-      "url": "https://villawindows.co.nz",
-      "telephone": "+6493201798",
-      "priceRange": "$$",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "East Tamaki",
-        "addressLocality": "Auckland",
-        "addressRegion": "Auckland",
-        "postalCode": "2013",
-        "addressCountry": "NZ"
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Villa Windows",
+        "image": "{{ '/assets/images/villa-windows-blue.png' | absolute_url }}",
+        "@id": "{{ '/' | absolute_url }}",
+        "url": "{{ '/' | absolute_url }}",
+        "telephone": "+6493201798",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "East Tamaki",
+          "addressLocality": "Auckland",
+          "addressRegion": "Auckland",
+          "postalCode": "2013",
+          "addressCountry": "NZ"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -36.9442,
+          "longitude": 174.8906
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "08:00",
+          "closes": "17:00"
+        },
+        "sameAs": [
+          "https://www.facebook.com/villawindowsnz"
+        ]
       },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -36.9442,
-        "longitude": 174.8906
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Villa Windows",
+        "url": "{{ '/' | absolute_url }}",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "{{ '/search?q={search_term_string}' | absolute_url }}",
+          "query-input": "required name=search_term_string"
+        }
       },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday"
-        ],
-        "opens": "08:00",
-        "closes": "17:00"
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Villa Windows",
+        "url": "{{ '/' | absolute_url }}",
+        "logo": "{{ '/assets/images/villa-windows-blue.png' | absolute_url }}",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+6493201798",
+          "contactType": "customer service",
+          "areaServed": "NZ",
+          "availableLanguage": "en"
+        }
       }
-    }
+    ]
     </script>
+    {% if page.custom_schema %}
+    <script type="application/ld+json">
+    {{ page.custom_schema | jsonify }}
+    </script>
+    {% endif %}
 </head>
 <body>
     <header>
@@ -54,12 +89,16 @@
             <div class="logo">
                 <a href="{{ '/' | relative_url }}"><img src="{{ '/assets/images/villa-windows-blue.png' | relative_url }}" alt="Villa Windows Logo"></a>
             </div>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
             <ul class="nav-links">
                 <li><a href="{{ '/' | relative_url }}">HOME</a></li>
                 <li><a href="{{ '/services' | relative_url }}">SERVICES</a></li>
                 <li><a href="{{ '/our-projects' | relative_url }}">OUR PROJECTS</a></li>
                 <li><a href="{{ '/faqs' | relative_url }}">FAQ’S</a></li>
-                <li><a href="{{ '/free-estimate' | relative_url }}">FREE ESTIMATE</a></li>
+                <li><a href="{{ '/free-estimate' | relative_url }}" class="nav-cta">FREE ESTIMATE</a></li>
             </ul>
         </nav>
     </header>

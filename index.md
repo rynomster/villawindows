@@ -4,8 +4,8 @@ title: Home
 description: Villa Windows Auckland - Specialists in Sash Windows and Timber Joinery. We provide retrofit double-glazing, repair and maintenance.
 ---
 
-<section class="hero" style="background-image: url('{{ "/assets/images/AdobeStock_324839821-scaled.jpeg" | relative_url }}'); background-size: cover; background-position: center; color: white; padding: 100px 20px;">
-    <div style="background: rgba(0,0,0,0.5); display: inline-block; padding: 20px;">
+<section class="hero" style="background-image: url('{{ "/assets/images/AdobeStock_324839821-scaled.jpeg" | relative_url }}');">
+    <div class="hero-content">
         <h1>Retrofit Double Glazing for your Timber Windows</h1>
         <p>Specialists in Sash Windows and Timber Joinery</p>
         <a href="{{ '/free-estimate' | relative_url }}" class="btn">Free Estimate</a>
@@ -37,14 +37,15 @@ description: Villa Windows Auckland - Specialists in Sash Windows and Timber Joi
 </section>
 
 <section class="about-us">
-    <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
-        <div style="flex: 1; min-width: 300px;">
+    <div class="about-us-flex">
+        <div class="about-us-content">
             <h2>Villa Windows</h2>
             <p>Suffer from hard to open or close sash windows? No problem, Villa Windows can help put the slide back in your sash.</p>
             <p>The team at Villa Windows are passionate about sash windows. We go to extra lengths to make sure our customers are happy, starting from a free quote to tidying up after ourselves.</p>
+            <p>You can be assured your windows will be looked after and restored back to the way they were intended 80-100yrs ago.</p>
         </div>
-        <div style="flex: 1; min-width: 300px;">
-            <img src="{{ '/assets/images/Screenshot-2023-08-10-at-11.26.10.png' | relative_url }}" alt="Workmanship" style="width:100%">
+        <div class="about-us-image">
+            <img src="{{ '/assets/images/Screenshot-2023-08-10-at-11.26.10.png' | relative_url }}" alt="Quality Timber Window Workmanship">
         </div>
     </div>
 </section>

@@ -2,6 +2,16 @@
 layout: default
 title: Sash Windows Service & Maintenance
 description: Professional maintenance and repair for timber sash windows in Auckland. Cord replacement, re-weighting, and smooth operation.
+custom_schema:
+  "@context": "https://schema.org"
+  "@type": "Service"
+  "name": "Sash Windows Service & Maintenance"
+  "serviceType": "Window Maintenance"
+  "provider":
+    "@type": "LocalBusiness"
+    "name": "Villa Windows"
+  "areaServed": "Auckland, NZ"
+  "description": "Professional servicing of traditional timber sash windows, including cord replacement and re-weighting."
 ---
 
 <h1>Sash Windows Service & Maintenance</h1>
