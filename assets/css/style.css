@@ -121,6 +121,29 @@ footer {
     text-align: center;
 }
 
+.service-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.card {
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.card img {
+    margin-bottom: 15px;
+}
+
 .form-group {
     margin-bottom: 15px;
 }
