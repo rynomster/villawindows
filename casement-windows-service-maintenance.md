@@ -18,4 +18,4 @@ description: Expert repair and maintenance for timber casement windows in Auckla
 
 <p>Well-maintained casement windows provide excellent ventilation and security. Don't let neglected timber joinery compromise your home's comfort.</p>
 
-<a href="/free-estimate" class="btn">Book a Service</a>
+<a href="{{ '/free-estimate' | relative_url }}" class="btn">Book a Service</a>

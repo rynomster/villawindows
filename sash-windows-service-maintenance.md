@@ -29,4 +29,4 @@ custom_schema:
 
 <p>Regular servicing can extend the life of your timber windows by decades, preserving the character and value of your property.</p>
 
-<a href="/free-estimate" class="btn">Get a Maintenance Quote</a>
+<a href="{{ '/free-estimate' | relative_url }}" class="btn">Get a Maintenance Quote</a>

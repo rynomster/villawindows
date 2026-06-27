@@ -19,4 +19,4 @@ description: Retrofit double glazing for timber casement windows. Improve comfor
 <h2>Our Approach</h2>
 <p>We assess the condition of your casement frames and the strength of the hinges. Often, we upgrade the hinges to "friction stays" to support the additional weight of the double glazed units, ensuring your windows stay open at the desired angle.</p>
 
-<a href="/free-estimate" class="btn">Enquire About Casement Double Glazing</a>
+<a href="{{ '/free-estimate' | relative_url }}" class="btn">Enquire About Casement Double Glazing</a>
