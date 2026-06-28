@@ -193,18 +193,12 @@ footer {
     text-decoration: none;
     border-radius: 4px;
     font-weight: bold;
-<<<<<<< HEAD
     transition: all 0.3s ease;
     border: none;
     cursor: pointer;
     text-transform: uppercase;
     letter-spacing: 1px;
     box-shadow: 0 4px 6px rgba(0,86,179,0.2);
-=======
-    transition: background 0.3s;
-    border: none;
-    cursor: pointer;
->>>>>>> origin/main
 }
 
 .btn:hover {
@@ -417,7 +411,6 @@ footer {
     margin-top: 0;
     color: #0056b3;
     font-size: 1.1rem;
-<<<<<<< HEAD
 }
 
 /* Animations & Interactivity */
@@ -461,8 +454,6 @@ footer {
 
 .lightbox-trigger:hover {
     opacity: 0.8;
-=======
->>>>>>> origin/main
 }
 
 /* Mobile Responsive Adjustments */
