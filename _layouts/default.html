@@ -136,7 +136,10 @@
     </footer>
 
     <!-- Interactivity: Scroll Reveal & Lightbox -->
-    <div id="lightbox"></div>
+    <div id="lightbox" role="dialog" aria-modal="true" aria-label="Image Lightbox" tabindex="-1">
+        <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+        <div class="lightbox-content"></div>
+    </div>
 
     <script>
         // Scroll Reveal
@@ -158,24 +161,57 @@
 
         // Lightbox
         const lightbox = document.getElementById('lightbox');
+        const lightboxContent = lightbox.querySelector('.lightbox-content');
+        const lightboxClose = lightbox.querySelector('.lightbox-close');
         const triggers = document.querySelectorAll('.lightbox-trigger');
+        let lastFocusedElement;
+
+        const openLightbox = (trigger) => {
+            lastFocusedElement = document.activeElement;
+            const img = document.createElement('img');
+            img.src = trigger.src;
+            img.alt = trigger.alt || 'Enlarged project image';
+            lightboxContent.innerHTML = '';
+            lightboxContent.appendChild(img);
+            lightbox.style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // Disable scroll
+            lightboxClose.focus();
+        };
+
+        const closeLightbox = () => {
+            lightbox.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Enable scroll
+            if (lastFocusedElement) lastFocusedElement.focus();
+        };
 
         triggers.forEach(trigger => {
-            trigger.addEventListener('click', () => {
-                const img = document.createElement('img');
-                img.src = trigger.src;
-                while (lightbox.firstChild) {
-                    lightbox.removeChild(lightbox.firstChild);
+            trigger.setAttribute('tabindex', '0');
+            trigger.setAttribute('role', 'button');
+            trigger.setAttribute('aria-label', 'View larger image: ' + (trigger.alt || 'Project image'));
+            trigger.addEventListener('click', () => openLightbox(trigger));
+            trigger.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    openLightbox(trigger);
                 }
-                lightbox.appendChild(img);
-                lightbox.style.display = 'flex';
-                document.body.style.overflow = 'hidden'; // Disable scroll
             });
         });
 
-        lightbox.addEventListener('click', () => {
-            lightbox.style.display = 'none';
-            document.body.style.overflow = 'auto'; // Enable scroll
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox || e.target === lightboxContent) closeLightbox();
+        });
+
+        window.addEventListener('keydown', (e) => {
+            if (lightbox.style.display !== 'flex') return;
+
+            if (e.key === 'Escape') {
+                closeLightbox();
+            } else if (e.key === 'Tab') {
+                // Focus trap: only the close button is focusable in this modal
+                e.preventDefault();
+                lightboxClose.focus();
+            }
         });
     </script>
 </body>
