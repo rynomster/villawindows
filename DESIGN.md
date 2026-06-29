@@ -1,79 +1,81 @@
-# Villa Windows — Modern Design System
+# Villa Windows — Design System
 
-This design system defines the visual language for Villa Windows. It balances heritage character (timber joinery, craftsmanship) with a clean, modern, fully responsive web experience.
+Based on the reference design system. A sophisticated, heritage-modern aesthetic — quiet elegance with craft at the centre.
 
 ---
 
 ## Brand Personality
 
-- **Heritage-rooted** – respects the craft of timber windows
-- **Modern & trustworthy** – clean, confident, professional
-- **Warm & approachable** – a family business you can trust
+- **Craft-led** — quiet confidence, not loud salesmanship
+- **Heritage modern** — respects tradition, feels contemporary
+- **Warm & understated** — inviting, trustworthy, refined
 
 ---
 
 ## Color Palette
 
-| Token             | Hex       | Usage                                           |
-|-------------------|-----------|--------------------------------------------------|
-| `--color-primary` | `#0056b3` | Main brand colour, primary buttons, key links    |
-| `--color-primary-dark` | `#003d80` | Hover states for primary elements             |
-| `--color-accent`  | `#C8962E` | Warm accent — secondary CTAs, highlights, badges |
-| `--color-accent-dark` | `#A87A1E` | Hover for accent elements                     |
-| `--color-bg`      | `#ffffff` | Page background                                  |
-| `--color-bg-alt`  | `#f7f8fa` | Alternating section backgrounds (light grey)     |
-| `--color-bg-dark` | `#1a1d23` | Footer and dark sections                         |
-| `--color-text`    | `#2d3436` | Primary body text                                |
-| `--color-text-light` | `#636e72` | Secondary text                               |
-| `--color-text-inverse` | `#ffffff` | Text on dark backgrounds                    |
-| `--color-border`  | `#e1e4e8` | Card borders, dividers                           |
-| `--color-success` | `#27ae60` | Success states, guarantees                       |
-| `--color-whatsapp` | `#25D366` | WhatsApp brand colour                          |
+| Token               | Hex       | Usage                                            |
+|---------------------|-----------|--------------------------------------------------|
+| `--color-bg`        | `#faf9f5` | Page background (warm off-white)                  |
+| `--color-bg-card`   | `#ffffff` | Card / container backgrounds                      |
+| `--color-bg-dark`   | `#0e1b25` | Dark sections (Why Us, footer)                    |
+| `--color-bg-darker` | `#0a151d` | Footer background                                 |
+| `--color-primary`   | `#3d6d8c` | Muted slate blue — CTAs, accents, section labels  |
+| `--color-primary-light` | `#9fc0d4` | Light blue-grey — secondary labels, lines       |
+| `--color-text`      | `#12222e` | Primary heading / body text (very dark navy)      |
+| `--color-text-body` | `#5a666e` | Body text (medium grey)                           |
+| `--color-text-muted`| `#bcc8ce` | Faded text, step numbers, metadata                |
+| `--color-text-inverse` | `#ffffff` | Text on dark backgrounds                        |
+| `--color-text-inverse-muted` | `rgba(255,255,255,0.66)` | Muted text on dark bg           |
+| `--color-border`    | `rgba(18,34,46,0.12)` | Subtle borders (light)                |
+| `--color-border-grid` | `rgba(255,255,255,0.12)` | Grid borders on dark bg        |
 
 ---
 
 ## Typography
 
-| Token                  | Font                            | Weight     | Usage                     |
-|------------------------|---------------------------------|------------|---------------------------|
-| `--font-heading`       | `'Playfair Display', serif`     | 600–700    | H1–H3 headings            |
-| `--font-body`          | `'Inter', system-ui, sans-serif` | 400–600    | Body text, navigation     |
-| `--font-mono`          | `'JetBrains Mono', monospace`   | 400        | Technical content (rare)  |
+| Token              | Font                                     | Weight | Usage                  |
+|--------------------|------------------------------------------|--------|------------------------|
+| `--font-heading`   | `'Spectral', Georgia, 'Times New Roman', serif` | 400–500 | All headings (H1–H3) |
+| `--font-body`      | `-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif` | 400–600 | Body, navigation |
+| `--font-mono`      | `'JetBrains Mono', 'SF Mono', 'Fira Code', monospace` | 400–500 | Labels, section numbers, metadata |
 
-### Size Scale (mobile → desktop)
+### Size Scale
 
 ```
---text-xs:   0.75rem  (12px)
---text-sm:   0.875rem (14px)
---text-base: 1rem     (16px)
---text-lg:   1.125rem (18px)
---text-xl:   1.25rem  (20px)
---text-2xl:  1.5rem   (24px)
---text-3xl:  1.875rem (30px)
---text-4xl:  2.25rem  (36px) → 3rem (48px) on desktop
+--text-xs:   0.75rem  (12px) — mono labels
+--text-sm:   0.875rem (14px) — body small
+--text-base: 1rem     (16px) — body
+--text-lg:   1.0625rem (17px) — CTA body text
+--text-xl:   1.25rem  (20px) — project titles (image overlays)
+--text-2xl:  1.375rem (22px) — H3, feature titles
+--text-3xl:  clamp(1.875rem, 4vw, 3.25rem) — H2
+--text-4xl:  clamp(2.125rem, 5.5vw, 4.25rem) — H1 (CTA heading)
 ```
 
 ### Line Height
-- Body: `1.7` for readability
-- Headings: `1.2` for tight, impactful headers
+- Body: `1.65`
+- Headings: `1.04–1.06` (tight, elegant)
 
 ---
 
 ## Spacing
 
-Based on a 4px grid. Core scale:
-
 ```
---space-1:  0.25rem  (4px)
---space-2:  0.5rem   (8px)
---space-3:  0.75rem  (12px)
---space-4:  1rem     (16px)
---space-6:  1.5rem   (24px)
---space-8:  2rem     (32px)
---space-10: 2.5rem   (40px)
---space-12: 3rem     (48px)
---space-16: 4rem     (64px)
---space-20: 5rem     (80px)
+--space-2:   0.125rem (2px)
+--space-4:   0.25rem  (4px)
+--space-8:   0.5rem   (8px)
+--space-12:  0.75rem  (12px)
+--space-16:  1rem     (16px)
+--space-20:  1.25rem  (20px)
+--space-24:  1.5rem   (24px)
+--space-32:  2rem     (32px)
+--space-36:  2.25rem  (36px)
+--space-40:  2.5rem   (40px)
+--space-48:  3rem     (48px)
+--space-56:  3.5rem   (56px)
+--space-64:  4rem     (64px)
+--space-80:  5rem     (80px)
 ```
 
 ---
@@ -81,121 +83,79 @@ Based on a 4px grid. Core scale:
 ## Components
 
 ### Buttons
+- Background filled `--color-primary` or white on dark sections
+- `border-radius: 2px` (very subtle)
+- Uppercase, 14px, 0.04em letter-spacing, weight 600
+- Padding: 17px 30px (tall buttons)
+- Hover: `translateY(-2px)` + deeper shadow
+- No bold box-shadows — just clean lift
 
-```css
-.btn {
-  --btn-bg: var(--color-primary);
-  --btn-color: white;
-  background: var(--btn-bg);
-  padding: 0.75rem 2rem;
-  border-radius: 6px;
-  font-weight: 600;
-  transition: all 0.25s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-.btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0,86,179,0.25);
-}
-.btn--accent {
-  --btn-bg: var(--color-accent);
-}
-.btn--outline {
-  background: transparent;
-  border: 2px solid var(--color-primary);
-  color: var(--color-primary);
-}
-```
+### Service Items (Homepage numbered list)
+- Numbered list with step numbers in `--color-text-muted` or `--color-primary-light`
+- Each item separated by `1px solid rgba(18,34,46,.12)` borders
+- Clean grid layout, no card backgrounds
+- Step number: Spectral serif, 30px, color #bcc8ce or #3d6d8c
 
-### Cards
-- White background, `--color-border` border
-- `border-radius: 12px`
-- Subtle shadow (`0 2px 8px rgba(0,0,0,0.06)`)
-- Hover: lift 4px with deeper shadow
-- Image at top with `object-fit: cover`, `aspect-ratio: 4/3`
-
-### Feature Items
-- Clean grid layout, 3-column on desktop, 2 on tablet, 1 on mobile
-- Icon or emoji accent at top
-- Heading in accent colour with subtle underline
+### Feature Items (Why Us)
+- Grid layout with 1px borders between items
+- Dark background (`#0e1b25`)
+- Numbered (01–06) in JetBrains Mono, `#9fc0d4`
+- Title in Spectral 22px, color white
+- Description in 14.5px, `rgba(255,255,255,0.66)`
+- Grid border: `1px solid rgba(255,255,255,0.12)`
 
 ### Project Gallery
-- Masonry-style or uniform grid
-- Lightbox on click with smooth overlay
-- Subtle zoom effect on hover
+- Grid with `repeat(auto-fit, minmax(260px, 1fr))`, gap 18px
+- Images with `object-fit: cover`
+- Hover: scale 1.06 over 1.2s, smooth cubic-bezier
+- Overlay: `linear-gradient(180deg, transparent 40%, rgba(10,22,31,.78))`
+- Overlay labels: JetBrains Mono uppercase label + Spectral title
 
-### Hero Sections
-- Full-width background image with gradient overlay (not flat rgba)
-- Gradient: `linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%)`
-- Centred content with max-width constraint
-- CTA button prominently displayed
+### Hero
+- Full-width dark sections with monospace labels + large Spectral headings
+- No background images with overlays — simpler, text-driven approach
+- Large headings with thin weight (400), tight line-height (1.06)
 
 ---
 
 ## Responsive Breakpoints
 
 ```
---bp-sm:  480px   (small phones)
---bp-md:  768px   (tablets)
---bp-lg:  1024px  (small desktops)
---bp-xl:  1280px  (large desktops)
+--bp-sm:  480px
+--bp-md:  768px
+--bp-lg:  1024px
+--bp-xl:  1280px
 ```
 
-### Mobile-First Approach
-- Default styles target mobile (360px+)
-- `@media (min-width: 768px)` for tablet
-- `@media (min-width: 1024px)` for desktop
-
----
-
-## Shadows
-
-```
---shadow-sm:   0 1px 3px rgba(0,0,0,0.08)
---shadow-md:   0 4px 12px rgba(0,0,0,0.1)
---shadow-lg:   0 8px 30px rgba(0,0,0,0.12)
---shadow-xl:   0 20px 60px rgba(0,0,0,0.15)
-```
+### Mobile-First
+- Padding: `clamp(20px, 5vw, 64px)` on sections
+- Section vertical padding: `clamp(70px, 10vw, 130px)`
 
 ---
 
 ## Animations
 
-- **Reveal on scroll**: elements fade in + translateY(20px) → translateY(0) over 0.6s
-- **Button hover**: lift + shadow deepen over 0.25s
-- **Card hover**: lift 4px + shadow grow over 0.3s
-- **Navigation**: smooth transition, mobile menu slides in from right
-- **Page transitions**: subtle fade on load
+- **Scroll reveal**: opacity 0→1, translateY(24-30px)→0
+- **Timing**: `.85s` to `.9s` cubic-bezier(.16,1,.3,1)
+- **Stagger**: Sequential items offset by `0.08s`–`0.16s` increments
+- **Hover (images)**: scale(1.06) over 1.2s cubic-bezier(.16,1,.3,1)
+
+---
+
+## Borders & Radius
+
+- `border-radius: 2px` for all cards/buttons
+- `border-radius: 3px` for image containers
+- Borders are `1px solid rgba(...)` — very subtle
+- No heavy shadows — favour clean lines
 
 ---
 
 ## Accessibility
 
-- All interactive elements must have visible focus states (`:focus-visible`)
-- Minimum colour contrast ratio: 4.5:1 for normal text, 3:1 for large text
-- Skip-to-content link (hidden until focused)
-- Proper ARIA labels on navigation toggle
-- All images require descriptive `alt` text
-- Semantic HTML5 elements throughout
-
----
-
-## SEO & LLM Considerations
-
-- Structured data (JSON-LD) for LocalBusiness, Service, FAQ
-- `jekyll-seo-tag` handles meta — don't duplicate
-- Heading hierarchy: exactly one H1 per page, logical H2/H3 nesting
-- Descriptive title tags (60 chars) and meta descriptions (160 chars)
-- Open Graph tags for social sharing
-
----
-
-## Image Standards
-
-- Max width: 1920px
-- Format: JPEG (photos) or WebP with JPEG fallback
-- Descriptive `alt` text required
-- Optimised for web (< 200KB per image where possible)
-- Aspect ratio maintained with `object-fit: cover`
+- All interactive elements require visible `:focus-visible` states
+- Contrast ratio minimum 4.5:1 for normal text
+- Semantic HTML5 throughout
+- Proper heading hierarchy (one H1 per page)
+- Alt text on all images
+- `aria-label` on navigation toggle
