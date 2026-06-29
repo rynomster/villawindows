@@ -5,7 +5,7 @@ Villa Windows is a Jekyll-based static website for a specialist timber joinery c
 This project was ported from an original WordPress site to a Jekyll-based static site for better performance, security, and hosting on GitHub Pages.
 
 ## URL
-- **Live Site:** [https://villawindows.lunatech.co.za](https://villawindows.lunatech.co.za)
+- **Live Site:** [https://villawindows.co.nz](https://villawindows.co.nz)
 
 ## Features
 - **Jekyll Static Site:** Fast, secure, and easy to maintain.

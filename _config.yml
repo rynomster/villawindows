@@ -1,7 +1,7 @@
 title: Villa Windows
 description: Specialists in Sash Windows and Timber Joinery in Auckland. Retrofit double-glazing, repair and maintenance.
 baseurl: ""
-url: "https://villawindows.lunatech.co.za"
+url: "https://villawindows.co.nz"
 theme: minima
 plugins:
   - jekyll-seo-tag
