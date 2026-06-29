@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     {% seo %}
     {% feed_meta %}
@@ -81,25 +84,26 @@
     {% endif %}
 </head>
 <body>
+    <div class="scroll-progress" id="scroll-progress"></div>
     <a href="#main-content" class="skip-link">Skip to main content</a>
-    <header>
-        <div class="top-bar">
-            <a href="tel:+6493201798">09 320 1798</a>
-        </div>
+    <header id="site-header">
         <nav>
             <div class="logo">
-                <a href="{{ '/' | relative_url }}"><img src="{{ '/assets/images/villa-windows-logo.png' | relative_url }}" alt="Villa Windows Logo"></a>
+                <a href="{{ '/' | relative_url }}">
+                    <img src="{{ '/assets/images/villa-windows-logo.png' | relative_url }}" alt="Villa Windows Logo" class="logo-dark">
+                    <img src="{{ '/assets/images/villa-windows-logo.png' | relative_url }}" alt="Villa Windows Logo" class="logo-light">
+                </a>
             </div>
             <input type="checkbox" id="nav-toggle" class="nav-toggle">
-            <label for="nav-toggle" class="nav-toggle-label">
+            <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
                 <span></span>
             </label>
             <ul class="nav-links">
-                <li><a href="{{ '/' | relative_url }}">HOME</a></li>
-                <li><a href="{{ '/services' | relative_url }}">SERVICES</a></li>
-                <li><a href="{{ '/our-projects' | relative_url }}">OUR PROJECTS</a></li>
-                <li><a href="{{ '/faqs' | relative_url }}">FAQ’S</a></li>
-                <li><a href="{{ '/free-estimate' | relative_url }}" class="nav-cta">FREE ESTIMATE</a></li>
+                <li><a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>HOME</a></li>
+                <li><a href="{{ '/services/' | relative_url }}" class="{% if page.url contains '/services' or page.category == 'services' %}active{% endif %}">SERVICES</a></li>
+                <li><a href="{{ '/our-projects' | relative_url }}" {% if page.url == '/our-projects/' %}class="active"{% endif %}>OUR PROJECTS</a></li>
+                <li><a href="{{ '/faqs' | relative_url }}" {% if page.url == '/faqs/' %}class="active"{% endif %}>FAQ’S</a></li>
+                <li><a href="{{ '/free-estimate' | relative_url }}" class="nav-cta {% if page.url == '/free-estimate/' %}active{% endif %}">FREE ESTIMATE</a></li>
             </ul>
         </nav>
     </header>
@@ -142,22 +146,82 @@
     </div>
 
     <script>
-        // Scroll Reveal
-        function reveal() {
-            var reveals = document.querySelectorAll(".reveal");
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 50; // More lenient threshold
-                if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add("active");
+        // --- IntersectionObserver for Scroll Reveal ---
+        const revealOptions = {
+            threshold: 0.12,
+            rootMargin: "0px 0px -6% 0px"
+        };
+
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    // Stagger sequential children if they exist
+                    const staggerItems = entry.target.querySelectorAll('.stagger-item');
+                    staggerItems.forEach((item, index) => {
+                        item.style.transitionDelay = `${index * 0.1}s`;
+                    });
+                    observer.unobserve(entry.target);
                 }
+            });
+        }, revealOptions);
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal');
+            reveals.forEach(el => revealObserver.observe(el));
+        });
+
+        // --- Sticky Nav, Progress Bar & Parallax ---
+        const header = document.getElementById('site-header');
+        const progressBar = document.getElementById('scroll-progress');
+        const heroMedia = document.querySelector('.hero-media');
+        const isHome = {{ page.url == '/' | jsonify }};
+
+        const handleScroll = () => {
+            const scrollY = window.scrollY;
+
+            // Sticky Nav
+            if (scrollY > 60) {
+                header.classList.add('is-scrolled');
+            } else {
+                header.classList.remove('is-scrolled');
             }
-        }
-        window.addEventListener("scroll", reveal);
-        window.addEventListener("DOMContentLoaded", reveal);
-        window.addEventListener("load", reveal);
-        reveal(); // Run immediately
+
+            // Progress Bar
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            progressBar.style.width = scrolled + "%";
+
+            // Hero Parallax (Home Only)
+            if (isHome && heroMedia) {
+                heroMedia.style.transform = `translateY(${scrollY * 0.14}px)`;
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+
+        // --- FAQ Accordion ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                if (!question) return;
+
+                question.addEventListener('click', () => {
+                    const isOpen = item.classList.contains('open');
+
+                    // Close all others
+                    faqItems.forEach(i => i.classList.remove('open'));
+
+                    // Toggle current
+                    if (!isOpen) {
+                        item.classList.add('open');
+                    }
+                });
+            });
+        });
 
         // Lightbox
         const lightbox = document.getElementById('lightbox');
