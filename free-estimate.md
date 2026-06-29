@@ -1,69 +1,84 @@
 ---
 layout: default
-title: Free Estimate
-description: Contact Villa Windows for a free estimate on your retrofit double glazing or timber joinery project in Auckland.
+title: Request a Free Estimate
+description: Contact Villa Windows for a free estimate on your timber window project. Specialist sash and casement services in Auckland.
 ---
 
-<section class="page-header" style="background-image: url('{{ "/assets/images/screenshot-free-estimate.png" | relative_url }}');">
-    <div>
-        <h1>Get a Free Estimate</h1>
+<section class="hero hero--inner">
+    <div class="hero-media">
+        <img src="{{ '/assets/images/casement-window-button.png' | relative_url }}" alt="Get a Free Estimate">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-inner">
+        <nav class="breadcrumb">
+            <a href="{{ '/' | relative_url }}">Home</a> / Estimate
+        </nav>
+        <h1>Request a Free Estimate</h1>
+        <p>Get in touch for expert advice and a detailed quote for your timber joinery project. We service the greater Auckland area.</p>
     </div>
 </section>
 
-<div class="contact-container reveal">
-    <div class="contact-info">
-        <p>For a free estimate, please contact us by email, phone, or WhatsApp.</p>
+<section class="reveal">
+    <div class="estimate-grid">
+        <div class="form-container">
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="your@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="021 000 0000">
+                </div>
+                <div class="form-group">
+                    <label for="service">Interested In</label>
+                    <select id="service" name="service">
+                        <option value="sash-double-glazing">Sash Window Double Glazing</option>
+                        <option value="sash-maintenance">Sash Window Maintenance</option>
+                        <option value="casement-double-glazing">Casement Window Double Glazing</option>
+                        <option value="casement-maintenance">Casement Window Maintenance</option>
+                        <option value="other">Other Repair / Restoration</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Project Details</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Tell us about your windows..."></textarea>
+                </div>
+                <button type="submit" class="btn">Send Request</button>
+            </form>
+        </div>
 
-        <h3>CONTACT DETAILS</h3>
-        <p><strong>Trevor Spenser</strong></p>
-        <p>P: <a href="tel:093201798">09 320 1798</a></p>
-        <p>E: <a href="mailto:trevor@villawindows.co.nz">trevor@villawindows.co.nz</a></p>
-        <p>WhatsApp: <a href="https://wa.me/6493201798" class="whatsapp-link" target="_blank">Chat with us on WhatsApp</a></p>
+        <div class="sidebar">
+            <div class="sidebar-card">
+                <h3>Direct Contact</h3>
+                <p>Speak with our specialist:</p>
+                <div class="sidebar-phone">
+                    <a href="tel:+6493201798">09 320 1798</a>
+                </div>
+                <div class="info-box">
+                    <p><strong>Email:</strong><br>trevor@villawindows.co.nz</p>
+                    <p><strong>Hours:</strong><br>Mon – Fri, 8am – 5pm</p>
+                    <p><strong>Workshop:</strong><br>East Tamaki, Auckland</p>
+                </div>
+            </div>
 
-        <p><strong>Business Hours:</strong><br>
-        Monday – Friday 8am – 5pm<br>
-        Saturday – Sunday Closed</p>
-
-        <p><strong>Our Location:</strong><br>
-        Our workshop is located in East Tamaki but we service all Auckland suburbs.</p>
-    </div>
-    <div class="contact-image">
-        <img src="{{ '/assets/images/villa-street.png' | relative_url }}" alt="Villa Street">
-    </div>
-</div>
-
-<section class="why-us reveal">
-    <h2>Why us?</h2>
-    <div class="features-grid">
-        <div class="feature-item">
-            <h3>QUALITY MATERIALS</h3>
-            <p>Our glass units comply with the NZ/AUS standard and carry a 10-year guarantee.</p>
-        </div>
-        <div class="feature-item">
-            <h3>ATTENTION TO DETAIL</h3>
-            <p>We take our time and go the extra mile to ensure a neat and tidy finish.</p>
-        </div>
-        <div class="feature-item">
-            <h3>QUALITY WORKMANSHIP</h3>
-            <p>Your sash windows will be well looked after & work completed to a high standard.</p>
-        </div>
-        <div class="feature-item">
-            <h3>COMPETITIVE RATES</h3>
-            <p>We offer a cost effective retrofit of your old sash windows.</p>
-        </div>
-        <div class="feature-item">
-            <h3>FREE ADVICE!</h3>
-            <p>Get in touch from anywhere if you need sound advice. We’d be happy to point you in the right direction!</p>
-        </div>
-        <div class="feature-item">
-            <h3>SERVICE EXCELLENCE</h3>
-            <p>Keeping our promises and keeping you well informed at all times is part of the service!</p>
+            <div style="margin-top: 32px; padding: 24px; border: 1px solid var(--color-border); border-radius: 2px;">
+                <p style="font-size: 14.5px; color: var(--color-text-soft);"><strong>WhatsApp:</strong><br>For a faster response, you can also reach us via WhatsApp.</p>
+                <a href="https://wa.me/6493201798" class="btn btn--outline" style="color: var(--color-primary); border-color: var(--color-primary); width: 100%; margin-top: 16px;">Chat with us</a>
+            </div>
         </div>
     </div>
 </section>
 
-<section class="cta-box reveal">
-    <h2>Have a question?</h2>
-    <p>Please get in touch with us.</p>
-    <a href="{{ '/free-estimate' | relative_url }}" class="btn">CONTACT US</a>
+<section class="bg-alt full-width">
+    <div class="reveal" style="max-width: 1280px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 64px); text-align: center;">
+        <div class="label-mono" style="justify-content: center;">Quality assured</div>
+        <h2>A decade of expertise</h2>
+        <p style="max-width: 600px; margin: 0 auto 32px;">Every project we undertake is completed to the highest standards, ensuring your heritage villa remains a beautiful and comfortable place to live.</p>
+        <img src="{{ '/assets/images/double-glazed-villa-1.png' | relative_url }}" alt="Villa Windows Quality Workmanship" style="max-width: 800px; width: 100%; border-radius: 3px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+    </div>
 </section>

@@ -1,0 +1,11 @@
+127.0.0.1 - - [29/Jun/2026 16:21:46] "GET /index.md HTTP/1.1" 200 -
+127.0.0.1 - - [29/Jun/2026 16:21:50] code 404, message File not found
+127.0.0.1 - - [29/Jun/2026 16:21:50] "GET /services.html HTTP/1.1" 404 -
+127.0.0.1 - - [29/Jun/2026 16:21:52] code 404, message File not found
+127.0.0.1 - - [29/Jun/2026 16:21:52] "GET /our-projects.html HTTP/1.1" 404 -
+127.0.0.1 - - [29/Jun/2026 16:21:54] code 404, message File not found
+127.0.0.1 - - [29/Jun/2026 16:21:54] "GET /faqs.html HTTP/1.1" 404 -
+127.0.0.1 - - [29/Jun/2026 16:21:56] code 404, message File not found
+127.0.0.1 - - [29/Jun/2026 16:21:56] "GET /free-estimate.html HTTP/1.1" 404 -
+127.0.0.1 - - [29/Jun/2026 16:21:58] code 404, message File not found
+127.0.0.1 - - [29/Jun/2026 16:21:58] "GET /retrofit-double-glazing.html HTTP/1.1" 404 -

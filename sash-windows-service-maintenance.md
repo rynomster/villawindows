@@ -1,32 +1,60 @@
 ---
 layout: default
-title: Sash Windows Service & Maintenance
-description: Professional maintenance and repair for timber sash windows in Auckland. Cord replacement, re-weighting, and smooth operation.
-custom_schema:
-  "@context": "https://schema.org"
-  "@type": "Service"
-  "name": "Sash Windows Service & Maintenance"
-  "serviceType": "Window Maintenance"
-  "provider":
-    "@type": "LocalBusiness"
-    "name": "Villa Windows"
-  "areaServed": "Auckland, NZ"
-  "description": "Professional servicing of traditional timber sash windows, including cord replacement and re-weighting."
+title: Sash Windows — Service & Maintenance
+description: Professional maintenance and repair for traditional timber sash windows. Re-cording, re-weighting, and ensuring smooth operation for Auckland heritage homes.
 ---
 
-<h1>Sash Windows Service & Maintenance</h1>
+<section class="hero hero--inner">
+    <div class="hero-media">
+        <img src="{{ '/assets/images/adobe-stock-sash-repair.jpg' | relative_url }}" alt="Sash Window Maintenance and Repair">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-inner">
+        <nav class="breadcrumb">
+            <a href="{{ '/' | relative_url }}">Home</a> / Services
+        </nav>
+        <h1>Sash Windows: Service & Maintenance</h1>
+        <p>Professional servicing of traditional timber sash windows. We restore the smooth, effortless operation your windows were designed for 80–100 years ago.</p>
+        <div class="hero-actions">
+            <a href="{{ '/free-estimate' | relative_url }}" class="btn">Request a service</a>
+        </div>
+    </div>
+</section>
 
-<p>Traditional sash windows require regular maintenance to ensure they continue to operate smoothly and provide security and insulation for your home.</p>
+<section class="reveal">
+    <div class="editorial-grid">
+        <div class="editorial-content">
+            <div class="label-mono">Expert Care</div>
+            <h2>Put the slide back in your sash</h2>
+            <p>Suffer from hard to open or close sash windows? Over time, cords break, weights become unbalanced, and paint build-up can jam the mechanism. Villa Windows specialises in bringing these beautiful heritage features back to life.</p>
+            <p>Our comprehensive service includes re-cording with high-quality sash cord, re-weighting for perfect balance, and ensuring the sashes slide smoothly and safely.</p>
+            <div class="info-box" style="background: var(--color-bg-alt); border: none; color: var(--color-text-body); margin-top: 32px;">
+                <p><strong>Our service includes:</strong></p>
+                <ul style="padding-left: 20px; margin-top: 16px;">
+                    <li style="margin-bottom: 8px;">Replacing worn or broken sash cords</li>
+                    <li style="margin-bottom: 8px;">Re-weighting sashes for effortless operation</li>
+                    <li style="margin-bottom: 8px;">Draught proofing and timber repairs</li>
+                    <li style="margin-bottom: 8px;">Ensuring sashes are safe and secure</li>
+                </ul>
+            </div>
+        </div>
+        <div class="editorial-image">
+            <img src="{{ '/assets/images/project-detail-1.png' | relative_url }}" alt="Sash Window Component Detail">
+        </div>
+    </div>
+</section>
 
-<h2>Our Maintenance Services Include:</h2>
-<ul>
-    <li><strong>Sash Cord Replacement:</strong> Replacing worn or broken cords with high-quality waxed cotton or synthetic alternatives.</li>
-    <li><strong>Re-weighting & Balancing:</strong> Ensuring your sashes stay open and move effortlessly by adjusting the internal lead or iron weights.</li>
-    <li><strong>Draught Proofing:</strong> Installing discreet brush seals to eliminate rattles and significantly reduce draughts.</li>
-    <li><strong>Timber Repairs:</strong> Repairing minor rot or damage to the sashes or frames using specialized timber fillers and epoxy resins.</li>
-    <li><strong>Hardware Replacement:</strong> Replacing or refurbishing locks, lifts, and pulleys to match the original style.</li>
-</ul>
-
-<p>Regular servicing can extend the life of your timber windows by decades, preserving the character and value of your property.</p>
-
-<a href="{{ '/free-estimate' | relative_url }}" class="btn">Get a Maintenance Quote</a>
+<section class="cta-box bg-dark full-width">
+    <div class="pane-grid">
+        <div></div><div></div><div></div><div></div>
+    </div>
+    <div class="container reveal">
+        <div class="label-mono" style="color:var(--color-primary-light); justify-content:center;">Free advice</div>
+        <h2>Have a question about your windows?</h2>
+        <p>We're happy to point you in the right direction. No job is too small for expert advice.</p>
+        <div class="hero-actions" style="justify-content:center; animation: none;">
+            <a href="tel:+6493201798" class="btn btn--white">Call 09 320 1798</a>
+            <a href="{{ '/free-estimate' | relative_url }}" class="btn btn--outline">Get an estimate</a>
+        </div>
+    </div>
+</section>
