@@ -4,8 +4,8 @@ title: Free Estimate
 description: Contact Villa Windows for a free estimate on your retrofit double glazing or timber joinery project in Auckland.
 ---
 
-<section class="page-header" style="background-image: url('{{ "/assets/images/screenshot-free-estimate.png" | relative_url }}'); background-size: cover; background-position: center; padding: 100px 20px; color: white; text-align: center; border-radius: 8px; margin-bottom: 40px;">
-    <div style="background: rgba(0,0,0,0.5); display: inline-block; padding: 30px; border-radius: 4px;">
+<section class="page-header" style="background-image: url('{{ "/assets/images/screenshot-free-estimate.png" | relative_url }}');">
+    <div>
         <h1>Get a Free Estimate</h1>
     </div>
 </section>
@@ -28,7 +28,7 @@ description: Contact Villa Windows for a free estimate on your retrofit double g
         Our workshop is located in East Tamaki but we service all Auckland suburbs.</p>
     </div>
     <div class="contact-image">
-        <img src="{{ '/assets/images/villa-street.png' | relative_url }}" alt="Villa Street" style="width: 100%; border-radius: 8px;">
+        <img src="{{ '/assets/images/villa-street.png' | relative_url }}" alt="Villa Street">
     </div>
 </div>
 
