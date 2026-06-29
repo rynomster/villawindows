@@ -11,7 +11,7 @@ description: Find answers to common questions about retrofit double glazing, her
     <div class="hero-overlay"></div>
     <div class="hero-inner">
         <nav class="breadcrumb">
-            <a href="{{ '/' | relative_url }}">Home</a> / FAQ’s
+            <a href="{{ '/' | relative_url }}">Home</a> / FAQs
         </nav>
         <h1>Frequently Asked Questions</h1>
         <p>If you can’t find the answer you’re looking for, don’t hesitate to get in touch. We’re happy to help guide you in the right direction.</p>
@@ -27,7 +27,7 @@ description: Find answers to common questions about retrofit double glazing, her
                 <div class="faq-icon"></div>
             </button>
             <div class="faq-answer">
-                <p>We do not perform window putty repairs; this specialized work is best handled by a professional glazier or glass company.</p>
+                <p>We do not perform window putty repairs; this specialised work is best handled by a professional glazier or glass company.</p>
             </div>
         </div>
 
@@ -60,7 +60,7 @@ description: Find answers to common questions about retrofit double glazing, her
                 <div class="faq-icon"></div>
             </button>
             <div class="faq-answer">
-                <p>Yes. Our Insulated Glass Units (IGUs) are manufactured to the relevant AUS/NZ standards by accredited manufacturers and are covered by a 10-year guarantee under the NZ Building Code.</p>
+                <p>Yes. Our Insulated Glass Units (IGUs) are manufactured to the relevant NZ/AUS standards by accredited manufacturers and are covered by a 10-year guarantee under the NZ Building Code.</p>
             </div>
         </div>
 
@@ -89,22 +89,22 @@ description: Find answers to common questions about retrofit double glazing, her
         <!-- FAQ Item 07 -->
         <div class="faq-item stagger-item">
             <button class="faq-question">
-                <h3>Do you double-glaze lead lights?</h3>
+                <h3>Do you double-glaze leadlights?</h3>
                 <div class="faq-icon"></div>
             </button>
             <div class="faq-answer">
-                <p>Yes, lead lights can often be 'encapsulated' into a modern IGU to provide thermal benefits while keeping the original decorative feature. Please get in touch for more specific information.</p>
+                <p>Yes, leadlights can often be 'encapsulated' into a modern IGU to provide thermal benefits while keeping the original decorative feature. Please get in touch for more specific information.</p>
             </div>
         </div>
 
         <!-- FAQ Item 08 -->
         <div class="faq-item stagger-item">
             <button class="faq-question">
-                <h3>Do you service or repair lead lights?</h3>
+                <h3>Do you service or repair leadlights?</h3>
                 <div class="faq-icon"></div>
             </button>
             <div class="faq-answer">
-                <p>No, this is specialized work performed by stained glass specialists. We can, however, provide referrals to trusted craftsmen in this field.</p>
+                <p>No, this is specialised work performed by stained glass specialists. We can, however, provide referrals to trusted craftsmen in this field.</p>
             </div>
         </div>
 
@@ -133,11 +133,11 @@ description: Find answers to common questions about retrofit double glazing, her
         <!-- FAQ Item 11 -->
         <div class="faq-item stagger-item">
             <button class="faq-question">
-                <h3>Do you do window sill replacement?</h3>
+                <h3>Do you do windowsill replacement?</h3>
                 <div class="faq-icon"></div>
             </button>
             <div class="faq-answer">
-                <p>No, full window sill replacement is best handled by a qualified builder. We can, however, perform minor timber repairs to sills during our joinery maintenance.</p>
+                <p>No, full windowsill replacement is best handled by a qualified builder.</p>
             </div>
         </div>
     </div>
