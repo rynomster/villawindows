@@ -83,7 +83,7 @@ description: Explore our full range of specialist timber joinery services, from 
             <div class="card-content">
                 <span class="card-index">HERITAGE · 05</span>
                 <h3>Heritage Repair & Restoration</h3>
-                <p>Specialist timber splicing, re-puttying and restoration for all types of heritage joinery.</p>
+                <p>Specialist repair and restoration for all types of heritage joinery.</p>
                 <span class="card-link" style="color: var(--color-text-muted);">Available on assessment</span>
             </div>
         </div>
@@ -96,7 +96,7 @@ description: Explore our full range of specialist timber joinery services, from 
             <div class="card-content">
                 <span class="card-index">DETAIL · 06</span>
                 <h3>Custom Glass & Glazing</h3>
-                <p>From leadlight encapsulation to specialized etchlite and cathedral glass features.</p>
+                <p>From leadlight encapsulation to specialised acid-etched and patterned glass features.</p>
                 <a href="{{ '/our-projects' | relative_url }}" class="card-link">View gallery →</a>
             </div>
         </div>

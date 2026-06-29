@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Casement Windows — Service & Maintenance
-description: Expert maintenance and repair for timber casement windows. Hinge replacement, draught proofing, and timber restoration in Auckland.
+description: Expert maintenance and repair for timber casement windows. Hinge replacement, draught-proofing, and timber restoration in Auckland.
 category: services
 ---
 
@@ -28,14 +28,14 @@ category: services
             <div class="label-mono">Craftsmanship</div>
             <h2>Restore your windows' integrity</h2>
             <p>Sticking casement sashes or broken hinges can be a safety risk and a source of frustration. Our expert joiners can repair and restore your casement windows to their original condition.</p>
-            <p>We handle everything from minor hardware replacements to major timber splicing and draught proofing. Our goal is to ensure your windows are secure, weather-tight, and easy to operate.</p>
+            <p>We handle everything from minor hardware replacements to draught-proofing and rot repair. Our goal is to ensure your windows are secure, weather-tight, and easy to operate.</p>
             <div class="info-box" style="background: var(--color-bg-alt); border: none; color: var(--color-text-body); margin-top: 32px;">
                 <p><strong>Common casement services:</strong></p>
                 <ul style="padding-left: 20px; margin-top: 16px;">
                     <li style="margin-bottom: 8px;">Hinge replacement and adjustment</li>
-                    <li style="margin-bottom: 8px;">Timber splicing and rot repair</li>
-                    <li style="margin-bottom: 8px;">Draught proofing installation</li>
-                    <li style="margin-bottom: 8px;">Security hardware upgrades</li>
+                    <li style="margin-bottom: 8px;">Timber restoration and rot repair</li>
+                    <li style="margin-bottom: 8px;">Draught-proofing installation</li>
+                    <li style="margin-bottom: 8px;">Window hardware and locks</li>
                 </ul>
             </div>
         </div>

@@ -27,14 +27,16 @@ category: services
         <div class="editorial-content">
             <div class="label-mono">Expert Care</div>
             <h2>Put the slide back in your sash</h2>
-            <p>Suffer from hard to open or close sash windows? Over time, cords break, weights become unbalanced, and paint build-up can jam the mechanism. Villa Windows specialises in bringing these beautiful heritage features back to life.</p>
+            <p>Suffer from hard-to-open or close sash windows? Over time, cords break, weights become unbalanced, and paint build-up can jam the mechanism. Villa Windows specialises in bringing these beautiful heritage features back to life.</p>
             <p>Our comprehensive service includes re-cording with high-quality sash cord, re-weighting for perfect balance, and ensuring the sashes slide smoothly and safely.</p>
             <div class="info-box" style="background: var(--color-bg-alt); border: none; color: var(--color-text-body); margin-top: 32px;">
                 <p><strong>Our service includes:</strong></p>
                 <ul style="padding-left: 20px; margin-top: 16px;">
                     <li style="margin-bottom: 8px;">Replacing worn or broken sash cords</li>
                     <li style="margin-bottom: 8px;">Re-weighting sashes for effortless operation</li>
-                    <li style="margin-bottom: 8px;">Draught proofing and timber repairs</li>
+                    <li style="margin-bottom: 8px;">Spiral balance replacement</li>
+                    <li style="margin-bottom: 8px;">Meeting-rail alignment</li>
+                    <li style="margin-bottom: 8px;">Draught-proofing and timber repairs</li>
                     <li style="margin-bottom: 8px;">Ensuring sashes are safe and secure</li>
                 </ul>
             </div>

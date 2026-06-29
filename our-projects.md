@@ -151,10 +151,10 @@ description: Browse our gallery of heritage window restoration and double-glazin
 
         <!-- Project 15 -->
         <div class="project-tile stagger-item">
-            <img src="{{ '/assets/images/etchlite.png' | relative_url }}" alt="Etchlite Glass Installation" class="lightbox-trigger">
+            <img src="{{ '/assets/images/etchlite.png' | relative_url }}" alt="Acid-etched Glass Installation" class="lightbox-trigger">
             <div class="project-caption">
                 <span class="project-tag">GLASS FEATURE</span>
-                <h3 class="project-title">Etchlite Glass Installation</h3>
+                <h3 class="project-title">Acid-etched Glass Installation</h3>
             </div>
         </div>
 

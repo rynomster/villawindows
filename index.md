@@ -55,7 +55,7 @@ description: Villa Windows Auckland - Specialists in sash window repairs, retrof
                     <span class="service-step">04</span>
                     <div class="service-content">
                         <h3>Casement Windows: Service &amp; Maintenance</h3>
-                        <p>Hinge replacements, timber repairs, and draught proofing for timber casement windows.</p>
+                        <p>Hinge replacements, timber repairs, and draught-proofing for timber casement windows.</p>
                         <a href="{{ '/casement-windows-service-maintenance' | relative_url }}" class="card-link">Learn More →</a>
                     </div>
                 </div>
@@ -72,7 +72,7 @@ description: Villa Windows Auckland - Specialists in sash window repairs, retrof
         <div class="editorial-content">
             <div class="label-mono">About us</div>
             <h2>Villa Windows</h2>
-            <p><strong>Suffer from hard to open or close sash windows?</strong></p>
+            <p><strong>Suffer from hard-to-open or close sash windows?</strong></p>
             <p>No problem — Villa Windows can help put the slide back in your sash. We're passionate about sash windows and go the extra mile to make sure our customers are happy, from a free quote to tidying up after ourselves.</p>
             <p>You can be assured your windows will be looked after and restored back to the way they were intended 80–100 years ago.</p>
             <a href="{{ '/our-projects' | relative_url }}" class="btn" style="margin-top: 24px;">View Our Projects</a>
