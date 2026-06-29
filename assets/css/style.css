@@ -11,6 +11,11 @@ body {
     background-color: #fff;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 h1, h2, h3 {
     font-family: 'Playfair Display', serif;
 }
@@ -29,6 +34,7 @@ header {
     text-align: right;
     padding: 8px 20px;
     font-size: 0.9rem;
+    overflow-wrap: break-word;
 }
 
 .top-bar a {
@@ -224,6 +230,29 @@ footer {
     display: inline-block;
     padding: 30px;
     border-radius: 4px;
+    max-width: 90%;
+}
+
+.page-header {
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px !important;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+.page-header h1 {
+    margin: 0;
+}
+
+.page-header > div {
+    background: rgba(0,0,0,0.5);
+    display: inline-block;
+    padding: 20px 30px;
+    border-radius: 4px;
+    max-width: 90%;
 }
 
 .about-us-flex {
@@ -236,15 +265,34 @@ footer {
 
 .about-us-content {
     flex: 1;
-    min-width: 300px;
+    min-width: 280px;
 }
 
 .about-us-image {
     flex: 1;
-    min-width: 300px;
+    min-width: 280px;
 }
 
 .about-us-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.service-item {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+}
+
+.service-image, .service-content {
+    flex: 1;
+    min-width: 280px;
+}
+
+.service-image img {
     width: 100%;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -310,12 +358,14 @@ footer {
 
 .contact-info {
     flex: 1;
-    min-width: 300px;
+    min-width: 280px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .contact-image {
     flex: 1;
-    min-width: 300px;
+    min-width: 280px;
 }
 
 .whatsapp-link {
@@ -335,7 +385,7 @@ footer {
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
     margin-top: 30px;
 }
@@ -378,7 +428,7 @@ footer {
 
 .project-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
     margin-top: 30px;
 }
@@ -388,6 +438,13 @@ footer {
     padding: 15px;
     border-radius: 8px;
     text-align: center;
+}
+
+.project-item img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: 4px;
 }
 
 .project-item h3 {
@@ -520,7 +577,39 @@ footer {
         padding: 60px 15px !important;
     }
 
+    .page-header {
+        padding: 50px 15px !important;
+    }
+
+    .page-header > div {
+        padding: 15px 20px;
+    }
+
     .features-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 15px;
+    }
+
+    .service-item, .about-us-flex, .contact-container, .service-cards {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .service-image, .service-content, .about-us-content, .about-us-image, .contact-info, .contact-image, .card {
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
     }
 }

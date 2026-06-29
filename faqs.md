@@ -4,8 +4,8 @@ title: FAQs
 description: Frequently asked questions about retrofit double glazing, timber windows, and our services.
 ---
 
-<section class="page-header" style="background-image: url('{{ "/assets/images/screenshot-faqs.png" | relative_url }}'); background-size: cover; background-position: center; padding: 100px 20px; color: white; text-align: center; border-radius: 8px; margin-bottom: 40px;">
-    <div style="background: rgba(0,0,0,0.5); display: inline-block; padding: 30px; border-radius: 4px;">
+<section class="page-header" style="background-image: url('{{ "/assets/images/screenshot-faqs.png" | relative_url }}');">
+    <div>
         <h1>FAQ’S</h1>
     </div>
 </section>

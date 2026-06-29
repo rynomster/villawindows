@@ -144,14 +144,16 @@
             for (var i = 0; i < reveals.length; i++) {
                 var windowHeight = window.innerHeight;
                 var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 150;
+                var elementVisible = 50; // More lenient threshold
                 if (elementTop < windowHeight - elementVisible) {
                     reveals[i].classList.add("active");
                 }
             }
         }
         window.addEventListener("scroll", reveal);
+        window.addEventListener("DOMContentLoaded", reveal);
         window.addEventListener("load", reveal);
+        reveal(); // Run immediately
 
         // Lightbox
         const lightbox = document.getElementById('lightbox');
