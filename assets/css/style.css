@@ -852,6 +852,77 @@ section.full-width {
   gap: clamp(36px, 5vw, 72px);
 }
 
+/* Contact Methods */
+.contact-heading {
+  margin: 24px 0;
+}
+
+.contact-links {
+  margin-top: 48px;
+}
+
+.contact-item {
+  margin-bottom: 32px;
+}
+
+.contact-item .label-mono {
+  font-size: 10px;
+  margin-bottom: 8px;
+}
+
+.contact-phone {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  color: var(--color-text);
+}
+
+.contact-phone a {
+  color: inherit;
+}
+
+.contact-email {
+  font-size: 20px;
+  color: var(--color-text);
+}
+
+.contact-email a {
+  color: inherit;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.contact-action {
+  margin-top: 32px;
+}
+
+.btn--whatsapp {
+  padding: 20px 40px;
+  font-size: 16px;
+}
+
+.label-mono--center {
+  justify-content: center;
+}
+
+.quality-reveal {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 5vw, 64px);
+  text-align: center;
+}
+
+.quality-text {
+  max-width: 600px;
+  margin: 0 auto 32px;
+}
+
+.quality-image {
+  max-width: 800px;
+  width: 100%;
+  border-radius: 3px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  margin: 0 auto;
+}
+
 .form-group {
   margin-bottom: var(--space-24);
 }
@@ -1009,7 +1080,7 @@ footer {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: 1.2fr 1fr 1fr;
   max-width: 1280px;
   margin: 0 auto;
   gap: var(--space-48);
@@ -1119,10 +1190,43 @@ footer {
 
   .hero-actions {
     flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
   }
 
   .estimate-grid {
     grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-32);
+  }
+
+  .contact-phone {
+    font-size: 28px;
+  }
+
+  .sidebar-card {
+    padding: var(--space-32) var(--space-24);
+  }
+
+  section {
+    padding: clamp(50px, 8vw, 80px) var(--space-20);
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    width: 100%;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-32);
   }
 }
 
