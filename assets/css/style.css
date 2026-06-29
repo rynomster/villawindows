@@ -190,19 +190,34 @@ header {
 .top-bar {
   background: var(--color-primary);
   color: var(--color-text-inverse);
-  text-align: right;
-  padding: var(--space-2) var(--space-6);
-  font-size: var(--text-sm);
+  text-align: center;
+  padding: var(--space-3) var(--space-6);
+  font-size: var(--text-base);
+  font-weight: 600;
+  letter-spacing: 0.3px;
 }
 
 .top-bar a {
   color: var(--color-text-inverse);
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: var(--text-lg);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  transition: background var(--transition-fast);
+  display: inline-block;
 }
 
 .top-bar a:hover {
-  text-decoration: underline;
+  background: rgba(255,255,255,0.15);
+  text-decoration: none;
+}
+
+.top-bar a::before {
+  content: "\260E";
+  display: inline-block;
+  margin-right: var(--space-2);
+  font-size: var(--text-lg);
 }
 
 nav {
@@ -1165,7 +1180,12 @@ footer {
 
   .top-bar {
     text-align: center;
-    font-size: var(--text-xs);
+    font-size: var(--text-sm);
+    padding: var(--space-2) var(--space-4);
+  }
+
+  .top-bar a {
+    font-size: var(--text-base);
   }
 
   .hero {
