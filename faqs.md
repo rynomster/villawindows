@@ -12,7 +12,7 @@ description: Frequently asked questions about retrofit double glazing, timber wi
 
 <p>If you can’t find the answer, don’t hesitate to get in touch, we will be happy to answer any query. If it’s not work we can do, we will point you in the right direction.</p>
 
-<div class="faq-list">
+<div class="faq-list reveal">
     <div class="faq-item">
         <h3>1. Do you replace or repair cracked / damaged window putty?</h3>
         <p>We do not do window putty, this is work for a glazier/glass company.</p>
@@ -73,7 +73,7 @@ description: Frequently asked questions about retrofit double glazing, timber wi
     <img src="{{ '/assets/images/double-glazed-villa-1.png' | relative_url }}" alt="Double Glazed Villa" style="max-width: 100%; border-radius: 8px;">
 </div>
 
-<section class="why-us">
+<section class="why-us reveal">
     <h2>Why us?</h2>
     <div class="features-grid">
         <div class="feature-item">
@@ -103,7 +103,7 @@ description: Frequently asked questions about retrofit double glazing, timber wi
     </div>
 </section>
 
-<section class="cta-box">
+<section class="cta-box reveal">
     <h2>Have a question?</h2>
     <p>Please get in touch with us.</p>
     <a href="{{ '/free-estimate' | relative_url }}" class="btn">CONTACT US</a>

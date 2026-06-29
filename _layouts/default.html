@@ -133,5 +133,47 @@
             <p>&copy; {{ "now" | date: "%Y" }} Villa Windows. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Interactivity: Scroll Reveal & Lightbox -->
+    <div id="lightbox"></div>
+
+    <script>
+        // Scroll Reveal
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        window.addEventListener("load", reveal);
+
+        // Lightbox
+        const lightbox = document.getElementById('lightbox');
+        const triggers = document.querySelectorAll('.lightbox-trigger');
+
+        triggers.forEach(trigger => {
+            trigger.addEventListener('click', () => {
+                const img = document.createElement('img');
+                img.src = trigger.src;
+                while (lightbox.firstChild) {
+                    lightbox.removeChild(lightbox.firstChild);
+                }
+                lightbox.appendChild(img);
+                lightbox.style.display = 'flex';
+                document.body.style.overflow = 'hidden'; // Disable scroll
+            });
+        });
+
+        lightbox.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Enable scroll
+        });
+    </script>
 </body>
 </html>

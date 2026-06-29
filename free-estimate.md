@@ -10,9 +10,9 @@ description: Contact Villa Windows for a free estimate on your retrofit double g
     </div>
 </section>
 
-<div class="contact-container">
+<div class="contact-container reveal">
     <div class="contact-info">
-        <p>For a free estimate, please contact us through our contact form, by email or phone.</p>
+        <p>For a free estimate, please contact us by email, phone, or WhatsApp.</p>
 
         <h3>CONTACT DETAILS</h3>
         <p><strong>Trevor Spenser</strong></p>
@@ -32,7 +32,7 @@ description: Contact Villa Windows for a free estimate on your retrofit double g
     </div>
 </div>
 
-<section class="why-us">
+<section class="why-us reveal">
     <h2>Why us?</h2>
     <div class="features-grid">
         <div class="feature-item">
@@ -62,7 +62,7 @@ description: Contact Villa Windows for a free estimate on your retrofit double g
     </div>
 </section>
 
-<section class="cta-box">
+<section class="cta-box reveal">
     <h2>Have a question?</h2>
     <p>Please get in touch with us.</p>
     <a href="{{ '/free-estimate' | relative_url }}" class="btn">CONTACT US</a>

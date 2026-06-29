@@ -12,7 +12,7 @@ description: Villa Windows Auckland - Specialists in Sash Windows and Timber Joi
     </div>
 </section>
 
-<section class="services-overview">
+<section class="services-overview reveal">
     <h2>VILLA SASH WINDOW REPAIRS</h2>
     <div class="service-cards">
         <div class="card">
@@ -38,7 +38,7 @@ description: Villa Windows Auckland - Specialists in Sash Windows and Timber Joi
     </div>
 </section>
 
-<section class="about-us">
+<section class="about-us reveal">
     <div class="about-us-flex">
         <div class="about-us-content">
             <h2>VILLA WINDOWS</h2>
@@ -49,7 +49,7 @@ description: Villa Windows Auckland - Specialists in Sash Windows and Timber Joi
     </div>
 </section>
 
-<section class="service-details">
+<section class="service-details reveal">
     <div class="about-us-flex">
         <div class="about-us-content">
             <h2>Sash window repairs and restoration</h2>
@@ -69,7 +69,7 @@ description: Villa Windows Auckland - Specialists in Sash Windows and Timber Joi
     </div>
 </section>
 
-<section class="why-us">
+<section class="why-us reveal">
     <h2>Why us?</h2>
     <div class="features-grid">
         <div class="feature-item">
@@ -99,7 +99,7 @@ description: Villa Windows Auckland - Specialists in Sash Windows and Timber Joi
     </div>
 </section>
 
-<section class="cta-box">
+<section class="cta-box reveal">
     <h2>Have a question?</h2>
     <p>Please get in touch with us.</p>
     <a href="{{ '/free-estimate' | relative_url }}" class="btn">CONTACT US</a>
