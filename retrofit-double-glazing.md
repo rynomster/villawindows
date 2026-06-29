@@ -2,6 +2,7 @@
 layout: default
 title: Sash Windows — Retrofit Double-Glazing
 description: Upgrade your original timber sash windows with modern double glazing. Keep the heritage look while improving thermal performance and comfort.
+category: services
 ---
 
 <section class="hero hero--inner">

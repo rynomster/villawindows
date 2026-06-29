@@ -2,6 +2,7 @@
 layout: default
 title: Sash Windows — Service & Maintenance
 description: Professional maintenance and repair for traditional timber sash windows. Re-cording, re-weighting, and ensuring smooth operation for Auckland heritage homes.
+category: services
 ---
 
 <section class="hero hero--inner">

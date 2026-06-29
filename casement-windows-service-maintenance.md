@@ -2,6 +2,7 @@
 layout: default
 title: Casement Windows — Service & Maintenance
 description: Expert maintenance and repair for timber casement windows. Hinge replacement, draught proofing, and timber restoration in Auckland.
+category: services
 ---
 
 <section class="hero hero--inner">

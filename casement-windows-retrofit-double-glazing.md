@@ -2,6 +2,7 @@
 layout: default
 title: Casement Windows — Retrofit Double-Glazing
 description: Modern double glazing for timber casement windows. Improve the thermal performance of your heritage home without changing its appearance.
+category: services
 ---
 
 <section class="hero hero--inner">

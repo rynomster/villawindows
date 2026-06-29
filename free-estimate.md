@@ -19,56 +19,43 @@ description: Contact Villa Windows for a free estimate on your timber window pro
 </section>
 
 <section class="reveal">
-    <div class="estimate-grid">
-        <div class="form-container">
-            <form action="#" method="post">
-                <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" required placeholder="Your name">
+    <div class="estimate-grid" style="grid-template-columns: 1fr 1fr;">
+        <div class="contact-methods">
+            <div class="label-mono">Get in touch</div>
+            <h2 style="margin: 24px 0;">How to reach us</h2>
+            <p>For the fastest response, please use WhatsApp or call us directly. We're happy to discuss your project and provide a free estimate.</p>
+
+            <div style="margin-top: 48px;">
+                <div style="margin-bottom: 32px;">
+                    <span class="label-mono" style="font-size: 10px; margin-bottom: 8px;">Direct Phone</span>
+                    <div style="font-family: var(--font-heading); font-size: 32px; color: var(--color-text);">
+                        <a href="tel:+6493201798" style="color: inherit;">09 320 1798</a>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" required placeholder="your@email.com">
+
+                <div style="margin-bottom: 32px;">
+                    <span class="label-mono" style="font-size: 10px; margin-bottom: 8px;">Email Address</span>
+                    <div style="font-size: 20px; color: var(--color-text);">
+                        <a href="mailto:trevor@villawindows.co.nz" style="color: inherit; border-bottom: 1px solid var(--color-border);">trevor@villawindows.co.nz</a>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" placeholder="021 000 0000">
+
+                <div>
+                    <a href="https://wa.me/6493201798" class="btn" style="padding: 20px 40px; font-size: 16px;">Chat on WhatsApp</a>
                 </div>
-                <div class="form-group">
-                    <label for="service">Interested In</label>
-                    <select id="service" name="service">
-                        <option value="sash-double-glazing">Sash Window Double Glazing</option>
-                        <option value="sash-maintenance">Sash Window Maintenance</option>
-                        <option value="casement-double-glazing">Casement Window Double Glazing</option>
-                        <option value="casement-maintenance">Casement Window Maintenance</option>
-                        <option value="other">Other Repair / Restoration</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="message">Project Details</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Tell us about your windows..."></textarea>
-                </div>
-                <button type="submit" class="btn">Send Request</button>
-            </form>
+            </div>
         </div>
 
         <div class="sidebar">
             <div class="sidebar-card">
-                <h3>Direct Contact</h3>
-                <p>Speak with our specialist:</p>
-                <div class="sidebar-phone">
-                    <a href="tel:+6493201798">09 320 1798</a>
-                </div>
+                <h3>Workshop & Hours</h3>
                 <div class="info-box">
-                    <p><strong>Email:</strong><br>trevor@villawindows.co.nz</p>
-                    <p><strong>Hours:</strong><br>Mon – Fri, 8am – 5pm</p>
-                    <p><strong>Workshop:</strong><br>East Tamaki, Auckland</p>
+                    <p><strong>Workshop Location:</strong><br>East Tamaki, Auckland</p>
+                    <p><strong>Business Hours:</strong><br>Monday – Friday: 8am – 5pm<br>Saturday – Sunday: Closed</p>
                 </div>
-            </div>
-
-            <div style="margin-top: 32px; padding: 24px; border: 1px solid var(--color-border); border-radius: 2px;">
-                <p style="font-size: 14.5px; color: var(--color-text-soft);"><strong>WhatsApp:</strong><br>For a faster response, you can also reach us via WhatsApp.</p>
-                <a href="https://wa.me/6493201798" class="btn btn--outline" style="color: var(--color-primary); border-color: var(--color-primary); width: 100%; margin-top: 16px;">Chat with us</a>
+                <div class="info-box" style="margin-top: 24px;">
+                    <p><strong>Service Area:</strong><br>We provide on-site assessments and installations across the greater Auckland area.</p>
+                </div>
             </div>
         </div>
     </div>

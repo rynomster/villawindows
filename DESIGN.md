@@ -26,7 +26,7 @@ type system.
 | Navigation | static bar | **fixed, transparent-over-hero → frosted-white on scroll**, + scroll-progress bar |
 | Motion | basic reveal | reveal + stagger + hero parallax + image hover-zoom + FAQ accordion |
 | Project gallery | fixed grid | responsive **masonry** (CSS columns), all 23 projects |
-| Forms | plain | focus rings, styled select, animated success state |
+| Forms | N/A | Removed per latest instruction; replaced by direct contact methods. |
 
 If a value here conflicts with the old CSS, **this document wins**.
 
