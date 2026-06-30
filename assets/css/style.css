@@ -1246,6 +1246,15 @@ footer {
   }
 }
 
+/* --- Lightbox --- */
+#lightbox { display: none; position: fixed; inset: 0; z-index: 1000; background: rgba(0,0,0,0.9); align-items: center; justify-content: center; }
+.lightbox-content img { max-width: 90vw; max-height: 90vh; object-fit: contain; }
+.lightbox-close, .lightbox-nav { position: absolute; color: #fff; background: none; border: none; cursor: pointer; font-size: 3rem; padding: 1rem; }
+.lightbox-close { top: 1rem; right: 1rem; line-height: 1; }
+.lightbox-prev { left: 1rem; top: 50%; transform: translateY(-50%); }
+.lightbox-next { right: 1rem; top: 50%; transform: translateY(-50%); }
+.lightbox-trigger { cursor: zoom-in; }
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-delay: -1ms !important;
