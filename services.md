@@ -111,7 +111,7 @@ description: Explore our full range of specialist timber joinery services, from 
         <h2>Unsure what your windows need?</h2>
         <p>Every home is unique. We provide free advice and estimates based on decades of experience.</p>
         <div class="hero-actions" style="justify-content:center; animation: none;">
-            <a href="tel:+6493201798" class="btn btn--white">Call 09 320 1798</a>
+            <a href="tel:+6421887934" class="btn btn--white">Call 021 887 934</a>
             <a href="{{ '/free-estimate' | relative_url }}" class="btn btn--outline">Get a Free Estimate</a>
         </div>
     </div>
