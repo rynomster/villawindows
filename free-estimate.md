@@ -2,6 +2,7 @@
 layout: default
 title: Request a Free Estimate
 description: Contact Villa Windows for a free estimate on your timber window project. Specialist sash and casement services in Auckland.
+google_tag: true
 ---
 
 <section class="hero hero--inner">
