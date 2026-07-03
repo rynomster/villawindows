@@ -56,7 +56,7 @@ category: services
         <h2>Have a question about your windows?</h2>
         <p>We're happy to point you in the right direction. No job is too small for expert advice.</p>
         <div class="hero-actions" style="justify-content:center; animation: none;">
-            <a href="tel:+6493201798" class="btn btn--white">Call 09 320 1798</a>
+            <a href="tel:+6421887934" class="btn btn--white">Call 021 887 934</a>
             <a href="{{ '/free-estimate' | relative_url }}" class="btn btn--outline">Get an estimate</a>
         </div>
     </div>

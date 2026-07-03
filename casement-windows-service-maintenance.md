@@ -51,7 +51,7 @@ category: services
         <h2>Treat your joinery with the respect it deserves</h2>
         <p style="max-width: 600px; margin: 0 auto 32px;">Don't let minor issues become major repairs. Book a maintenance check for your heritage windows today.</p>
         <div class="hero-actions" style="justify-content:center; animation: none;">
-            <a href="tel:+6493201798" class="btn">Call 09 320 1798</a>
+            <a href="tel:+6421887934" class="btn">Call 021 887 934</a>
             <a href="{{ '/free-estimate' | relative_url }}" class="btn btn--outline" style="color: var(--color-primary); border-color: var(--color-primary);">Free Estimate</a>
         </div>
     </div>

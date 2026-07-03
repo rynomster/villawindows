@@ -2,6 +2,7 @@
 layout: default
 title: Request a Free Estimate
 description: Contact Villa Windows for a free estimate on your timber window project. Specialist sash and casement services in Auckland.
+google_tag: true
 ---
 
 <section class="hero hero--inner">
@@ -29,7 +30,7 @@ description: Contact Villa Windows for a free estimate on your timber window pro
                 <div class="contact-item">
                     <span class="label-mono">Direct Phone</span>
                     <div class="contact-phone">
-                        <a href="tel:+6493201798">09 320 1798</a>
+                        <a href="tel:+6421887934">021 887 934</a>
                     </div>
                 </div>
 
@@ -41,7 +42,7 @@ description: Contact Villa Windows for a free estimate on your timber window pro
                 </div>
 
                 <div class="contact-action">
-                    <a href="https://wa.me/6493201798" class="btn btn--whatsapp">Chat on WhatsApp</a>
+                    <a href="https://wa.me/6421887934" class="btn btn--whatsapp">Chat on WhatsApp</a>
                 </div>
             </div>
         </div>

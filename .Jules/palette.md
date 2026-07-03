@@ -5,3 +5,7 @@
 ## 2026-06-29 - [Accessible Checkbox Toggles]
 **Learning:** Using `display: none` on a checkbox-based toggle (like a hamburger menu) removes it from the keyboard tab order, making it impossible for keyboard users to open the menu.
 **Action:** Use a visually hidden pattern (sr-only) for the checkbox to keep it focusable, and use the `:focus-visible` pseudo-class on the checkbox to apply a visible focus indicator to the associated label.
+
+## 2026-06-30 - [Gallery Progress Indicators]
+**Learning:** In large image galleries, users can lose sense of their position. Providing a visual position indicator (e.g., "3 / 23") improves orientation and sets expectations for total content.
+**Action:** Always include a dynamic counter or progress indicator in lightbox galleries to enhance user navigation and spatial awareness.
