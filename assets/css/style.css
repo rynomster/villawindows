@@ -254,6 +254,12 @@ p {
   transition: all 0.4s var(--transition-standard);
 }
 
+@media (max-width: 768px) {
+  #site-header {
+    padding: 12px 0;
+  }
+}
+
 #site-header.is-scrolled {
   background: rgba(255,255,255,0.92);
   backdrop-filter: saturate(140%) blur(12px);
@@ -275,6 +281,12 @@ p {
   height: 48px;
   width: auto;
   transition: height 0.4s var(--transition-standard);
+}
+
+@media (max-width: 768px) {
+  .logo img {
+    height: 36px;
+  }
 }
 
 #site-header.is-scrolled .logo img {
@@ -397,11 +409,12 @@ p {
   position: relative;
   min-height: 100svh;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
   overflow: hidden;
   background: var(--color-bg-dark);
   max-width: none;
   padding: 0;
+  padding-top: clamp(100px, 15vh, 140px);
 }
 
 .hero--inner {
@@ -433,7 +446,7 @@ p {
   z-index: 3;
   width: 100%;
   max-width: 1280px;
-  margin: 0 auto;
+  margin: auto auto 0;
   padding: 0 clamp(20px, 5vw, 64px) clamp(70px, 11vh, 130px);
 }
 
