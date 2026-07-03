@@ -400,6 +400,8 @@ p {
   align-items: flex-end;
   overflow: hidden;
   background: var(--color-bg-dark);
+  max-width: none;
+  padding: 0;
 }
 
 .hero--inner {
