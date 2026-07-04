@@ -298,9 +298,16 @@
         });
 
         window.addEventListener('keydown', e => {
+            if (e.key === 'Escape') {
+                if (lb.style.display === 'flex') closeLb();
+                else {
+                    const navToggle = document.getElementById('nav-toggle');
+                    if (navToggle) navToggle.checked = false;
+                }
+            }
+
             if (lb.style.display !== 'flex') return;
 
-            if (e.key === 'Escape') closeLb();
             if (e.key === 'ArrowRight') updateLb(curIdx + 1);
             if (e.key === 'ArrowLeft') updateLb(curIdx - 1);
 
