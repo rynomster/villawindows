@@ -9,3 +9,7 @@
 ## 2026-06-30 - [Gallery Progress Indicators]
 **Learning:** In large image galleries, users can lose sense of their position. Providing a visual position indicator (e.g., "3 / 23") improves orientation and sets expectations for total content.
 **Action:** Always include a dynamic counter or progress indicator in lightbox galleries to enhance user navigation and spatial awareness.
+
+## 2026-07-01 - [Non-blocking Gallery Overlays]
+**Learning:** Absolute-positioned overlays (like project captions) can unintentionally block mouse interactions with underlying elements, even when they appear visually transparent.
+**Action:** Apply `pointer-events: none` to hover overlays to ensure clicks and touch events pass through to the primary interactive element (e.g., a lightbox trigger) underneath.

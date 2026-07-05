@@ -763,6 +763,7 @@ section.full-width {
   padding: var(--space-24);
   opacity: 0;
   transition: opacity 0.4s var(--transition-standard);
+  pointer-events: none;
 }
 
 .project-tile:hover .project-caption {
