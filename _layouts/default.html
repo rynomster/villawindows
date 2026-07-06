@@ -217,6 +217,14 @@
 
         window.addEventListener('scroll', handleScroll, { passive: true });
 
+        // --- Keyboard Accessibility for Mobile Nav ---
+        window.addEventListener('keydown', e => {
+            const navToggle = document.getElementById('nav-toggle');
+            if (e.key === 'Escape' && navToggle && navToggle.checked) {
+                navToggle.checked = false;
+            }
+        });
+
         // --- FAQ Accordion ---
         document.addEventListener('DOMContentLoaded', () => {
             const faqItems = document.querySelectorAll('.faq-item');
@@ -298,9 +306,16 @@
         });
 
         window.addEventListener('keydown', e => {
+            if (e.key === 'Escape') {
+                if (lb.style.display === 'flex') closeLb();
+                else {
+                    const navToggle = document.getElementById('nav-toggle');
+                    if (navToggle) navToggle.checked = false;
+                }
+            }
+
             if (lb.style.display !== 'flex') return;
 
-            if (e.key === 'Escape') closeLb();
             if (e.key === 'ArrowRight') updateLb(curIdx + 1);
             if (e.key === 'ArrowLeft') updateLb(curIdx - 1);
 

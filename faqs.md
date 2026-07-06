@@ -150,7 +150,7 @@ description: Find answers to common questions about retrofit double glazing, her
         <p style="max-width: 600px; margin: 0 auto 32px;">If you can't find your answer here, please reach out. We're happy to provide expert advice on your timber joinery.</p>
         <div class="hero-actions" style="justify-content:center; animation: none;">
             <a href="{{ '/free-estimate' | relative_url }}" class="btn">Contact Us</a>
-            <a href="https://wa.me/6421887934" class="btn btn--outline" style="color: var(--color-primary); border-color: var(--color-primary);">WhatsApp Us</a>
+            <a href="https://wa.me/6421887934" class="btn btn--outline" style="color: var(--color-primary); border-color: var(--color-primary);" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Us (opens in a new tab)">WhatsApp Us</a>
         </div>
     </div>
 </section>
