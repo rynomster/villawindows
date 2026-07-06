@@ -217,6 +217,14 @@
 
         window.addEventListener('scroll', handleScroll, { passive: true });
 
+        // --- Keyboard Accessibility for Mobile Nav ---
+        window.addEventListener('keydown', e => {
+            const navToggle = document.getElementById('nav-toggle');
+            if (e.key === 'Escape' && navToggle && navToggle.checked) {
+                navToggle.checked = false;
+            }
+        });
+
         // --- FAQ Accordion ---
         document.addEventListener('DOMContentLoaded', () => {
             const faqItems = document.querySelectorAll('.faq-item');
