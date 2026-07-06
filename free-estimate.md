@@ -42,7 +42,7 @@ google_tag: true
                 </div>
 
                 <div class="contact-action">
-                    <a href="https://wa.me/6421887934" class="btn btn--whatsapp">Chat on WhatsApp</a>
+                    <a href="https://wa.me/6421887934" class="btn btn--whatsapp" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
                 </div>
             </div>
         </div>
