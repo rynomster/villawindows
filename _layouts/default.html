@@ -152,12 +152,12 @@
     </footer>
 
     <!-- Interactivity: Scroll Reveal & Lightbox -->
-    <div id="lightbox" role="dialog" aria-modal="true" aria-label="Image Gallery" tabindex="-1">
-        <button class="lightbox-close" aria-label="Close">&times;</button>
-        <button class="lightbox-nav lightbox-prev" aria-label="Previous">&lsaquo;</button>
-        <button class="lightbox-nav lightbox-next" aria-label="Next">&rsaquo;</button>
+    <div id="lightbox" role="dialog" aria-modal="true" aria-label="Image Gallery (Press Esc to close)" tabindex="-1">
+        <button class="lightbox-close" aria-label="Close (Esc)">&times;</button>
+        <button class="lightbox-nav lightbox-prev" aria-label="Previous Image (Left arrow)">&lsaquo;</button>
+        <button class="lightbox-nav lightbox-next" aria-label="Next Image (Right arrow)">&rsaquo;</button>
         <div class="lightbox-content"></div>
-        <div class="lightbox-counter"></div>
+        <div class="lightbox-counter" aria-live="polite"></div>
     </div>
 
     <script>
@@ -278,13 +278,13 @@
         const openLb = i => {
             lastEl = document.activeElement;
             updateLb(i);
-            lb.style.display = 'flex';
+            lb.classList.add('is-open');
             document.body.style.overflow = 'hidden';
             lb.focus();
         };
 
         const closeLb = () => {
-            lb.style.display = 'none';
+            lb.classList.remove('is-open');
             document.body.style.overflow = '';
             lastEl?.focus();
         };
@@ -307,14 +307,14 @@
 
         window.addEventListener('keydown', e => {
             if (e.key === 'Escape') {
-                if (lb.style.display === 'flex') closeLb();
+                if (lb.classList.contains('is-open')) closeLb();
                 else {
                     const navToggle = document.getElementById('nav-toggle');
                     if (navToggle) navToggle.checked = false;
                 }
             }
 
-            if (lb.style.display !== 'flex') return;
+            if (!lb.classList.contains('is-open')) return;
 
             if (e.key === 'ArrowRight') updateLb(curIdx + 1);
             if (e.key === 'ArrowLeft') updateLb(curIdx - 1);
