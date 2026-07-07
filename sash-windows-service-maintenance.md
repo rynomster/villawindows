@@ -17,7 +17,7 @@ category: services
         <h1>Sash Windows: Service & Maintenance</h1>
         <p>Professional servicing of traditional timber sash windows. We restore the smooth, effortless operation your windows were designed for 80–100 years ago.</p>
         <div class="hero-actions">
-            <a href="{{ '/free-estimate' | relative_url }}" class="btn">Request a service</a>
+            <a href="{{ '/free-estimate' | relative_url }}" class="btn">Request a Free Estimate</a>
         </div>
     </div>
 </section>
@@ -57,7 +57,7 @@ category: services
         <p>We're happy to point you in the right direction. No job is too small for expert advice.</p>
         <div class="hero-actions" style="justify-content:center; animation: none;">
             <a href="tel:+6421887934" class="btn btn--white">Call 021 887 934</a>
-            <a href="{{ '/free-estimate' | relative_url }}" class="btn btn--outline">Get an estimate</a>
+            <a href="{{ '/free-estimate' | relative_url }}" class="btn btn--outline">Request a Free Estimate</a>
         </div>
     </div>
 </section>

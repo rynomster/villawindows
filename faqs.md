@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Frequently Asked Questions
-description: Find answers to common questions about retrofit double glazing, heritage window maintenance, and our specialist services.
+title: FAQs: Retrofit Double Glazing & Window Repair Auckland
+description: Common questions about retrofit double glazing for timber windows, cost vs replacement, and heritage window maintenance in Auckland.
 ---
 
 <section class="hero hero--inner">
@@ -20,6 +20,61 @@ description: Find answers to common questions about retrofit double glazing, her
 
 <section class="reveal">
     <div class="faq-accordion">
+        <!-- FAQ Item: Can old timber windows be double glazed? -->
+        <div class="faq-item stagger-item">
+            <button class="faq-question">
+                <h3>Can old timber sash windows be double glazed?</h3>
+                <div class="faq-icon"></div>
+            </button>
+            <div class="faq-answer">
+                <p>Yes, absolutely. We specialise in retrofitting high-performance Insulated Glass Units (IGUs) into existing timber sash and casement frames. As long as your timber frames are in reasonable structural condition, they can be upgraded to double glazing.</p>
+            </div>
+        </div>
+
+        <!-- FAQ Item: Is retrofit cheaper than replacement? -->
+        <div class="faq-item stagger-item">
+            <button class="faq-question">
+                <h3>Is retrofit double glazing cheaper than replacing windows?</h3>
+                <div class="faq-icon"></div>
+            </button>
+            <div class="faq-answer">
+                <p>Yes, significantly. Retrofitting allows you to keep your high-quality original timber joinery, avoiding the cost of new frames and the structural work required for full replacement. It is generally the best-value way to achieve modern thermal performance in a heritage home.</p>
+            </div>
+        </div>
+
+        <!-- FAQ Item: Appearance change? -->
+        <div class="faq-item stagger-item">
+            <button class="faq-question">
+                <h3>Will retrofit double glazing change the appearance of my villa windows?</h3>
+                <div class="faq-icon"></div>
+            </button>
+            <div class="faq-answer">
+                <p>Our goal is to preserve the authentic character of your home. The new double glazed units are installed within your existing frames, meaning the look of your windows remains virtually unchanged from the outside. We can even retain or replicate original glazing bars (mullions).</p>
+            </div>
+        </div>
+
+        <!-- FAQ Item: Draughts and noise? -->
+        <div class="faq-item stagger-item">
+            <button class="faq-question">
+                <h3>Does retrofit double glazing help with draughts and noise?</h3>
+                <div class="faq-icon"></div>
+            </button>
+            <div class="faq-answer">
+                <p>Yes, significantly. Double glazing provides a much better thermal and acoustic barrier than single glass. Additionally, as part of our installation process, we service the windows to ensure they close tightly, which eliminates draughts and further reduces noise.</p>
+            </div>
+        </div>
+
+        <!-- FAQ Item: Glass options? -->
+        <div class="faq-item stagger-item">
+            <button class="faq-question">
+                <h3>What glass options are available?</h3>
+                <div class="faq-icon"></div>
+            </button>
+            <div class="faq-answer">
+                <p>We offer a variety of options including high-performance Low-E glass for maximum warmth, acoustic laminate for superior noise reduction, and various obscure or patterned glass styles for privacy. We can also encapsulate existing leadlights into new IGUs.</p>
+            </div>
+        </div>
+
         <!-- FAQ Item 01 -->
         <div class="faq-item stagger-item">
             <button class="faq-question">
@@ -115,7 +170,18 @@ description: Find answers to common questions about retrofit double glazing, her
                 <div class="faq-icon"></div>
             </button>
             <div class="faq-answer">
-                <p>We primarily service the greater Auckland area. In exceptional circumstances, we may consider projects outside of Auckland—feel free to get in touch to discuss your requirements.</p>
+                <p>We primarily service the greater Auckland area, including Ponsonby, Grey Lynn, Remuera, Mt Eden, Devonport, and the North Shore. In exceptional circumstances, we may consider projects outside of Auckland—feel free to get in touch to discuss your requirements.</p>
+            </div>
+        </div>
+
+        <!-- FAQ Item: How do I get an estimate? -->
+        <div class="faq-item stagger-item">
+            <button class="faq-question">
+                <h3>How do I get an estimate?</h3>
+                <div class="faq-icon"></div>
+            </button>
+            <div class="faq-answer">
+                <p>Getting a free estimate is easy. Simply fill out our <a href="/free-estimate" style="text-decoration: underline;">Free Estimate form</a> with your details, or send us a message on WhatsApp. Including photos of your windows is very helpful for a quick and accurate initial assessment.</p>
             </div>
         </div>
 

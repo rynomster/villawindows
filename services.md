@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Our Services
-description: Explore our full range of specialist timber joinery services, from sash window double glazing to heritage restoration in Auckland.
+title: Services: Retrofit Double Glazing & Sash Window Repair Auckland
+description: Specialist timber joinery services in Auckland. We focus on retrofit double glazing for villa windows, sash window repairs, and casement maintenance.
 ---
 
 <section class="hero hero--inner">

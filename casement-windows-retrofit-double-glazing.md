@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Casement Windows — Retrofit Double-Glazing
-description: Modern double glazing for timber casement windows. Improve the thermal performance of your heritage home without changing its appearance.
+title: Casement Window Retrofit Double Glazing Auckland — Villa Windows
+description: Upgrade your timber casement windows with high-performance double glazing. Keep the heritage look while improving warmth and reducing noise.
 category: services
 ---
 
@@ -17,7 +17,7 @@ category: services
         <h1>Casement Windows: Retrofit Double-Glazing</h1>
         <p>Improve comfort and energy efficiency without changing the look of your home. High-quality double glazing tailored for traditional timber casement windows.</p>
         <div class="hero-actions">
-            <a href="{{ '/free-estimate' | relative_url }}" class="btn">Request an estimate</a>
+            <a href="{{ '/free-estimate' | relative_url }}" class="btn">Request a Free Estimate</a>
         </div>
     </div>
 </section>
