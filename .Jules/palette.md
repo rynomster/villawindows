@@ -17,3 +17,11 @@
 ## 2026-07-03 - [Safe Global Event Listeners]
 **Learning:** In multi-page static sites like Jekyll, global event listeners (e.g., for navigation Escape keys) in the main layout must be safely guarded with null checks. Attempting to access properties of elements that might not exist on every page (like a mobile nav toggle) will cause a TypeError and potentially break all other site scripts.
 **Action:** Always check for element existence before accessing properties in global listeners: `if (el && el.property)`.
+
+## 2026-07-05 - [Accessible Gallery Tiles]
+**Learning:** Image tiles with hover-only captions are inaccessible to keyboard users. Using `:focus-within` on the tile container allows keyboard users to reveal captions and trigger scaling effects when they tab to the underlying link or button.
+**Action:** Always pair `:hover` styles with `:focus-within` for interactive content overlays to maintain parity between mouse and keyboard experiences.
+
+## 2026-07-05 - [Smooth Modal Transitions]
+**Learning:** The `display` property cannot be animated. To achieve smooth entrance/exit animations for modals or lightboxes, use a combination of `opacity`, `visibility`, and `transition`.
+**Action:** For accessible and smooth modals, toggle a class that sets `opacity: 1` and `visibility: visible` instead of switching `display: flex` to `none`.
