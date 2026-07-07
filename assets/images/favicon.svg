@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Top Cornice -->
+  <rect x="25" y="5" width="50" height="2" fill="#12222e"/>
+  <rect x="22" y="9" width="56" height="3" fill="#12222e"/>
+  <rect x="25" y="14" width="50" height="2" fill="#12222e"/>
+
+  <!-- Top Sash (2x2 panes) -->
+  <rect x="28" y="22" width="20" height="12" fill="#3d6d8c"/>
+  <rect x="52" y="22" width="20" height="12" fill="#3d6d8c"/>
+  <rect x="28" y="38" width="20" height="12" fill="#3d6d8c"/>
+  <rect x="52" y="38" width="20" height="12" fill="#3d6d8c"/>
+
+  <!-- Meeting Rail Detail -->
+  <path d="M28 54 h20 v6 q0 4 -4 4 h-12 q-4 0 -4 -4 z" fill="#3d6d8c"/>
+  <path d="M52 54 h20 v6 q0 4 -4 4 h-12 q-4 0 -4 -4 z" fill="#3d6d8c"/>
+
+  <!-- Bottom Sash (2 panes) -->
+  <rect x="28" y="68" width="20" height="22" fill="#3d6d8c"/>
+  <rect x="52" y="68" width="20" height="22" fill="#3d6d8c"/>
+
+  <!-- Sill -->
+  <rect x="22" y="94" width="56" height="4" fill="#12222e"/>
+</svg>
