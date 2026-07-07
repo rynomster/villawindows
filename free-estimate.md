@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Request a Free Estimate
-description: Contact Villa Windows for a free estimate on your timber window project. Specialist sash and casement services in Auckland.
+title: Free Estimate: Retrofit Double Glazing Auckland — Villa Windows
+description: Request a free estimate for retrofit double glazing, sash window repairs, or timber joinery maintenance in Auckland. Serving since 2010.
 google_tag: true
 ---
 
@@ -22,39 +22,156 @@ google_tag: true
 <section class="reveal">
     <div class="estimate-grid">
         <div class="contact-methods">
-            <div class="label-mono">Get in touch</div>
-            <h2 class="contact-heading">How to reach us</h2>
-            <p>For the fastest response, please use WhatsApp or call us directly. We're happy to discuss your project and provide a free estimate.</p>
+            <div class="label-mono">Request an estimate</div>
+            <h2 class="contact-heading">Project Details</h2>
+            <p>Please provide some details about your project below. This helps us provide a more accurate initial assessment.</p>
 
-            <div class="contact-links">
-                <div class="contact-item">
-                    <span class="label-mono">Direct Phone</span>
-                    <div class="contact-phone">
-                        <a href="tel:+6421887934">021 887 934</a>
+            <form id="estimate-form" class="estimate-form" style="margin-top: 32px;">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required placeholder="Your name">
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="021 000 0000">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="email@example.com">
                     </div>
                 </div>
 
-                <div class="contact-item">
-                    <span class="label-mono">Email Address</span>
-                    <div class="contact-email">
-                        <a href="mailto:trevor@villawindows.co.nz">trevor@villawindows.co.nz</a>
+                <div class="form-group">
+                    <label for="suburb">Auckland Suburb *</label>
+                    <select id="suburb" name="suburb" required>
+                        <option value="" disabled selected>Select your suburb...</option>
+                        <option value="Ponsonby">Ponsonby</option>
+                        <option value="Grey Lynn">Grey Lynn</option>
+                        <option value="Remuera">Remuera</option>
+                        <option value="Mount Eden">Mount Eden</option>
+                        <option value="Epsom">Epsom</option>
+                        <option value="Sandringham">Sandringham</option>
+                        <option value="Kingsland">Kingsland</option>
+                        <option value="Devonport">Devonport</option>
+                        <option value="North Shore">North Shore</option>
+                        <option value="East Auckland">East Auckland</option>
+                        <option value="West Auckland">West Auckland</option>
+                        <option value="South Auckland">South Auckland</option>
+                        <option value="Other">Other (please specify in message)</option>
+                    </select>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div class="form-group">
+                        <label for="num-windows">Approx. Number of Windows</label>
+                        <input type="number" id="num-windows" name="num-windows" placeholder="e.g. 5">
+                    </div>
+                    <div class="form-group">
+                        <label for="window-type">Window Type</label>
+                        <select id="window-type" name="window-type">
+                            <option value="Sash">Sash</option>
+                            <option value="Casement">Casement</option>
+                            <option value="Mixed">Mixed / Other</option>
+                            <option value="Unsure">Unsure</option>
+                        </select>
                     </div>
                 </div>
 
-                <div class="contact-action">
-                    <a href="https://wa.me/6421887934" class="btn btn--whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp (opens in a new tab)">Chat on WhatsApp</a>
+                <div class="form-group">
+                    <label for="service">Service Needed</label>
+                    <select id="service" name="service">
+                        <option value="Retrofit Double Glazing">Retrofit Double Glazing</option>
+                        <option value="Repair & Maintenance">Repair & Maintenance</option>
+                        <option value="Full Assessment">Full Assessment / Unsure</option>
+                    </select>
                 </div>
-            </div>
 
-            <div class="review-cta" style="margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--color-border);">
-                <span class="label-mono">Customer Feedback</span>
-                <h3 style="margin: 16px 0;">Happy with our work?</h3>
-                <p style="margin-bottom: 24px;">Your feedback helps others find us. We'd appreciate a quick review on Google.</p>
-                <a href="https://www.google.com/search?q=Villa+Windows+%26+Sash+window+repairs+Auckland#lrd=0x6d0d4967396783d7:0xb79768b75c8797b7,3" target="_blank" rel="noopener noreferrer" class="btn btn--outline" style="color: var(--color-primary); border-color: var(--color-primary);">Review us on Google</a>
-            </div>
+                <div class="form-group">
+                    <label for="message">Message / Project Details</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Tell us more about what you need..."></textarea>
+                </div>
+
+                <p style="font-size: 14px; color: var(--color-text-soft); margin-bottom: 24px;">
+                    <strong>Note:</strong> After clicking below, you can choose to send this via WhatsApp or Email. Please attach any photos of your windows to your message as they are very helpful for estimates.
+                </p>
+
+                <div class="hero-actions" style="margin-top: 32px; animation: none;">
+                    <button type="button" id="submit-whatsapp" class="btn btn--whatsapp" style="width: 100%;">Send via WhatsApp</button>
+                    <button type="button" id="submit-email" class="btn btn--outline" style="width: 100%; color: var(--color-primary); border-color: var(--color-primary);">Send via Email</button>
+                </div>
+            </form>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const form = document.getElementById('estimate-form');
+                    const whatsappBtn = document.getElementById('submit-whatsapp');
+                    const emailBtn = document.getElementById('submit-email');
+
+                    function getFormData() {
+                        const formData = new FormData(form);
+                        let data = {};
+                        formData.forEach((value, key) => data[key] = value);
+                        return data;
+                    }
+
+                    function constructMessage(data) {
+                        return `Hello Villa Windows, I'm interested in an estimate.
+
+Name: ${data.name}
+Phone: ${data.phone}
+Email: ${data.email}
+Suburb: ${data.suburb}
+Approx Windows: ${data['num-windows'] || 'Not specified'}
+Window Type: ${data['window-type']}
+Service: ${data.service}
+
+Details: ${data.message || 'No additional details provided.'}`;
+                    }
+
+                    whatsappBtn.addEventListener('click', function() {
+                        if (!form.reportValidity()) return;
+                        const data = getFormData();
+                        const message = encodeURIComponent(constructMessage(data));
+                        window.open(`https://wa.me/6421887934?text=${message}`, '_blank');
+                    });
+
+                    emailBtn.addEventListener('click', function() {
+                        if (!form.reportValidity()) return;
+                        const data = getFormData();
+                        const subject = encodeURIComponent(`Estimate Request: ${data.name} - ${data.suburb}`);
+                        const body = encodeURIComponent(constructMessage(data));
+                        window.location.href = `mailto:trevor@villawindows.co.nz?subject=${subject}&body=${body}`;
+                    });
+                });
+            </script>
         </div>
 
         <div class="sidebar">
+            <div class="sidebar-card" style="margin-bottom: 24px; background: var(--color-bg-alt); color: var(--color-text); border: 1px solid var(--color-border);">
+                <h3 style="color: var(--color-primary);">Fast Contact</h3>
+                <div class="contact-links" style="margin-top: 24px;">
+                    <div class="contact-item" style="margin-bottom: 20px;">
+                        <span class="label-mono" style="font-size: 9px;">Call Trevor Directly</span>
+                        <div class="contact-phone" style="font-size: 24px;">
+                            <a href="tel:+6421887934">021 887 934</a>
+                        </div>
+                    </div>
+                    <div class="contact-item" style="margin-bottom: 20px;">
+                        <span class="label-mono" style="font-size: 9px;">Email Us</span>
+                        <div class="contact-email" style="font-size: 16px;">
+                            <a href="mailto:trevor@villawindows.co.nz">trevor@villawindows.co.nz</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-cta" style="margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--color-border);">
+                    <span class="label-mono" style="font-size: 9px;">Customer Feedback</span>
+                    <p style="font-size: 14px; margin: 12px 0;">Proudly serving Auckland since 2010.</p>
+                    <a href="https://www.google.com/search?q=Villa+Windows+%26+Sash+window+repairs+Auckland#lrd=0x6d0d4967396783d7:0xb79768b75c8797b7,1" target="_blank" rel="noopener noreferrer" style="font-size: 13px; text-decoration: underline;">Read our Google Reviews</a>
+                </div>
+            </div>
+
             <div class="sidebar-card">
                 <h3>Workshop & Hours</h3>
                 <div class="info-box">

@@ -17,7 +17,7 @@ category: services
         <h1>Casement Windows: Service & Maintenance</h1>
         <p>Professional maintenance for timber casement windows. From hinge replacements to timber restoration, we keep your windows working beautifully.</p>
         <div class="hero-actions">
-            <a href="{{ '/free-estimate' | relative_url }}" class="btn">Request a service</a>
+            <a href="{{ '/free-estimate' | relative_url }}" class="btn">Request a Free Estimate</a>
         </div>
     </div>
 </section>
@@ -51,8 +51,8 @@ category: services
         <h2>Treat your joinery with the respect it deserves</h2>
         <p style="max-width: 600px; margin: 0 auto 32px;">Don't let minor issues become major repairs. Book a maintenance check for your heritage windows today.</p>
         <div class="hero-actions" style="justify-content:center; animation: none;">
-            <a href="tel:+6421887934" class="btn">Call 021 887 934</a>
-            <a href="{{ '/free-estimate' | relative_url }}" class="btn btn--outline" style="color: var(--color-primary); border-color: var(--color-primary);">Free Estimate</a>
+            <a href="tel:+6421887934" class="btn btn--white">Call 021 887 934</a>
+            <a href="{{ '/free-estimate' | relative_url }}" class="btn btn--outline">Request a Free Estimate</a>
         </div>
     </div>
 </section>

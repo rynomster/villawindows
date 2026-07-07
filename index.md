@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Villa Windows — Sash Windows & Timber Joinery Specialists
-description: Villa Windows Auckland - Specialists in sash window repairs, retrofit double-glazing, and timber joinery maintenance. Serving Auckland since 2010.
+title: Retrofit Double Glazing Auckland — Villa Windows
+description: Specialists in retrofit double glazing for Auckland villa and timber windows. Keep your heritage character while improving warmth, comfort, and noise reduction. Serving Auckland since 2010.
 ---
 
 <section class="hero">
@@ -11,11 +11,11 @@ description: Villa Windows Auckland - Specialists in sash window repairs, retrof
     <div class="hero-overlay"></div>
     <div class="hero-inner">
         <div class="label-mono">Heritage craftsmanship</div>
-        <h1>Specialists in Sash Windows and Timber Joinery</h1>
-        <p>Retrofit double-glazing, repair and maintenance to timber joinery. Keeping Auckland's heritage windows working beautifully for generations.</p>
+        <h1>Retrofit Double Glazing for Auckland Villa & Timber Windows</h1>
+        <p>Keep the character. Improve warmth, comfort, and noise reduction without replacing your original timber joinery.</p>
         <div class="hero-actions">
-            <a href="{{ '/free-estimate' | relative_url }}" class="btn">Request a free estimate</a>
-            <a href="{{ '/services' | relative_url }}" class="btn btn--outline">Our Services</a>
+            <a href="{{ '/free-estimate' | relative_url }}" class="btn">Request a Free Estimate</a>
+            <a href="{{ '/retrofit-double-glazing' | relative_url }}" class="btn btn--outline">View Retrofit Double Glazing</a>
         </div>
     </div>
 </section>
@@ -71,9 +71,9 @@ description: Villa Windows Auckland - Specialists in sash window repairs, retrof
     <div class="editorial-grid flipped reveal" style="max-width: 1280px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 64px);">
         <div class="editorial-content">
             <div class="label-mono">About us</div>
-            <h2>Villa Windows</h2>
-            <p><strong>Suffer from hard-to-open or close sash windows?</strong></p>
-            <p>No problem — Villa Windows can help put the slide back in your sash. We're passionate about sash windows and go the extra mile to make sure our customers are happy, from a free quote to tidying up after ourselves.</p>
+            <h2>Auckland's Heritage Window Specialists</h2>
+            <p><strong>Serving Auckland since 2010.</strong></p>
+            <p>Suffer from hard-to-open or close sash windows? No problem — Villa Windows can help put the slide back in your sash. We're passionate about sash windows and go the extra mile to make sure our customers are happy, from a free estimate to tidying up after ourselves.</p>
             <p>You can be assured your windows will be looked after and restored back to the way they were intended 80–100 years ago.</p>
             <a href="{{ '/our-projects' | relative_url }}" class="btn" style="margin-top: 24px;">View Our Projects</a>
         </div>
@@ -96,8 +96,8 @@ description: Villa Windows Auckland - Specialists in sash window repairs, retrof
             </div>
             <div class="feature-item stagger-item">
                 <span class="feature-num">02</span>
-                <h3>Quality materials</h3>
-                <p>Glass units comply with the NZ/AUS standard and carry a 10-year guarantee.</p>
+                <h3>10-Year Guarantee</h3>
+                <p>All our Insulated Glass Units (IGUs) comply with NZ/AUS standards and carry a 10-year guarantee.</p>
             </div>
             <div class="feature-item stagger-item">
                 <span class="feature-num">03</span>
@@ -111,8 +111,8 @@ description: Villa Windows Auckland - Specialists in sash window repairs, retrof
             </div>
             <div class="feature-item stagger-item">
                 <span class="feature-num">05</span>
-                <h3>Competitive rates</h3>
-                <p>A cost-effective retrofit of your old sash windows.</p>
+                <h3>Best-Value Retrofit</h3>
+                <p>A cost-effective way to double glaze your home while keeping your original timber joinery.</p>
             </div>
             <div class="feature-item stagger-item">
                 <span class="feature-num">06</span>
@@ -138,7 +138,7 @@ description: Villa Windows Auckland - Specialists in sash window repairs, retrof
         <p>Free quotes, sound advice and a tidy finish. Get in touch and we'll point you in the right direction.</p>
         <div class="hero-actions" style="justify-content:center; animation: none;">
             <a href="tel:+6421887934" class="btn btn--white">Call 021 887 934</a>
-            <a href="{{ '/free-estimate' | relative_url }}" class="btn btn--outline">Request a free estimate</a>
+            <a href="{{ '/free-estimate' | relative_url }}" class="btn btn--outline">Request a Free Estimate</a>
         </div>
     </div>
 </section>
