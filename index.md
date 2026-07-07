@@ -91,31 +91,36 @@ description: Villa Windows Auckland - Specialists in sash window repairs, retrof
         <div class="why-us-container">
             <div class="feature-item stagger-item">
                 <span class="feature-num">01</span>
+                <h3>Google reviews</h3>
+                <p>Proudly rated for excellence. <a href="https://www.google.com/search?q=Villa+Windows+%26+Sash+window+repairs+Auckland#lrd=0x6d0d4967396783d7:0xb79768b75c8797b7,1" target="_blank" rel="noopener noreferrer" style="color: var(--color-primary-light); text-decoration: underline;">Read what our customers say</a>.</p>
+            </div>
+            <div class="feature-item stagger-item">
+                <span class="feature-num">02</span>
                 <h3>Quality materials</h3>
                 <p>Glass units comply with the NZ/AUS standard and carry a 10-year guarantee.</p>
             </div>
             <div class="feature-item stagger-item">
-                <span class="feature-num">02</span>
+                <span class="feature-num">03</span>
                 <h3>Attention to detail</h3>
                 <p>We take our time and go the extra mile for a neat, tidy finish.</p>
             </div>
             <div class="feature-item stagger-item">
-                <span class="feature-num">03</span>
+                <span class="feature-num">04</span>
                 <h3>Quality workmanship</h3>
                 <p>Your sash windows are well looked after and completed to a high standard.</p>
             </div>
             <div class="feature-item stagger-item">
-                <span class="feature-num">04</span>
+                <span class="feature-num">05</span>
                 <h3>Competitive rates</h3>
                 <p>A cost-effective retrofit of your old sash windows.</p>
             </div>
             <div class="feature-item stagger-item">
-                <span class="feature-num">05</span>
+                <span class="feature-num">06</span>
                 <h3>Free advice</h3>
                 <p>Get in touch from anywhere — we're happy to point you in the right direction.</p>
             </div>
             <div class="feature-item stagger-item">
-                <span class="feature-num">06</span>
+                <span class="feature-num">07</span>
                 <h3>Service excellence</h3>
                 <p>Keeping our promises and keeping you well informed at all times.</p>
             </div>
