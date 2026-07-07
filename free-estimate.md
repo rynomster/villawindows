@@ -45,6 +45,13 @@ google_tag: true
                     <a href="https://wa.me/6421887934" class="btn btn--whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp (opens in a new tab)">Chat on WhatsApp</a>
                 </div>
             </div>
+
+            <div class="review-cta" style="margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--color-border);">
+                <span class="label-mono">Customer Feedback</span>
+                <h3 style="margin: 16px 0;">Happy with our work?</h3>
+                <p style="margin-bottom: 24px;">Your feedback helps others find us. We'd appreciate a quick review on Google.</p>
+                <a href="https://www.google.com/search?q=Villa+Windows+%26+Sash+window+repairs+Auckland#lrd=0x6d0d4967396783d7:0xb79768b75c8797b7,3" target="_blank" rel="noopener noreferrer" class="btn btn--outline" style="color: var(--color-primary); border-color: var(--color-primary);">Review us on Google</a>
+            </div>
         </div>
 
         <div class="sidebar">
