@@ -92,7 +92,7 @@ description: Specialists in retrofit double glazing for Auckland villa and timbe
             <div class="feature-item stagger-item">
                 <span class="feature-num">01</span>
                 <h3>Google reviews</h3>
-                <p>Proudly rated for excellence. <a href="https://www.google.com/search?q=Villa+Windows+%26+Sash+window+repairs+Auckland#lrd=0x6d0d4967396783d7:0xb79768b75c8797b7,1" target="_blank" rel="noopener noreferrer" style="color: var(--color-primary-light); text-decoration: underline;">Read what our customers say</a>.</p>
+                <p>Proudly rated for excellence. <a href="https://www.google.com/search?q=Villa+Windows+%26+Sash+window+repairs+Auckland#lrd=0x6d0d4967396783d7:0xb79768b75c8797b7,1" target="_blank" rel="noopener noreferrer" style="color: var(--color-primary-light); text-decoration: underline;" aria-label="Read what our customers say (opens in a new tab)">Read what our customers say</a>.</p>
             </div>
             <div class="feature-item stagger-item">
                 <span class="feature-num">02</span>
