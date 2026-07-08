@@ -103,6 +103,13 @@ google_tag: true
                 </div>
             </form>
 
+            <div id="estimate-success" class="form-success" style="display: none;" role="alert" tabindex="-1">
+                <div class="success-icon">✓</div>
+                <h3>Request Prepared!</h3>
+                <p>Your estimate request has been prepared. If your WhatsApp or Email app didn't open automatically, please check your background apps.</p>
+                <p>We look forward to discussing your project with you.</p>
+            </div>
+
             <script>
                 document.addEventListener('DOMContentLoaded', function() {
                     const form = document.getElementById('estimate-form');
@@ -130,11 +137,21 @@ Service: ${data.service}
 Details: ${data.message || 'No additional details provided.'}`;
                     }
 
+                    function showSuccess() {
+                        form.style.display = 'none';
+                        const successMsg = document.getElementById('estimate-success');
+                        successMsg.style.display = 'block';
+                        successMsg.focus();
+                        // Scroll to the success message
+                        successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+
                     whatsappBtn.addEventListener('click', function() {
                         if (!form.reportValidity()) return;
                         const data = getFormData();
                         const message = encodeURIComponent(constructMessage(data));
                         window.open(`https://wa.me/6421887934?text=${message}`, '_blank');
+                        showSuccess();
                     });
 
                     emailBtn.addEventListener('click', function() {
@@ -143,6 +160,7 @@ Details: ${data.message || 'No additional details provided.'}`;
                         const subject = encodeURIComponent(`Estimate Request: ${data.name} - ${data.suburb}`);
                         const body = encodeURIComponent(constructMessage(data));
                         window.location.href = `mailto:trevor@villawindows.co.nz?subject=${subject}&body=${body}`;
+                        showSuccess();
                     });
                 });
             </script>
