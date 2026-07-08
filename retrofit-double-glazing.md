@@ -7,7 +7,7 @@ category: services
 
 <section class="hero hero--inner">
     <div class="hero-media">
-        <img src="{{ '/assets/images/screenshot-retrofit-double-glazing.png' | relative_url }}" alt="Retrofit Double Glazing for Sash Windows">
+        <img src="{{ '/assets/images/screenshot-retrofit-double-glazing.png' | relative_url }}" alt="Retrofit Double Glazing for Sash Windows" fetchpriority="high" loading="eager">
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-inner">
@@ -34,7 +34,7 @@ category: services
             </div>
         </div>
         <div class="editorial-image">
-            <img src="{{ '/assets/images/dgu-1.png' | relative_url }}" alt="Double Glazing Unit Detail">
+            <img src="{{ '/assets/images/dgu-1.png' | relative_url }}" alt="Double Glazing Unit Detail" loading="lazy" decoding="async">
         </div>
     </div>
 </section>
@@ -66,7 +66,7 @@ category: services
                 </ul>
             </div>
             <div class="editorial-image">
-                <img src="{{ '/assets/images/project-detail-3.png' | relative_url }}" alt="Timber Joinery Craftsmanship">
+                <img src="{{ '/assets/images/project-detail-3.png' | relative_url }}" alt="Timber Joinery Craftsmanship" loading="lazy" decoding="async">
             </div>
         </div>
     </div>
@@ -164,7 +164,7 @@ category: services
                 <p>All our glass units comply with NZ/AUS standards and carry a <strong>10-year guarantee</strong>.</p>
             </div>
             <div class="editorial-image">
-                <img src="{{ '/assets/images/cathedral-glass.png' | relative_url }}" alt="Custom Glass Options">
+                <img src="{{ '/assets/images/cathedral-glass.png' | relative_url }}" alt="Custom Glass Options" loading="lazy" decoding="async">
             </div>
         </div>
     </div>
@@ -206,7 +206,7 @@ category: services
     <div class="service-grid">
         <div class="service-card stagger-item">
             <div class="card-media">
-                <img src="{{ '/assets/images/screenshot-hero.png' | relative_url }}" alt="Sash Windows">
+                <img src="{{ '/assets/images/screenshot-hero.png' | relative_url }}" alt="Sash Windows" loading="lazy" decoding="async">
             </div>
             <div class="card-content">
                 <h3>Sash Windows</h3>
@@ -215,7 +215,7 @@ category: services
         </div>
         <div class="service-card stagger-item">
             <div class="card-media">
-                <img src="{{ '/assets/images/casement-win-2.png' | relative_url }}" alt="Casement Windows">
+                <img src="{{ '/assets/images/casement-win-2.png' | relative_url }}" alt="Casement Windows" loading="lazy" decoding="async">
             </div>
             <div class="card-content">
                 <h3>Casement Windows</h3>
@@ -224,7 +224,7 @@ category: services
         </div>
         <div class="service-card stagger-item">
             <div class="card-media">
-                <img src="{{ '/assets/images/project-detail-7.png' | relative_url }}" alt="Fixed & Specialty Windows">
+                <img src="{{ '/assets/images/project-detail-7.png' | relative_url }}" alt="Fixed & Specialty Windows" loading="lazy" decoding="async">
             </div>
             <div class="card-content">
                 <h3>Fixed & Specialty</h3>

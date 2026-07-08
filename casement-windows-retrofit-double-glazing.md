@@ -7,7 +7,7 @@ category: services
 
 <section class="hero hero--inner">
     <div class="hero-media">
-        <img src="{{ '/assets/images/screenshot-hero.png' | relative_url }}" alt="Casement Window Retrofit Double Glazing">
+        <img src="{{ '/assets/images/screenshot-hero.png' | relative_url }}" alt="Casement Window Retrofit Double Glazing" fetchpriority="high" loading="eager">
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-inner">
@@ -32,7 +32,7 @@ category: services
             <p>We use high-quality materials that comply with NZ/AUS standards, ensuring your investment is protected for years to come.</p>
         </div>
         <div class="editorial-image">
-            <img src="{{ '/assets/images/casement-win-2.png' | relative_url }}" alt="Casement Window Detail">
+            <img src="{{ '/assets/images/casement-win-2.png' | relative_url }}" alt="Casement Window Detail" loading="lazy" decoding="async">
         </div>
     </div>
 </section>
@@ -48,7 +48,7 @@ category: services
                 <a href="{{ '/our-projects' | relative_url }}" class="btn" style="margin-top: 24px;">View Recent Projects</a>
             </div>
             <div class="editorial-image">
-                <img src="{{ '/assets/images/project-detail-7.png' | relative_url }}" alt="Finished Timber Joinery">
+            <img src="{{ '/assets/images/project-detail-7.png' | relative_url }}" alt="Finished Timber Joinery" loading="lazy" decoding="async">
             </div>
         </div>
     </div>

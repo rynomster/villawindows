@@ -7,7 +7,7 @@ category: services
 
 <section class="hero hero--inner">
     <div class="hero-media">
-        <img src="{{ '/assets/images/adobe-stock-sash-repair.jpg' | relative_url }}" alt="Sash Window Maintenance and Repair">
+        <img src="{{ '/assets/images/adobe-stock-sash-repair.jpg' | relative_url }}" alt="Sash Window Maintenance and Repair" fetchpriority="high" loading="eager">
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-inner">
@@ -42,7 +42,7 @@ category: services
             </div>
         </div>
         <div class="editorial-image">
-            <img src="{{ '/assets/images/project-detail-1.png' | relative_url }}" alt="Sash Window Component Detail">
+            <img src="{{ '/assets/images/project-detail-1.png' | relative_url }}" alt="Sash Window Component Detail" loading="lazy" decoding="async">
         </div>
     </div>
 </section>

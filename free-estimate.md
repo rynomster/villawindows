@@ -7,7 +7,7 @@ google_tag: true
 
 <section class="hero hero--inner">
     <div class="hero-media">
-        <img src="{{ '/assets/images/casement-window-button.png' | relative_url }}" alt="Get a Free Estimate">
+        <img src="{{ '/assets/images/casement-window-button.png' | relative_url }}" alt="Get a Free Estimate" fetchpriority="high" loading="eager">
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-inner">
@@ -209,6 +209,6 @@ Details: ${data.message || 'No additional details provided.'}`;
         <div class="label-mono label-mono--center">Quality assured</div>
         <h2>A decade of expertise</h2>
         <p class="quality-text">Every project we undertake is completed to the highest standards, ensuring your heritage villa remains a beautiful and comfortable place to live.</p>
-        <img src="{{ '/assets/images/double-glazed-villa-1.png' | relative_url }}" alt="Villa Windows Quality Workmanship" class="quality-image">
+        <img src="{{ '/assets/images/double-glazed-villa-1.png' | relative_url }}" alt="Villa Windows Quality Workmanship" class="quality-image" loading="lazy" decoding="async">
     </div>
 </section>
