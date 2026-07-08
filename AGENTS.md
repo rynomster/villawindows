@@ -4,7 +4,7 @@ Welcome! This repository is a Jekyll-based static site ported from WordPress for
 
 ## Architecture & Technology
 - **Jekyll**: The site is built with Jekyll. All content is in `.md` files with YAML front matter.
-- **GitHub Pages**: Deployed via GitHub Pages. The `baseurl` in `_config.yml` is set to `""` (empty string) because the site uses a custom domain (`villawindows.co.nz`). Always use the `relative_url` filter for internal links and assets: `{{ '/path' | relative_url }}`.
+- **GitHub Pages**: Deployed via GitHub Pages. The `baseurl` in `_config.yml` is set to `""` (empty string) because the site uses a custom domain (`www.villawindows.co.nz`). Always use the `relative_url` filter for internal links and assets: `{{ '/path' | relative_url }}`.
 - **Styling**: All styles are in `assets/css/style.css`. Avoid inline styles unless necessary for specific hero sections.
 
 ## Content Management
