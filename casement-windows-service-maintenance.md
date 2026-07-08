@@ -7,7 +7,7 @@ category: services
 
 <section class="hero hero--inner">
     <div class="hero-media">
-        <img src="{{ '/assets/images/screenshot-service-maintenance.png' | relative_url }}" alt="Casement Window Maintenance">
+        <img src="{{ '/assets/images/screenshot-service-maintenance.png' | relative_url }}" alt="Casement Window Maintenance" fetchpriority="high" loading="eager">
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-inner">
@@ -40,7 +40,7 @@ category: services
             </div>
         </div>
         <div class="editorial-image">
-            <img src="{{ '/assets/images/project-detail-2.png' | relative_url }}" alt="Window Frame Restoration">
+            <img src="{{ '/assets/images/project-detail-2.png' | relative_url }}" alt="Window Frame Restoration" loading="lazy" decoding="async">
         </div>
     </div>
 </section>

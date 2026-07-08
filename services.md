@@ -6,7 +6,7 @@ description: Specialist timber joinery services in Auckland. We focus on retrofi
 
 <section class="hero hero--inner">
     <div class="hero-media">
-        <img src="{{ '/assets/images/screenshot-retrofit-double-glazing.png' | relative_url }}" alt="Villa Windows Specialist Services">
+        <img src="{{ '/assets/images/screenshot-retrofit-double-glazing.png' | relative_url }}" alt="Villa Windows Specialist Services" fetchpriority="high" loading="eager">
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-inner">
@@ -26,7 +26,7 @@ description: Specialist timber joinery services in Auckland. We focus on retrofi
         <!-- Service Card 01 -->
         <div class="service-card stagger-item">
             <div class="card-media">
-                <img src="{{ '/assets/images/screenshot-hero.png' | relative_url }}" alt="Sash Window Double Glazing">
+                <img src="{{ '/assets/images/screenshot-hero.png' | relative_url }}" alt="Sash Window Double Glazing" loading="lazy" decoding="async">
             </div>
             <div class="card-content">
                 <span class="card-index">SASH · 01</span>
@@ -39,7 +39,7 @@ description: Specialist timber joinery services in Auckland. We focus on retrofi
         <!-- Service Card 02 -->
         <div class="service-card stagger-item">
             <div class="card-media">
-                <img src="{{ '/assets/images/adobe-stock-sash-repair.jpg' | relative_url }}" alt="Sash Window Maintenance">
+                <img src="{{ '/assets/images/adobe-stock-sash-repair.jpg' | relative_url }}" alt="Sash Window Maintenance" loading="lazy" decoding="async">
             </div>
             <div class="card-content">
                 <span class="card-index">SASH · 02</span>
@@ -52,7 +52,7 @@ description: Specialist timber joinery services in Auckland. We focus on retrofi
         <!-- Service Card 03 -->
         <div class="service-card stagger-item">
             <div class="card-media">
-                <img src="{{ '/assets/images/casement-win-2.png' | relative_url }}" alt="Casement Window Double Glazing">
+                <img src="{{ '/assets/images/casement-win-2.png' | relative_url }}" alt="Casement Window Double Glazing" loading="lazy" decoding="async">
             </div>
             <div class="card-content">
                 <span class="card-index">CASEMENT · 03</span>
@@ -65,7 +65,7 @@ description: Specialist timber joinery services in Auckland. We focus on retrofi
         <!-- Service Card 04 -->
         <div class="service-card stagger-item">
             <div class="card-media">
-                <img src="{{ '/assets/images/screenshot-service-maintenance.png' | relative_url }}" alt="Casement Window Maintenance">
+                <img src="{{ '/assets/images/screenshot-service-maintenance.png' | relative_url }}" alt="Casement Window Maintenance" loading="lazy" decoding="async">
             </div>
             <div class="card-content">
                 <span class="card-index">CASEMENT · 04</span>
@@ -78,7 +78,7 @@ description: Specialist timber joinery services in Auckland. We focus on retrofi
         <!-- Service Card 05 -->
         <div class="service-card stagger-item">
             <div class="card-media">
-                <img src="{{ '/assets/images/project-detail-2.png' | relative_url }}" alt="Repair and Restoration">
+                <img src="{{ '/assets/images/project-detail-2.png' | relative_url }}" alt="Repair and Restoration" loading="lazy" decoding="async">
             </div>
             <div class="card-content">
                 <span class="card-index">HERITAGE · 05</span>
@@ -91,7 +91,7 @@ description: Specialist timber joinery services in Auckland. We focus on retrofi
         <!-- Service Card 06 -->
         <div class="service-card stagger-item">
             <div class="card-media">
-                <img src="{{ '/assets/images/cathedral-glass.png' | relative_url }}" alt="Custom Glass Features">
+                <img src="{{ '/assets/images/cathedral-glass.png' | relative_url }}" alt="Custom Glass Features" loading="lazy" decoding="async">
             </div>
             <div class="card-content">
                 <span class="card-index">DETAIL · 06</span>

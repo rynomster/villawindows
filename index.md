@@ -6,7 +6,7 @@ description: Specialists in retrofit double glazing for Auckland villa and timbe
 
 <section class="hero">
     <div class="hero-media">
-        <img src="{{ '/assets/images/adobe-stock-sash-repair.jpg' | relative_url }}" alt="Heritage Sash Window Repair">
+        <img src="{{ '/assets/images/adobe-stock-sash-repair.jpg' | relative_url }}" alt="Heritage Sash Window Repair" fetchpriority="high" loading="eager">
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-inner">
@@ -62,7 +62,7 @@ description: Specialists in retrofit double glazing for Auckland villa and timbe
             </div>
         </div>
         <div class="editorial-image stagger-item">
-            <img src="{{ '/assets/images/project-detail-3.png' | relative_url }}" alt="Timber Joinery Craftsmanship">
+            <img src="{{ '/assets/images/project-detail-3.png' | relative_url }}" alt="Timber Joinery Craftsmanship" loading="lazy" decoding="async">
         </div>
     </div>
 </section>
@@ -78,7 +78,7 @@ description: Specialists in retrofit double glazing for Auckland villa and timbe
             <a href="{{ '/our-projects' | relative_url }}" class="btn" style="margin-top: 24px;">View Our Projects</a>
         </div>
         <div class="editorial-image">
-            <img src="{{ '/assets/images/adobe-stock-sash-repair.jpg' | relative_url }}" alt="Sash Window Repair Detail">
+            <img src="{{ '/assets/images/adobe-stock-sash-repair.jpg' | relative_url }}" alt="Sash Window Repair Detail" loading="lazy" decoding="async">
         </div>
     </div>
 </section>

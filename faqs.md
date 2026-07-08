@@ -6,7 +6,7 @@ description: Common questions about retrofit double glazing for timber windows, 
 
 <section class="hero hero--inner">
     <div class="hero-media">
-        <img src="{{ '/assets/images/screenshot-service-maintenance.png' | relative_url }}" alt="Frequently Asked Questions">
+        <img src="{{ '/assets/images/screenshot-service-maintenance.png' | relative_url }}" alt="Frequently Asked Questions" fetchpriority="high" loading="eager">
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-inner">

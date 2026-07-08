@@ -1,0 +1,3 @@
+## 2024-07-08 - Image Loading Optimization
+**Learning:** In image-heavy static sites, the default browser loading behavior often leads to contention between critical hero images and below-the-fold content, delaying Largest Contentful Paint (LCP). Explicitly setting `fetchpriority="high"` for the logo and hero image, while using `loading="lazy"` and `decoding="async"` for others, significantly optimizes the critical rendering path without adding JS overhead.
+**Action:** Always audit the first viewport's images for `fetchpriority` and `loading="eager"` and apply `loading="lazy"` to all images below the fold to improve core web vitals.
