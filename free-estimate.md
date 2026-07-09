@@ -98,7 +98,7 @@ google_tag: true
                 </p>
 
                 <div class="hero-actions" style="margin-top: 32px; animation: none;">
-                    <button type="button" id="submit-whatsapp" class="btn btn--whatsapp" style="width: 100%;">Send via WhatsApp</button>
+                    <button type="button" id="submit-whatsapp" class="btn btn--whatsapp" style="width: 100%;" aria-label="Send via WhatsApp (opens in a new tab)">Send via WhatsApp</button>
                     <button type="button" id="submit-email" class="btn btn--outline" style="width: 100%; color: var(--color-primary); border-color: var(--color-primary);">Send via Email</button>
                 </div>
             </form>
@@ -186,7 +186,7 @@ Details: ${data.message || 'No additional details provided.'}`;
                 <div class="review-cta" style="margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--color-border);">
                     <span class="label-mono" style="font-size: 9px;">Customer Feedback</span>
                     <p style="font-size: 14px; margin: 12px 0;">Proudly serving Auckland since 2010.</p>
-                    <a href="https://www.google.com/search?q=Villa+Windows+%26+Sash+window+repairs+Auckland#lrd=0x6d0d4967396783d7:0xb79768b75c8797b7,1" target="_blank" rel="noopener noreferrer" style="font-size: 13px; text-decoration: underline;">Read our Google Reviews</a>
+                    <a href="https://www.google.com/search?q=Villa+Windows+%26+Sash+window+repairs+Auckland#lrd=0x6d0d4967396783d7:0xb79768b75c8797b7,1" target="_blank" rel="noopener noreferrer" style="font-size: 13px; text-decoration: underline;" aria-label="Read our Google Reviews (opens in a new tab)">Read our Google Reviews</a>
                 </div>
             </div>
 

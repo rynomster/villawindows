@@ -347,6 +347,10 @@ p {
   transform: translateY(-2px);
 }
 
+.btn:active {
+  transform: translateY(0);
+}
+
 /* Hamburger */
 .nav-toggle {
   position: absolute;
