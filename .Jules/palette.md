@@ -28,3 +28,7 @@
 ## 2025-05-14 - Success Feedback for External Form Actions
 **Learning:** For forms that transition to external apps (e.g., WhatsApp or Email), providing an immediate, accessible "Request Prepared" success state within the web app is critical. It eliminates the "did it work?" uncertainty if the external app is slow to open or opens in the background. Using `role="alert"`, focus management, and `scrollIntoView` ensures all users, including those using screen readers, receive this confirmation.
 **Action:** Always implement a terminal success state for lead-gen forms, even if the primary action happens in an external client. Ensure the confirmation is programmatically focused and visually prominent.
+
+## 2025-05-14 - [High-Contrast Focus Indicators]
+**Learning:** Standard focus indicators (often using the primary brand color) frequently fail accessibility contrast requirements when applied over dark thematic sections like heroes, footers, or dark-mode cards.
+**Action:** When defining global focus styles, always implement a high-contrast override (using a light variant of the primary color) specifically for elements nested within dark background containers to ensure WCAG 2.4.7 compliance across all site sections.
