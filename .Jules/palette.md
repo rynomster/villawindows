@@ -25,6 +25,11 @@
 ## 2026-07-05 - [Smooth Modal Transitions]
 **Learning:** The `display` property cannot be animated. To achieve smooth entrance/exit animations for modals or lightboxes, use a combination of `opacity`, `visibility`, and `transition`.
 **Action:** For accessible and smooth modals, toggle a class that sets `opacity: 1` and `visibility: visible` instead of switching `display: flex` to `none`.
+
 ## 2025-05-14 - Success Feedback for External Form Actions
 **Learning:** For forms that transition to external apps (e.g., WhatsApp or Email), providing an immediate, accessible "Request Prepared" success state within the web app is critical. It eliminates the "did it work?" uncertainty if the external app is slow to open or opens in the background. Using `role="alert"`, focus management, and `scrollIntoView` ensures all users, including those using screen readers, receive this confirmation.
 **Action:** Always implement a terminal success state for lead-gen forms, even if the primary action happens in an external client. Ensure the confirmation is programmatically focused and visually prominent.
+
+## 2025-05-15 - [High-Contrast Focus Indicators for Dark Backgrounds]
+**Learning:** A single global focus ring color rarely works across both light and dark backgrounds. On dark heritage-themed sites, standard primary brand colors (like muted slate-blue) often lack the 3:1 or 4.5:1 contrast ratio required for accessibility.
+**Action:** Always define context-aware focus indicators. Use lighter variants of the brand palette for dark sections (`.bg-dark`, `.hero`, `footer`) to ensure the focus state is clearly visible to keyboard users.

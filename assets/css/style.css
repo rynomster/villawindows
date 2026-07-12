@@ -209,6 +209,15 @@ p {
   border-radius: 2px;
 }
 
+.bg-dark :focus-visible,
+.hero :focus-visible,
+footer :focus-visible,
+#lightbox :focus-visible,
+.sidebar-card :focus-visible,
+#site-header:not(.is-scrolled) :focus-visible {
+  outline-color: var(--color-primary-light);
+}
+
 /* Skip link */
 .skip-link {
   position: absolute;
