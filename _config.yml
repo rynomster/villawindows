@@ -8,3 +8,9 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
 permalink: pretty
+exclude:
+  - DESIGN.md
+  - AGENTS.md
+  - README.md
+  - .jules
+  - .Jules
