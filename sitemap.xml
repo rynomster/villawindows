@@ -1,0 +1,27 @@
+---
+layout: null
+permalink: /sitemap.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {%- for page in site.pages -%}
+    {%- unless page.url contains "assets" or page.url contains "css" or page.url contains "sitemap.xml" or page.url contains "robots.txt" or page.sitemap == false -%}
+    <url>
+      <loc>{{ page.url | absolute_url }}</loc>
+      {%- if page.last_modified_at -%}
+        <lastmod>{{ page.last_modified_at | date_to_xmlschema }}</lastmod>
+      {%- endif -%}
+      {%- if page.sitemap.changefreq -%}
+        <changefreq>{{ page.sitemap.changefreq }}</changefreq>
+      {%- else -%}
+        <changefreq>monthly</changefreq>
+      {%- endif -%}
+      {%- if page.sitemap.priority -%}
+        <priority>{{ page.sitemap.priority }}</priority>
+      {%- else -%}
+        <priority>0.5</priority>
+      {%- endif -%}
+    </url>
+    {%- endunless -%}
+  {%- endfor -%}
+</urlset>
