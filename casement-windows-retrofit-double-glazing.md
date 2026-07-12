@@ -3,6 +3,41 @@ layout: default
 title: Casement Window Retrofit Double Glazing Auckland — Villa Windows
 description: Upgrade your timber casement windows with high-performance double glazing. Keep the heritage look while improving warmth and reducing noise.
 category: services
+custom_schema:
+  "@context": "https://schema.org"
+  "@type": "Service"
+  "name": "Casement Windows Retrofit Double Glazing"
+  "description": "Keep the original look of your timber casement windows while retrofitting high-performance double glazing in Auckland. Includes a 10-year guarantee on IGUs."
+  "provider":
+    "@type": "LocalBusiness"
+    "name": "Villa Windows & Sash window repairs"
+    "image": "https://www.villawindows.co.nz/assets/images/villa-windows-logo.png"
+    "telephone": "+6421887934"
+    "priceRange": "$$"
+    "address":
+      "@type": "PostalAddress"
+      "streetAddress": "East Tamaki"
+      "addressLocality": "Auckland"
+      "addressRegion": "Auckland"
+      "postalCode": "2013"
+      "addressCountry": "NZ"
+  "areaServed":
+    "@type": "AdministrativeArea"
+    "name": "Auckland"
+  "hasOfferCatalog":
+    "@type": "OfferCatalog"
+    "name": "Casement Window Double Glazing Services"
+    "itemListElement":
+      - "@type": "Offer"
+        "itemOffered":
+          "@type": "Service"
+          "name": "Casement Retrofit Double Glazing"
+          "description": "Installing modern Insulated Glass Units (IGUs) into existing timber casement frames."
+      - "@type": "Offer"
+        "itemOffered":
+          "@type": "Service"
+          "name": "Hinge & Hardware Servicing"
+          "description": "Servicing and adjusting hinges and locks to handle the new double glazed units."
 ---
 
 <section class="hero hero--inner">
