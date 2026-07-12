@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Retrofit Double Glazing Auckland — Villa Windows
-description: Specialists in retrofit double glazing for Auckland villa and timber windows. Keep your heritage character while improving warmth, comfort, and noise reduction. Serving Auckland since 2010.
+title: Retrofit Double Glazing Auckland & Sash Window Repair — Villa Windows
+description: Specialists in retrofit double glazing for existing timber windows and sash window repair in Auckland. Retain your home's heritage character with high-performance window refurbishment.
 ---
 
 <section class="hero">
@@ -24,8 +24,8 @@ description: Specialists in retrofit double glazing for Auckland villa and timbe
     <div class="editorial-grid">
         <div class="editorial-content">
             <div class="label-mono">Our services</div>
-            <h2>Villa sash window repairs</h2>
-            <p class="intro-text">We provide end-to-end timber joinery solutions, from modern thermal upgrades to delicate heritage restoration.</p>
+            <h2>Sash window repair &amp; timber window repairs in Auckland</h2>
+            <p class="intro-text">We provide professional window refurbishment and end-to-end timber joinery solutions, from double glazing existing timber windows to delicate heritage restoration.</p>
             <div class="service-items">
                 <div class="service-item stagger-item">
                     <span class="service-step">01</span>
@@ -71,9 +71,9 @@ description: Specialists in retrofit double glazing for Auckland villa and timbe
     <div class="editorial-grid flipped reveal" style="max-width: 1280px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 64px);">
         <div class="editorial-content">
             <div class="label-mono">About us</div>
-            <h2>Auckland's Heritage Window Specialists</h2>
+            <h2>Auckland's Heritage Window Refurbishment Specialists</h2>
             <p><strong>Serving Auckland since 2010.</strong></p>
-            <p>Suffer from hard-to-open or close sash windows? No problem — Villa Windows can help put the slide back in your sash. We're passionate about sash windows and go the extra mile to make sure our customers are happy, from a free estimate to tidying up after ourselves.</p>
+            <p>Suffer from hard-to-open or close sash windows? No problem — Villa Windows is here for your villa window repair and sash window repair in Auckland. We put the slide back in your sash and offer premium timber window repairs. We're passionate about sash windows and go the extra mile to make sure our customers are happy, from a free estimate to tidying up after ourselves.</p>
             <p>You can be assured your windows will be looked after and restored back to the way they were intended 80–100 years ago.</p>
             <a href="{{ '/our-projects' | relative_url }}" class="btn" style="margin-top: 24px;">View Our Projects</a>
         </div>

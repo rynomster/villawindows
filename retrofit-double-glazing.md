@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Retrofit Double Glazing Auckland — Villa & Timber Windows
-description: Best-value double glazing for Auckland heritage homes. Keep your original timber frames, improve warmth and noise reduction with high-performance IGUs.
+title: Retrofit Double Glazing Sash Windows Auckland — Villa & Timber Windows
+description: Best-value retrofit double glazing for existing timber windows in Auckland. Keep your original timber frames, improve warmth and noise reduction with high-performance IGUs.
 category: services
 custom_schema:
   "@context": "https://schema.org"
@@ -49,7 +49,7 @@ custom_schema:
         <nav class="breadcrumb">
             <a href="{{ '/' | relative_url }}">Home</a> / <a href="{{ '/services' | relative_url }}">Services</a>
         </nav>
-        <h1>Retrofit Double Glazing for Auckland Villa & Timber Windows</h1>
+        <h1>Retrofit Double Glazing Sash Windows Auckland</h1>
         <p>Keep the original character of your home while enjoying modern warmth and comfort. We specialise in retrofitting high-performance double glazing into existing timber sash and casement frames.</p>
         <div class="hero-actions">
             <a href="{{ '/free-estimate' | relative_url }}" class="btn">Request a Free Estimate</a>
@@ -63,7 +63,7 @@ custom_schema:
             <div class="label-mono">What is it?</div>
             <h2>Thermal performance for heritage homes</h2>
             <p>Retrofit double glazing is the process of replacing the single pane of glass in your existing timber windows with a modern Insulated Glass Unit (IGU). </p>
-            <p>Unlike full window replacement, we keep your original high-quality timber frames. This makes it the most cost-effective way to double glaze your villa without losing its heritage soul.</p>
+            <p>Unlike full window replacement, we keep your original high-quality timber frames. This makes it the most cost-effective way to double glaze existing timber windows without losing its heritage soul.</p>
             <div class="hero-actions" style="margin-top: 32px;">
                 <a href="{{ '/free-estimate' | relative_url }}" class="btn">Get a Free Quote</a>
             </div>
