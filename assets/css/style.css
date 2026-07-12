@@ -697,6 +697,14 @@ section.full-width {
   color: var(--color-primary);
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  transition: all 0.3s var(--transition-standard);
+}
+
+.card-link:hover,
+.card-link:focus-visible {
+  color: var(--color-primary-hover);
+  transform: translateX(var(--space-4));
+  outline: none;
 }
 
 /* ============================================================
@@ -870,6 +878,16 @@ section.full-width {
 .faq-item.open .faq-icon::before,
 .faq-item.open .faq-icon::after {
   background: #fff;
+}
+
+.faq-question:hover h3,
+.faq-question:focus-visible h3 {
+  color: var(--color-primary);
+}
+
+.faq-question:hover .faq-icon,
+.faq-question:focus-visible .faq-icon {
+  border-color: var(--color-primary);
 }
 
 .faq-answer {
