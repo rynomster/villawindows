@@ -23,7 +23,7 @@ description: Common questions about retrofit double glazing for timber windows, 
         <!-- FAQ Item: Can old timber windows be double glazed? -->
         <div class="faq-item stagger-item">
             <button class="faq-question">
-                <h3>Can old timber sash windows be double glazed?</h3>
+                <h3>Can you double glaze existing wooden windows?</h3>
                 <div class="faq-icon"></div>
             </button>
             <div class="faq-answer">
