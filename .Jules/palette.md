@@ -33,3 +33,11 @@
 ## 2025-05-15 - [High-Contrast Focus Indicators for Dark Backgrounds]
 **Learning:** A single global focus ring color rarely works across both light and dark backgrounds. On dark heritage-themed sites, standard primary brand colors (like muted slate-blue) often lack the 3:1 or 4.5:1 contrast ratio required for accessibility.
 **Action:** Always define context-aware focus indicators. Use lighter variants of the brand palette for dark sections (`.bg-dark`, `.hero`, `footer`) to ensure the focus state is clearly visible to keyboard users.
+
+## 2025-05-16 - [Contextual Scroll Locking for Mobile Menus]
+**Learning:** Global scroll locking (e.g., `overflow: hidden` on the body) for mobile menus must be viewport-aware. Applying it unconditionally when the menu is 'open' can break desktop layouts if a user resizes their browser while the mobile menu state is technically still active.
+**Action:** Restrict scroll-lock classes (`.nav-open`) to mobile-specific media queries in CSS to ensure the body remains scrollable if the viewport expands, even if the toggle state hasn't been manually cleared.
+
+## 2025-05-16 - [Descriptive Context for Repetitive Call-to-Actions]
+**Learning:** Call-to-action links with generic text like "Learn More" or "Read More" create a poor experience for screen reader users when multiple instances exist on a single page. Screen readers often present links in a list, where identical text provides zero context about the destination.
+**Action:** Always augment repetitive "Learn More" links with `aria-label` attributes that provide specific context (e.g., "Learn more about [Service Name]") to meet WCAG 2.4.4 (Link Purpose).

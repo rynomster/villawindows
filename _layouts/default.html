@@ -113,6 +113,7 @@
             <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
                 <span></span>
             </label>
+            <div class="nav-overlay"></div>
             <ul class="nav-links">
                 <li><a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active" aria-current="page"{% endif %}>HOME</a></li>
                 <li><a href="{{ '/services/' | relative_url }}" class="{% if page.url contains '/services' or page.category == 'services' %}active{% endif %}" {% if page.url contains '/services' or page.category == 'services' %}aria-current="page"{% endif %}>SERVICES</a></li>
@@ -225,11 +226,22 @@
 
         window.addEventListener('scroll', handleScroll, { passive: true });
 
-        // --- Keyboard Accessibility for Mobile Nav ---
-        window.addEventListener('keydown', e => {
+        // --- Mobile Nav Logic ---
+        document.addEventListener('DOMContentLoaded', () => {
             const navToggle = document.getElementById('nav-toggle');
-            if (e.key === 'Escape' && navToggle && navToggle.checked) {
-                navToggle.checked = false;
+            const navOverlay = document.querySelector('.nav-overlay');
+            if (navToggle) {
+                navToggle.addEventListener('change', () => {
+                    document.body.classList.toggle('nav-open', navToggle.checked);
+                });
+            }
+            if (navOverlay) {
+                navOverlay.addEventListener('click', () => {
+                    if (navToggle) {
+                        navToggle.checked = false;
+                        document.body.classList.remove('nav-open');
+                    }
+                });
             }
         });
 
@@ -318,7 +330,10 @@
                 if (lb.classList.contains('is-open')) closeLb();
                 else {
                     const navToggle = document.getElementById('nav-toggle');
-                    if (navToggle) navToggle.checked = false;
+                    if (navToggle && navToggle.checked) {
+                        navToggle.checked = false;
+                        document.body.classList.remove('nav-open');
+                    }
                 }
             }
 

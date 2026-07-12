@@ -32,7 +32,7 @@ description: Specialists in retrofit double glazing for existing timber windows 
                     <div class="service-content">
                         <h3>Sash Windows: Retrofit Double-Glazing</h3>
                         <p>Keep the original look of your timber windows while enjoying the benefits of modern double glazing.</p>
-                        <a href="{{ '/retrofit-double-glazing' | relative_url }}" class="card-link">Learn More →</a>
+                        <a href="{{ '/retrofit-double-glazing' | relative_url }}" class="card-link" aria-label="Learn more about Sash Windows Retrofit Double-Glazing">Learn More →</a>
                     </div>
                 </div>
                 <div class="service-item stagger-item">
@@ -40,7 +40,7 @@ description: Specialists in retrofit double glazing for existing timber windows 
                     <div class="service-content">
                         <h3>Sash Windows: Service &amp; Maintenance</h3>
                         <p>Professional servicing including cord replacement, re-weighting, and ensuring smooth operation.</p>
-                        <a href="{{ '/sash-windows-service-maintenance' | relative_url }}" class="card-link">Learn More →</a>
+                        <a href="{{ '/sash-windows-service-maintenance' | relative_url }}" class="card-link" aria-label="Learn more about Sash Windows Service and Maintenance">Learn More →</a>
                     </div>
                 </div>
                 <div class="service-item stagger-item">
@@ -48,7 +48,7 @@ description: Specialists in retrofit double glazing for existing timber windows 
                     <div class="service-content">
                         <h3>Casement Windows: Retrofit Double-Glazing</h3>
                         <p>Improve comfort and energy efficiency without changing the look of your heritage home.</p>
-                        <a href="{{ '/casement-windows-retrofit-double-glazing' | relative_url }}" class="card-link">Learn More →</a>
+                        <a href="{{ '/casement-windows-retrofit-double-glazing' | relative_url }}" class="card-link" aria-label="Learn more about Casement Windows Retrofit Double-Glazing">Learn More →</a>
                     </div>
                 </div>
                 <div class="service-item stagger-item">
@@ -56,7 +56,7 @@ description: Specialists in retrofit double glazing for existing timber windows 
                     <div class="service-content">
                         <h3>Casement Windows: Service &amp; Maintenance</h3>
                         <p>Hinge replacements, timber repairs, and draught-proofing for timber casement windows.</p>
-                        <a href="{{ '/casement-windows-service-maintenance' | relative_url }}" class="card-link">Learn More →</a>
+                        <a href="{{ '/casement-windows-service-maintenance' | relative_url }}" class="card-link" aria-label="Learn more about Casement Windows Service and Maintenance">Learn More →</a>
                     </div>
                 </div>
             </div>
