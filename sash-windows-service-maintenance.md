@@ -3,6 +3,56 @@ layout: default
 title: Sash Windows — Service & Maintenance
 description: Professional maintenance and repair for traditional timber sash windows. Re-cording, re-weighting, and ensuring smooth operation for Auckland heritage homes.
 category: services
+custom_schema:
+  "@context": "https://schema.org"
+  "@type": "Service"
+  "name": "Sash Windows Service & Maintenance"
+  "description": "Professional maintenance and repair for traditional timber sash windows in Auckland. Includes re-cording, re-weighting, spiral balance replacement, and meeting-rail alignment."
+  "provider":
+    "@type": "LocalBusiness"
+    "name": "Villa Windows & Sash window repairs"
+    "image": "https://www.villawindows.co.nz/assets/images/villa-windows-logo.png"
+    "telephone": "+6421887934"
+    "priceRange": "$$"
+    "address":
+      "@type": "PostalAddress"
+      "streetAddress": "East Tamaki"
+      "addressLocality": "Auckland"
+      "addressRegion": "Auckland"
+      "postalCode": "2013"
+      "addressCountry": "NZ"
+  "areaServed":
+    "@type": "AdministrativeArea"
+    "name": "Auckland"
+  "hasOfferCatalog":
+    "@type": "OfferCatalog"
+    "name": "Sash Window Maintenance Services"
+    "itemListElement":
+      - "@type": "Offer"
+        "itemOffered":
+          "@type": "Service"
+          "name": "Sash Cord Replacement"
+          "description": "Replacing worn or broken sash cords with high-quality sash cord for smooth sliding."
+      - "@type": "Offer"
+        "itemOffered":
+          "@type": "Service"
+          "name": "Sash Re-weighting"
+          "description": "Re-balancing sashes for effortless operation."
+      - "@type": "Offer"
+        "itemOffered":
+          "@type": "Service"
+          "name": "Spiral balance replacement"
+          "description": "Replacing worn-out spiral balances to restore effortless window movement."
+      - "@type": "Offer"
+        "itemOffered":
+          "@type": "Service"
+          "name": "Meeting-rail alignment"
+          "description": "Aligning meeting rails to eliminate drafts, security concerns, and rattle."
+      - "@type": "Offer"
+        "itemOffered":
+          "@type": "Service"
+          "name": "Draught-proofing"
+          "description": "Draught-proofing and timber maintenance."
 ---
 
 <section class="hero hero--inner">

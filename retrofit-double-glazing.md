@@ -3,6 +3,41 @@ layout: default
 title: Retrofit Double Glazing Auckland — Villa & Timber Windows
 description: Best-value double glazing for Auckland heritage homes. Keep your original timber frames, improve warmth and noise reduction with high-performance IGUs.
 category: services
+custom_schema:
+  "@context": "https://schema.org"
+  "@type": "Service"
+  "name": "Sash Windows Retrofit Double Glazing"
+  "description": "Keep the original look of your timber sash windows while retrofitting high-performance double glazing in Auckland. Includes a 10-year guarantee on IGUs."
+  "provider":
+    "@type": "LocalBusiness"
+    "name": "Villa Windows & Sash window repairs"
+    "image": "https://www.villawindows.co.nz/assets/images/villa-windows-logo.png"
+    "telephone": "+6421887934"
+    "priceRange": "$$"
+    "address":
+      "@type": "PostalAddress"
+      "streetAddress": "East Tamaki"
+      "addressLocality": "Auckland"
+      "addressRegion": "Auckland"
+      "postalCode": "2013"
+      "addressCountry": "NZ"
+  "areaServed":
+    "@type": "AdministrativeArea"
+    "name": "Auckland"
+  "hasOfferCatalog":
+    "@type": "OfferCatalog"
+    "name": "Sash Window Double Glazing Services"
+    "itemListElement":
+      - "@type": "Offer"
+        "itemOffered":
+          "@type": "Service"
+          "name": "Retrofit Double Glazing"
+          "description": "Installing modern Insulated Glass Units (IGUs) into existing timber sash frames."
+      - "@type": "Offer"
+        "itemOffered":
+          "@type": "Service"
+          "name": "Window Servicing & Re-weighting"
+          "description": "Servicing and re-balancing sash windows to handle the double glazing."
 ---
 
 <section class="hero hero--inner">

@@ -3,6 +3,46 @@ layout: default
 title: Casement Windows — Service & Maintenance
 description: Expert maintenance and repair for timber casement windows. Hinge replacement, draught-proofing, and timber restoration in Auckland.
 category: services
+custom_schema:
+  "@context": "https://schema.org"
+  "@type": "Service"
+  "name": "Casement Windows Service & Maintenance"
+  "description": "Professional maintenance and repairs for timber casement windows in Auckland. Hinge replacements, hardware adjustments, and draught-proofing."
+  "provider":
+    "@type": "LocalBusiness"
+    "name": "Villa Windows & Sash window repairs"
+    "image": "https://www.villawindows.co.nz/assets/images/villa-windows-logo.png"
+    "telephone": "+6421887934"
+    "priceRange": "$$"
+    "address":
+      "@type": "PostalAddress"
+      "streetAddress": "East Tamaki"
+      "addressLocality": "Auckland"
+      "addressRegion": "Auckland"
+      "postalCode": "2013"
+      "addressCountry": "NZ"
+  "areaServed":
+    "@type": "AdministrativeArea"
+    "name": "Auckland"
+  "hasOfferCatalog":
+    "@type": "OfferCatalog"
+    "name": "Casement Window Maintenance Services"
+    "itemListElement":
+      - "@type": "Offer"
+        "itemOffered":
+          "@type": "Service"
+          "name": "Hinge Replacement"
+          "description": "Replacing worn or broken hinges for smooth and secure operation."
+      - "@type": "Offer"
+        "itemOffered":
+          "@type": "Service"
+          "name": "Draught-proofing"
+          "description": "Installing draught-proofing around casement sashes."
+      - "@type": "Offer"
+        "itemOffered":
+          "@type": "Service"
+          "name": "Window hardware and locks"
+          "description": "Replacing or upgrading window hardware, locks, and handles."
 ---
 
 <section class="hero hero--inner">

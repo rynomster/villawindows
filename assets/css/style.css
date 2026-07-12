@@ -1200,6 +1200,16 @@ footer {
   text-transform: uppercase;
 }
 
+.footer-bottom a {
+  color: var(--color-text-inverse-muted);
+  text-decoration: none;
+  transition: color 0.3s var(--transition-standard);
+}
+
+.footer-bottom a:hover {
+  color: var(--color-primary-light);
+}
+
 /* ============================================================
    SCROLL REVEAL & STAGGER
    ============================================================ */

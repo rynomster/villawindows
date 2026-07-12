@@ -142,10 +142,10 @@ description: Browse our gallery of heritage window restoration and double-glazin
 
         <!-- Project 14 -->
         <div class="project-tile stagger-item">
-            <img src="{{ '/assets/images/cathedral-glass.png' | relative_url }}" alt="Cathedral Glass Feature" class="lightbox-trigger" loading="lazy" decoding="async">
+            <img src="{{ '/assets/images/cathedral-glass.png' | relative_url }}" alt="Patterned Glass Feature" class="lightbox-trigger" loading="lazy" decoding="async">
             <div class="project-caption">
                 <span class="project-tag">GLASS FEATURE</span>
-                <h3 class="project-title">Cathedral Glass Feature</h3>
+                <h3 class="project-title">Patterned Glass Feature</h3>
             </div>
         </div>
 
