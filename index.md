@@ -6,7 +6,17 @@ description: Specialists in retrofit double glazing for existing timber windows 
 
 <section class="hero">
     <div class="hero-media">
-        <img src="{{ '/assets/images/adobe-stock-sash-repair.jpg' | relative_url }}" alt="Heritage Sash Window Repair" fetchpriority="high" loading="eager">
+        <picture>
+            <source media="(max-width: 480px)" srcset="{{ '/assets/images/adobe-stock-sash-repair-480.avif' | relative_url }}" type="image/avif">
+            <source media="(max-width: 480px)" srcset="{{ '/assets/images/adobe-stock-sash-repair-480.webp' | relative_url }}" type="image/webp">
+            <source media="(max-width: 768px)" srcset="{{ '/assets/images/adobe-stock-sash-repair-768.avif' | relative_url }}" type="image/avif">
+            <source media="(max-width: 768px)" srcset="{{ '/assets/images/adobe-stock-sash-repair-768.webp' | relative_url }}" type="image/webp">
+            <source media="(max-width: 1280px)" srcset="{{ '/assets/images/adobe-stock-sash-repair-1280.avif' | relative_url }}" type="image/avif">
+            <source media="(max-width: 1280px)" srcset="{{ '/assets/images/adobe-stock-sash-repair-1280.webp' | relative_url }}" type="image/webp">
+            <source media="(min-width: 1281px)" srcset="{{ '/assets/images/adobe-stock-sash-repair-1920.avif' | relative_url }}" type="image/avif">
+            <source media="(min-width: 1281px)" srcset="{{ '/assets/images/adobe-stock-sash-repair-1920.webp' | relative_url }}" type="image/webp">
+            <img src="{{ '/assets/images/adobe-stock-sash-repair.jpg' | relative_url }}" alt="Heritage Sash Window Repair" width="1920" height="1280" fetchpriority="high" loading="eager">
+        </picture>
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-inner">
@@ -62,7 +72,13 @@ description: Specialists in retrofit double glazing for existing timber windows 
             </div>
         </div>
         <div class="editorial-image stagger-item">
-            <img src="{{ '/assets/images/project-detail-3.png' | relative_url }}" alt="Timber Joinery Craftsmanship" loading="lazy" decoding="async">
+            <picture>
+                <source media="(max-width: 480px)" srcset="{{ '/assets/images/project-detail-3-325.avif' | relative_url }}" type="image/avif">
+                <source media="(max-width: 480px)" srcset="{{ '/assets/images/project-detail-3-325.webp' | relative_url }}" type="image/webp">
+                <source media="(min-width: 481px)" srcset="{{ '/assets/images/project-detail-3-650.avif' | relative_url }}" type="image/avif">
+                <source media="(min-width: 481px)" srcset="{{ '/assets/images/project-detail-3-650.webp' | relative_url }}" type="image/webp">
+                <img src="{{ '/assets/images/project-detail-3.png' | relative_url }}" alt="Timber Joinery Craftsmanship" width="650" height="572" loading="lazy" decoding="async">
+            </picture>
         </div>
     </div>
 </section>
@@ -78,7 +94,15 @@ description: Specialists in retrofit double glazing for existing timber windows 
             <a href="{{ '/our-projects' | relative_url }}" class="btn" style="margin-top: 24px;">View Our Projects</a>
         </div>
         <div class="editorial-image">
-            <img src="{{ '/assets/images/adobe-stock-sash-repair.jpg' | relative_url }}" alt="Sash Window Repair Detail" loading="lazy" decoding="async">
+            <picture>
+                <source media="(max-width: 480px)" srcset="{{ '/assets/images/adobe-stock-sash-repair-480.avif' | relative_url }}" type="image/avif">
+                <source media="(max-width: 480px)" srcset="{{ '/assets/images/adobe-stock-sash-repair-480.webp' | relative_url }}" type="image/webp">
+                <source media="(max-width: 768px)" srcset="{{ '/assets/images/adobe-stock-sash-repair-768.avif' | relative_url }}" type="image/avif">
+                <source media="(max-width: 768px)" srcset="{{ '/assets/images/adobe-stock-sash-repair-768.webp' | relative_url }}" type="image/webp">
+                <source media="(min-width: 769px)" srcset="{{ '/assets/images/adobe-stock-sash-repair-1280.avif' | relative_url }}" type="image/avif">
+                <source media="(min-width: 769px)" srcset="{{ '/assets/images/adobe-stock-sash-repair-1280.webp' | relative_url }}" type="image/webp">
+                <img src="{{ '/assets/images/adobe-stock-sash-repair.jpg' | relative_url }}" alt="Sash Window Repair Detail" width="1920" height="1280" loading="lazy" decoding="async">
+            </picture>
         </div>
     </div>
 </section>

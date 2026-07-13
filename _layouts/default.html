@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/style.min.css' | relative_url }}">
     {% seo %}
     {% feed_meta %}
     <!-- Schema.org for AI & SEO -->
@@ -106,8 +106,16 @@
         <nav>
             <div class="logo">
                 <a href="{{ '/' | relative_url }}">
-                    <img src="{{ '/assets/images/villa-windows-logo.png' | relative_url }}" alt="Villa Windows Logo" class="logo-dark" fetchpriority="high">
-                    <img src="{{ '/assets/images/villa-windows-logo.png' | relative_url }}" alt="Villa Windows Logo" class="logo-light" fetchpriority="high">
+                    <picture class="logo-dark">
+                        <source srcset="{{ '/assets/images/villa-windows-logo-121.avif' | relative_url }}" type="image/avif">
+                        <source srcset="{{ '/assets/images/villa-windows-logo-121.webp' | relative_url }}" type="image/webp">
+                        <img src="{{ '/assets/images/villa-windows-logo.png' | relative_url }}" alt="Villa Windows Logo" class="logo-dark" width="121" height="63" fetchpriority="high">
+                    </picture>
+                    <picture class="logo-light">
+                        <source srcset="{{ '/assets/images/villa-windows-logo-121.avif' | relative_url }}" type="image/avif">
+                        <source srcset="{{ '/assets/images/villa-windows-logo-121.webp' | relative_url }}" type="image/webp">
+                        <img src="{{ '/assets/images/villa-windows-logo.png' | relative_url }}" alt="Villa Windows Logo" class="logo-light" width="121" height="63" fetchpriority="high">
+                    </picture>
                 </a>
             </div>
             <input type="checkbox" id="nav-toggle" class="nav-toggle">
@@ -200,7 +208,7 @@
         const header = document.getElementById('site-header');
         const progressBar = document.getElementById('scroll-progress');
         const heroMedia = document.querySelector('.hero-media');
-        const isHome = {{ page.url == '/' | jsonify }};
+        const isHome = {% if page.url == '/' %}true{% else %}false{% endif %};
 
         const handleScroll = () => {
             const scrollY = window.scrollY;
