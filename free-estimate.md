@@ -99,7 +99,7 @@ google_tag: true
 
                 <div class="hero-actions" style="margin-top: 32px; animation: none;">
                     <button type="button" id="submit-whatsapp" class="btn btn--whatsapp" style="width: 100%;" aria-label="Send via WhatsApp (opens in a new tab)">Send via WhatsApp</button>
-                    <button type="button" id="submit-email" class="btn btn--outline" style="width: 100%; color: var(--color-primary); border-color: var(--color-primary);">Send via Email</button>
+                    <button type="button" id="submit-email" class="btn btn--outline" style="width: 100%; color: var(--color-primary); border-color: var(--color-primary);" aria-label="Send via Email (opens your email app)">Send via Email</button>
                 </div>
             </form>
 
