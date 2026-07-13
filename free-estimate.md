@@ -149,6 +149,16 @@ Details: ${data.message || 'No additional details provided.'}`;
                     whatsappBtn.addEventListener('click', function() {
                         if (!form.reportValidity()) return;
                         const data = getFormData();
+
+                        if (window.trackLead) {
+                            window.trackLead('whatsapp', {
+                                service_type: data.service,
+                                window_type: data['window-type'],
+                                suburb: data.suburb,
+                                form_name: 'free_estimate'
+                            });
+                        }
+
                         const message = encodeURIComponent(constructMessage(data));
                         window.open(`https://wa.me/6421887934?text=${message}`, '_blank');
                         showSuccess();
@@ -157,6 +167,16 @@ Details: ${data.message || 'No additional details provided.'}`;
                     emailBtn.addEventListener('click', function() {
                         if (!form.reportValidity()) return;
                         const data = getFormData();
+
+                        if (window.trackLead) {
+                            window.trackLead('email', {
+                                service_type: data.service,
+                                window_type: data['window-type'],
+                                suburb: data.suburb,
+                                form_name: 'free_estimate'
+                            });
+                        }
+
                         const subject = encodeURIComponent(`Estimate Request: ${data.name} - ${data.suburb}`);
                         const body = encodeURIComponent(constructMessage(data));
                         window.location.href = `mailto:trevor@villawindows.co.nz?subject=${subject}&body=${body}`;
