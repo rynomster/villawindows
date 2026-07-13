@@ -102,7 +102,7 @@
 <body>
     <div class="scroll-progress" id="scroll-progress" role="progressbar" aria-label="Scroll progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
     <a href="#main-content" class="skip-link">Skip to main content</a>
-    <header id="site-header">
+    <header id="site-header" {% unless page.url == '/' or page.url == '/index.html' %}class="is-scrolled"{% endunless %}>
         <nav>
             <div class="logo">
                 <a href="{{ '/' | relative_url }}">
@@ -208,16 +208,20 @@
         const header = document.getElementById('site-header');
         const progressBar = document.getElementById('scroll-progress');
         const heroMedia = document.querySelector('.hero-media');
-        const isHome = {% if page.url == '/' %}true{% else %}false{% endif %};
+        const isHome = {% if page.url == '/' or page.url == '/index.html' %}true{% else %}false{% endif %};
 
         const handleScroll = () => {
             const scrollY = window.scrollY;
 
             // Sticky Nav
-            if (scrollY > 60) {
-                header.classList.add('is-scrolled');
+            if (isHome) {
+                if (scrollY > 60) {
+                    header.classList.add('is-scrolled');
+                } else {
+                    header.classList.remove('is-scrolled');
+                }
             } else {
-                header.classList.remove('is-scrolled');
+                header.classList.add('is-scrolled');
             }
 
             // Progress Bar
