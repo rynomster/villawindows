@@ -90,6 +90,7 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+
 img {
   max-width: 100%;
   height: auto;
@@ -358,6 +359,23 @@ footer :focus-visible,
 
 .btn:active {
   transform: translateY(0);
+}
+
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 22, 31, 0.4);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s var(--transition-standard);
+}
+
+.nav-toggle:checked ~ .nav-overlay {
+  opacity: 1;
+  visibility: visible;
 }
 
 /* Hamburger */
@@ -1334,6 +1352,8 @@ footer {
    RESPONSIVE
    ============================================================ */
 @media (max-width: 768px) {
+  body.nav-open { overflow: hidden; }
+
   #site-header nav {
     padding: 0 var(--space-20);
   }
@@ -1355,6 +1375,7 @@ footer {
     box-shadow: -10px 0 30px rgba(0,0,0,0.1);
     gap: var(--space-24);
     align-items: flex-start;
+    z-index: 1001;
   }
 
   .nav-toggle:checked ~ .nav-links {
