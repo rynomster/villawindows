@@ -663,7 +663,8 @@ section.full-width {
   border: 1px solid var(--color-border);
 }
 
-.service-card:hover {
+.service-card:hover,
+.service-card:focus-within {
   transform: translateY(-8px);
   box-shadow: 0 30px 60px -34px rgba(14,27,37,.45);
 }
@@ -680,7 +681,8 @@ section.full-width {
   transition: transform 1.1s var(--transition-standard);
 }
 
-.service-card:hover .card-media img {
+.service-card:hover .card-media img,
+.service-card:focus-within .card-media img {
   transform: scale(1.07);
 }
 

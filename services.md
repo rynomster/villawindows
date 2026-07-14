@@ -32,7 +32,7 @@ description: Specialist timber joinery services in Auckland. We focus on retrofi
                 <span class="card-index">SASH · 01</span>
                 <h3>Sash Windows: Retrofit Double-Glazing</h3>
                 <p>Maintain the character of your villa while enjoying modern thermal efficiency and noise reduction.</p>
-                <a href="{{ '/retrofit-double-glazing' | relative_url }}" class="card-link">Learn more →</a>
+                <a href="{{ '/retrofit-double-glazing' | relative_url }}" class="card-link" aria-label="Learn more about Sash Windows Retrofit Double-Glazing">Learn more →</a>
             </div>
         </div>
 
@@ -45,7 +45,7 @@ description: Specialist timber joinery services in Auckland. We focus on retrofi
                 <span class="card-index">SASH · 02</span>
                 <h3>Sash Windows: Service & Maintenance</h3>
                 <p>Restore the effortless operation of your heritage windows with expert re-cording and re-weighting.</p>
-                <a href="{{ '/sash-windows-service-maintenance' | relative_url }}" class="card-link">Learn more →</a>
+                <a href="{{ '/sash-windows-service-maintenance' | relative_url }}" class="card-link" aria-label="Learn more about Sash Windows Service and Maintenance">Learn more →</a>
             </div>
         </div>
 
@@ -58,7 +58,7 @@ description: Specialist timber joinery services in Auckland. We focus on retrofi
                 <span class="card-index">CASEMENT · 03</span>
                 <h3>Casement Windows: Retrofit Double-Glazing</h3>
                 <p>Eliminate draughts and improve comfort without changing the look of your traditional casement windows.</p>
-                <a href="{{ '/casement-windows-retrofit-double-glazing' | relative_url }}" class="card-link">Learn more →</a>
+                <a href="{{ '/casement-windows-retrofit-double-glazing' | relative_url }}" class="card-link" aria-label="Learn more about Casement Windows Retrofit Double-Glazing">Learn more →</a>
             </div>
         </div>
 
@@ -71,7 +71,7 @@ description: Specialist timber joinery services in Auckland. We focus on retrofi
                 <span class="card-index">CASEMENT · 04</span>
                 <h3>Casement Windows: Service & Maintenance</h3>
                 <p>Professional hinge replacement and timber restoration to keep your casement windows secure and weather-tight.</p>
-                <a href="{{ '/casement-windows-service-maintenance' | relative_url }}" class="card-link">Learn more →</a>
+                <a href="{{ '/casement-windows-service-maintenance' | relative_url }}" class="card-link" aria-label="Learn more about Casement Windows Service and Maintenance">Learn more →</a>
             </div>
         </div>
 
@@ -97,7 +97,7 @@ description: Specialist timber joinery services in Auckland. We focus on retrofi
                 <span class="card-index">DETAIL · 06</span>
                 <h3>Custom Glass & Glazing</h3>
                 <p>From leadlight encapsulation to specialised acid-etched and patterned glass features.</p>
-                <a href="{{ '/our-projects' | relative_url }}" class="card-link">View gallery →</a>
+                <a href="{{ '/our-projects' | relative_url }}" class="card-link" aria-label="View our gallery of Custom Glass and Glazing projects">View gallery →</a>
             </div>
         </div>
     </div>
