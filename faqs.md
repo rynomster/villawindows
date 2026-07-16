@@ -181,7 +181,7 @@ description: Common questions about retrofit double glazing for timber windows, 
                 <div class="faq-icon"></div>
             </button>
             <div class="faq-answer">
-                <p>Getting a free estimate is easy. Simply fill out our <a href="/free-estimate" style="text-decoration: underline;">Free Estimate form</a> with your details, or send us a message on WhatsApp. Including photos of your windows is very helpful for a quick and accurate initial assessment.</p>
+                <p>Getting a free estimate is easy. Simply fill out our <a href="{{ '/free-estimate' | relative_url }}" style="text-decoration: underline;">Free Estimate form</a> with your details, or send us a message on WhatsApp. Including photos of your windows is very helpful for a quick and accurate initial assessment.</p>
             </div>
         </div>
 
