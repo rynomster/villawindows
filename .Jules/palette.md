@@ -41,3 +41,7 @@
 ## 2025-05-16 - [Descriptive Context for Repetitive Call-to-Actions]
 **Learning:** Call-to-action links with generic text like "Learn More" or "Read More" create a poor experience for screen reader users when multiple instances exist on a single page. Screen readers often present links in a list, where identical text provides zero context about the destination.
 **Action:** Always augment repetitive "Learn More" links with `aria-label` attributes that provide specific context (e.g., "Learn more about [Service Name]") to meet WCAG 2.4.4 (Link Purpose).
+
+## 2025-05-17 - [Visual Parity for Keyboard Users via :focus-within]
+**Learning:** Visual feedback on hover (like card elevation or shadows) is often lost for keyboard users. Using `:focus-within` on the parent container ensures that when a user tabs into a child link, the entire component provides the same interactive feedback as a mouse hover.
+**Action:** Always pair `:hover` effects on interactive cards with `:focus-within` to maintain visual and state parity across input methods.

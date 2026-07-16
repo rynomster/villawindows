@@ -97,7 +97,7 @@ description: Specialist timber joinery services in Auckland. We focus on retrofi
                 <span class="card-index">DETAIL · 06</span>
                 <h3>Custom Glass & Glazing</h3>
                 <p>From leadlight encapsulation to specialised acid-etched and patterned glass features.</p>
-                <a href="{{ '/our-projects' | relative_url }}" class="card-link" aria-label="View our project gallery">View gallery →</a>
+                <a href="{{ '/our-projects' | relative_url }}" class="card-link" aria-label="View our gallery of Custom Glass and Glazing projects">View gallery →</a>
             </div>
         </div>
     </div>
