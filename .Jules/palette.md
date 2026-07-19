@@ -45,3 +45,7 @@
 ## 2025-05-17 - [Visual Parity for Keyboard Users via :focus-within]
 **Learning:** Visual feedback on hover (like card elevation or shadows) is often lost for keyboard users. Using `:focus-within` on the parent container ensures that when a user tabs into a child link, the entire component provides the same interactive feedback as a mouse hover.
 **Action:** Always pair `:hover` effects on interactive cards with `:focus-within` to maintain visual and state parity across input methods.
+
+## 2025-05-18 - [Dynamic Lightbox Captions with Live Region Synchronization]
+**Learning:** When displaying visual media in a lightbox, visual and non-visual context must remain fully synchronized. Relying solely on a numeric progress counter (e.g., "3 / 23") fails to explain the context of what is being viewed. Dynamically mirroring the source image's `alt` text to a visible, high-contrast overlay that uses `aria-live="polite"` satisfies both sighted and assistive technology users simultaneously.
+**Action:** When implementing interactive galleries, map existing semantic image data (like `alt` text) to a visible caption overlay, and ensure it is marked as an ARIA live region so dynamic content updates are announced seamlessly.

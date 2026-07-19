@@ -175,6 +175,7 @@
         <button class="lightbox-nav lightbox-prev" aria-label="Previous Image (Left arrow)">&lsaquo;</button>
         <button class="lightbox-nav lightbox-next" aria-label="Next Image (Right arrow)">&rsaquo;</button>
         <div class="lightbox-content"></div>
+        <div class="lightbox-caption" aria-live="polite"></div>
         <div class="lightbox-counter" aria-live="polite"></div>
     </div>
 
@@ -299,6 +300,7 @@
         const lb = document.getElementById('lightbox'),
               lbC = lb.querySelector('.lightbox-content'),
               lbCounter = lb.querySelector('.lightbox-counter'),
+              lbCaption = lb.querySelector('.lightbox-caption'),
               triggers = [...document.querySelectorAll('.lightbox-trigger')];
         let curIdx = 0, lastEl;
 
@@ -306,6 +308,7 @@
             curIdx = (i + triggers.length) % triggers.length;
             lbC.innerHTML = `<img src="${triggers[curIdx].src}" alt="${triggers[curIdx].alt || ''}">`;
             if (lbCounter) lbCounter.textContent = `${curIdx + 1} / ${triggers.length}`;
+            if (lbCaption) lbCaption.textContent = triggers[curIdx].alt || '';
         };
 
         const openLb = i => {

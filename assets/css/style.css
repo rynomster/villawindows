@@ -1336,6 +1336,22 @@ footer {
   font-size: 3rem;
 }
 
+.lightbox-caption {
+  position: absolute;
+  bottom: 4.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-style: italic;
+  letter-spacing: 0.03em;
+  text-align: center;
+  max-width: 80%;
+  text-shadow: 0 2px 4px rgba(10, 22, 31, 0.8);
+  opacity: 0.95;
+}
+
 .lightbox-counter {
   position: absolute;
   bottom: 2.5rem;
@@ -1349,6 +1365,14 @@ footer {
 }
 
 .lightbox-trigger { cursor: zoom-in; }
+
+@media (max-width: 768px) {
+  .lightbox-caption {
+    bottom: 3.5rem;
+    font-size: var(--text-base);
+    max-width: 90%;
+  }
+}
 
 /* ============================================================
    RESPONSIVE
