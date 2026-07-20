@@ -6,7 +6,7 @@
 **Learning:** Using `display: none` on a checkbox-based toggle (like a hamburger menu) removes it from the keyboard tab order, making it impossible for keyboard users to open the menu.
 **Action:** Use a visually hidden pattern (sr-only) for the checkbox to keep it focusable, and use the `:focus-visible` pseudo-class on the checkbox to apply a visible focus indicator to the associated label.
 
-## 2026-06-30 - [Gallery Progress Indicators]
+## 2026-07-30 - [Gallery Progress Indicators]
 **Learning:** In large image galleries, users can lose sense of their position. Providing a visual position indicator (e.g., "3 / 23") improves orientation and sets expectations for total content.
 **Action:** Always include a dynamic counter or progress indicator in lightbox galleries to enhance user navigation and spatial awareness.
 
@@ -45,3 +45,7 @@
 ## 2025-05-17 - [Visual Parity for Keyboard Users via :focus-within]
 **Learning:** Visual feedback on hover (like card elevation or shadows) is often lost for keyboard users. Using `:focus-within` on the parent container ensures that when a user tabs into a child link, the entire component provides the same interactive feedback as a mouse hover.
 **Action:** Always pair `:hover` effects on interactive cards with `:focus-within` to maintain visual and state parity across input methods.
+
+## 2026-07-10 - [Off-screen Mobile Menu Focus Leak]
+**Learning:** Fixed-position mobile menus styled with off-screen positioning (e.g., `right: -100%`) can still receive focus and be navigated by keyboard users via the Tab key when closed. This creates a confusing experience as the page's focus indicator disappears into the invisible sidebar.
+**Action:** Apply `visibility: hidden` and a transition on the visibility property to off-screen elements when closed, and switch to `visibility: visible` when open, effectively removing off-screen links from the tab order.
