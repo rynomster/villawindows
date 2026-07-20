@@ -53,3 +53,7 @@
 ## 2026-07-10 - [Off-screen Mobile Menu Focus Leak]
 **Learning:** Fixed-position mobile menus styled with off-screen positioning (e.g., `right: -100%`) can still receive focus and be navigated by keyboard users via the Tab key when closed. This creates a confusing experience as the page's focus indicator disappears into the invisible sidebar.
 **Action:** Apply `visibility: hidden` and a transition on the visibility property to off-screen elements when closed, and switch to `visibility: visible` when open, effectively removing off-screen links from the tab order.
+
+## 2026-07-12 - [Backup Copy Action for Form Redirects]
+**Learning:** When forms redirect users to external protocols (like `wa.me` WhatsApp links or `mailto:` mail clients), there is an inherent risk that the native app fails to launch or launch blocker settings disrupt the workflow. Providing a copy-to-clipboard fallback button on the terminal success screen allows users to preserve and manually send their prepared request details easily.
+**Action:** Always complement external protocol redirects on forms with a styled copy backup button on the success panel, utilizing appropriate ARIA labels and visual state resets to ensure accessible success feedback.
