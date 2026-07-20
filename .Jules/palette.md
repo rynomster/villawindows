@@ -6,7 +6,7 @@
 **Learning:** Using `display: none` on a checkbox-based toggle (like a hamburger menu) removes it from the keyboard tab order, making it impossible for keyboard users to open the menu.
 **Action:** Use a visually hidden pattern (sr-only) for the checkbox to keep it focusable, and use the `:focus-visible` pseudo-class on the checkbox to apply a visible focus indicator to the associated label.
 
-## 2026-06-30 - [Gallery Progress Indicators]
+## 2026-07-30 - [Gallery Progress Indicators]
 **Learning:** In large image galleries, users can lose sense of their position. Providing a visual position indicator (e.g., "3 / 23") improves orientation and sets expectations for total content.
 **Action:** Always include a dynamic counter or progress indicator in lightbox galleries to enhance user navigation and spatial awareness.
 
@@ -49,3 +49,7 @@
 ## 2025-05-18 - [Dynamic Lightbox Captions with Live Region Synchronization]
 **Learning:** When displaying visual media in a lightbox, visual and non-visual context must remain fully synchronized. Relying solely on a numeric progress counter (e.g., "3 / 23") fails to explain the context of what is being viewed. Dynamically mirroring the source image's `alt` text to a visible, high-contrast overlay that uses `aria-live="polite"` satisfies both sighted and assistive technology users simultaneously.
 **Action:** When implementing interactive galleries, map existing semantic image data (like `alt` text) to a visible caption overlay, and ensure it is marked as an ARIA live region so dynamic content updates are announced seamlessly.
+
+## 2026-07-10 - [Off-screen Mobile Menu Focus Leak]
+**Learning:** Fixed-position mobile menus styled with off-screen positioning (e.g., `right: -100%`) can still receive focus and be navigated by keyboard users via the Tab key when closed. This creates a confusing experience as the page's focus indicator disappears into the invisible sidebar.
+**Action:** Apply `visibility: hidden` and a transition on the visibility property to off-screen elements when closed, and switch to `visibility: visible` when open, effectively removing off-screen links from the tab order.

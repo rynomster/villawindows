@@ -306,9 +306,18 @@
 
         const updateLb = i => {
             curIdx = (i + triggers.length) % triggers.length;
-            lbC.innerHTML = `<img src="${triggers[curIdx].src}" alt="${triggers[curIdx].alt || ''}">`;
+            const currentTrigger = triggers[curIdx];
+            lbC.innerHTML = `<img src="${currentTrigger.src}" alt="${currentTrigger.alt || ''}">`;
             if (lbCounter) lbCounter.textContent = `${curIdx + 1} / ${triggers.length}`;
-            if (lbCaption) lbCaption.textContent = triggers[curIdx].alt || '';
+            if (lbCaption) {
+                if (currentTrigger.alt) {
+                    lbCaption.textContent = currentTrigger.alt;
+                    lbCaption.style.display = 'block';
+                } else {
+                    lbCaption.textContent = '';
+                    lbCaption.style.display = 'none';
+                }
+            }
         };
 
         const openLb = i => {
