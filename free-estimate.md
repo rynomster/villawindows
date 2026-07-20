@@ -108,6 +108,7 @@ google_tag: true
                 <h3>Request Prepared!</h3>
                 <p>Your estimate request has been prepared. If your WhatsApp or Email app didn't open automatically, please check your background apps.</p>
                 <p>We look forward to discussing your project with you.</p>
+                <button type="button" id="copy-message" class="btn btn--outline" style="margin-top: 24px; color: var(--color-primary); border-color: var(--color-primary); padding: 12px 24px;" aria-label="Copy request details to clipboard as a backup">Copy Request Details</button>
             </div>
 
             <script>
@@ -115,6 +116,8 @@ google_tag: true
                     const form = document.getElementById('estimate-form');
                     const whatsappBtn = document.getElementById('submit-whatsapp');
                     const emailBtn = document.getElementById('submit-email');
+                    const copyBtn = document.getElementById('copy-message');
+                    let preparedMessage = '';
 
                     function getFormData() {
                         const formData = new FormData(form);
@@ -149,6 +152,7 @@ Details: ${data.message || 'No additional details provided.'}`;
                     whatsappBtn.addEventListener('click', function() {
                         if (!form.reportValidity()) return;
                         const data = getFormData();
+                        preparedMessage = constructMessage(data);
 
                         if (window.trackLead) {
                             window.trackLead('whatsapp', {
@@ -159,7 +163,7 @@ Details: ${data.message || 'No additional details provided.'}`;
                             });
                         }
 
-                        const message = encodeURIComponent(constructMessage(data));
+                        const message = encodeURIComponent(preparedMessage);
                         window.open(`https://wa.me/6421887934?text=${message}`, '_blank');
                         showSuccess();
                     });
@@ -167,6 +171,7 @@ Details: ${data.message || 'No additional details provided.'}`;
                     emailBtn.addEventListener('click', function() {
                         if (!form.reportValidity()) return;
                         const data = getFormData();
+                        preparedMessage = constructMessage(data);
 
                         if (window.trackLead) {
                             window.trackLead('email', {
@@ -178,9 +183,34 @@ Details: ${data.message || 'No additional details provided.'}`;
                         }
 
                         const subject = encodeURIComponent(`Estimate Request: ${data.name} - ${data.suburb}`);
-                        const body = encodeURIComponent(constructMessage(data));
+                        const body = encodeURIComponent(preparedMessage);
                         window.location.href = `mailto:trevor@villawindows.co.nz?subject=${subject}&body=${body}`;
                         showSuccess();
+                    });
+
+                    copyBtn.addEventListener('click', function() {
+                        if (!preparedMessage) {
+                            const data = getFormData();
+                            preparedMessage = constructMessage(data);
+                        }
+                        navigator.clipboard.writeText(preparedMessage).then(() => {
+                            const originalText = copyBtn.textContent;
+                            copyBtn.textContent = '✓ Copied!';
+                            copyBtn.setAttribute('aria-label', 'Request details copied to clipboard');
+                            setTimeout(() => {
+                                copyBtn.textContent = originalText;
+                                copyBtn.setAttribute('aria-label', 'Copy request details to clipboard as a backup');
+                            }, 2500);
+                        }).catch(err => {
+                            console.error('Failed to copy text: ', err);
+                            const originalText = copyBtn.textContent;
+                            copyBtn.textContent = 'Failed to copy';
+                            copyBtn.setAttribute('aria-label', 'Failed to copy request details to clipboard');
+                            setTimeout(() => {
+                                copyBtn.textContent = originalText;
+                                copyBtn.setAttribute('aria-label', 'Copy request details to clipboard as a backup');
+                            }, 2500);
+                        });
                     });
                 });
             </script>
