@@ -108,6 +108,7 @@ google_tag: true
                 <h3>Request Prepared!</h3>
                 <p>Your estimate request has been prepared. If your WhatsApp or Email app didn't open automatically, please check your background apps.</p>
                 <p>We look forward to discussing your project with you.</p>
+                <button type="button" id="copy-request-btn" class="btn btn--outline" style="margin-top: 16px; width: 100%; max-width: 320px; color: var(--color-primary); border-color: var(--color-primary);" aria-label="Copy request details to clipboard">Copy Request to Clipboard</button>
             </div>
 
             <script>
@@ -115,6 +116,8 @@ google_tag: true
                     const form = document.getElementById('estimate-form');
                     const whatsappBtn = document.getElementById('submit-whatsapp');
                     const emailBtn = document.getElementById('submit-email');
+                    const copyBtn = document.getElementById('copy-request-btn');
+                    let preparedMessage = '';
 
                     function getFormData() {
                         const formData = new FormData(form);
@@ -159,8 +162,10 @@ Details: ${data.message || 'No additional details provided.'}`;
                             });
                         }
 
-                        const message = encodeURIComponent(constructMessage(data));
-                        window.open(`https://wa.me/6421887934?text=${message}`, '_blank');
+                        const message = constructMessage(data);
+                        preparedMessage = message;
+                        const encodedMessage = encodeURIComponent(message);
+                        window.open(`https://wa.me/6421887934?text=${encodedMessage}`, '_blank');
                         showSuccess();
                     });
 
@@ -178,10 +183,29 @@ Details: ${data.message || 'No additional details provided.'}`;
                         }
 
                         const subject = encodeURIComponent(`Estimate Request: ${data.name} - ${data.suburb}`);
-                        const body = encodeURIComponent(constructMessage(data));
+                        const message = constructMessage(data);
+                        preparedMessage = message;
+                        const body = encodeURIComponent(message);
                         window.location.href = `mailto:trevor@villawindows.co.nz?subject=${subject}&body=${body}`;
                         showSuccess();
                     });
+
+                    if (copyBtn) {
+                        copyBtn.addEventListener('click', function() {
+                            if (!preparedMessage) return;
+                            navigator.clipboard.writeText(preparedMessage).then(() => {
+                                const originalText = copyBtn.textContent;
+                                copyBtn.textContent = '✓ Copied!';
+                                copyBtn.setAttribute('aria-label', 'Request details copied successfully');
+                                setTimeout(() => {
+                                    copyBtn.textContent = originalText;
+                                    copyBtn.setAttribute('aria-label', 'Copy request details to clipboard');
+                                }, 3000);
+                            }).catch(err => {
+                                console.error('Failed to copy text: ', err);
+                            });
+                        });
+                    }
                 });
             </script>
         </div>
