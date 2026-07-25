@@ -53,3 +53,7 @@
 ## 2026-07-10 - [Off-screen Mobile Menu Focus Leak]
 **Learning:** Fixed-position mobile menus styled with off-screen positioning (e.g., `right: -100%`) can still receive focus and be navigated by keyboard users via the Tab key when closed. This creates a confusing experience as the page's focus indicator disappears into the invisible sidebar.
 **Action:** Apply `visibility: hidden` and a transition on the visibility property to off-screen elements when closed, and switch to `visibility: visible` when open, effectively removing off-screen links from the tab order.
+
+## 2026-07-25 - [Clipboard Backups for External Forms]
+**Learning:** For lead-generation forms that trigger external/native applications (WhatsApp/Email), users occasionally experience silent failures if the app isn't installed or is blocked by browser/OS configurations. Including a secure clipboard copy button as a fallback on the success confirmation card ensures no user data or effort is lost. Adding reactive visual text states ("✓ Copied!") and synchronized screen-reader ARIA labels keeps the interaction accessible and highly satisfying.
+**Action:** When designing form completion states that link to external protocols, always include a robust copy-to-clipboard button as a manual backup, complete with active status feedback for both sighted and screen-reader users.
