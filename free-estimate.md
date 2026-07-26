@@ -107,6 +107,13 @@ google_tag: true
                 <div class="success-icon">✓</div>
                 <h3>Request Prepared!</h3>
                 <p>Your estimate request has been prepared. If your WhatsApp or Email app didn't open automatically, please check your background apps.</p>
+
+                <div class="copy-backup" style="margin: 24px auto; padding: 20px; background: var(--color-bg-alt); border: 1px solid var(--color-border); border-radius: 4px; text-align: left; max-width: 500px;">
+                    <p style="font-size: 14px; margin-top: 0; margin-bottom: 12px; font-weight: 600; color: var(--color-text);">Backup: Copy Request Message</p>
+                    <textarea id="prepared-message" readonly style="width: 100%; height: 120px; font-family: var(--font-body); font-size: 14px; padding: 12px; border: 1px solid var(--color-border); border-radius: 2px; margin-bottom: 16px; background: #fff; color: var(--color-text); resize: none; box-sizing: border-box;" aria-label="Prepared message text"></textarea>
+                    <button type="button" id="copy-message-btn" class="btn btn--outline" style="width: 100%; color: var(--color-primary); border-color: var(--color-primary); transition: all 0.3s var(--transition-standard);" aria-label="Copy request message to clipboard">Copy Message</button>
+                </div>
+
                 <p>We look forward to discussing your project with you.</p>
             </div>
 
@@ -115,6 +122,8 @@ google_tag: true
                     const form = document.getElementById('estimate-form');
                     const whatsappBtn = document.getElementById('submit-whatsapp');
                     const emailBtn = document.getElementById('submit-email');
+                    const copyBtn = document.getElementById('copy-message-btn');
+                    const preparedTextArea = document.getElementById('prepared-message');
 
                     function getFormData() {
                         const formData = new FormData(form);
@@ -137,7 +146,10 @@ Service: ${data.service}
 Details: ${data.message || 'No additional details provided.'}`;
                     }
 
-                    function showSuccess() {
+                    function showSuccess(messageText) {
+                        if (preparedTextArea) {
+                            preparedTextArea.value = messageText;
+                        }
                         form.style.display = 'none';
                         const successMsg = document.getElementById('estimate-success');
                         successMsg.style.display = 'block';
@@ -159,9 +171,10 @@ Details: ${data.message || 'No additional details provided.'}`;
                             });
                         }
 
-                        const message = encodeURIComponent(constructMessage(data));
+                        const messageText = constructMessage(data);
+                        const message = encodeURIComponent(messageText);
                         window.open(`https://wa.me/6421887934?text=${message}`, '_blank');
-                        showSuccess();
+                        showSuccess(messageText);
                     });
 
                     emailBtn.addEventListener('click', function() {
@@ -177,11 +190,59 @@ Details: ${data.message || 'No additional details provided.'}`;
                             });
                         }
 
+                        const messageText = constructMessage(data);
                         const subject = encodeURIComponent(`Estimate Request: ${data.name} - ${data.suburb}`);
-                        const body = encodeURIComponent(constructMessage(data));
+                        const body = encodeURIComponent(messageText);
                         window.location.href = `mailto:trevor@villawindows.co.nz?subject=${subject}&body=${body}`;
-                        showSuccess();
+                        showSuccess(messageText);
                     });
+
+                    if (copyBtn && preparedTextArea) {
+                        copyBtn.addEventListener('click', function() {
+                            preparedTextArea.select();
+                            preparedTextArea.setSelectionRange(0, 99999); // For mobile devices
+
+                            const textToCopy = preparedTextArea.value;
+
+                            const doFallbackCopy = () => {
+                                try {
+                                    document.execCommand('copy');
+                                    updateCopyButtonState();
+                                } catch (err) {
+                                    console.error('Fallback copy failed', err);
+                                }
+                            };
+
+                            if (navigator.clipboard && navigator.clipboard.writeText) {
+                                navigator.clipboard.writeText(textToCopy).then(() => {
+                                    updateCopyButtonState();
+                                }).catch(err => {
+                                    doFallbackCopy();
+                                });
+                            } else {
+                                doFallbackCopy();
+                            }
+                        });
+                    }
+
+                    function updateCopyButtonState() {
+                        if (copyBtn) {
+                            const originalText = "Copy Message";
+                            copyBtn.textContent = "Copied! ✓";
+                            copyBtn.setAttribute('aria-label', "Copied! Request message copied to clipboard");
+                            copyBtn.style.background = "var(--color-primary)";
+                            copyBtn.style.color = "#fff";
+                            copyBtn.style.borderColor = "var(--color-primary)";
+
+                            setTimeout(() => {
+                                copyBtn.textContent = originalText;
+                                copyBtn.setAttribute('aria-label', "Copy request message to clipboard");
+                                copyBtn.style.background = "transparent";
+                                copyBtn.style.color = "var(--color-primary)";
+                                copyBtn.style.borderColor = "var(--color-primary)";
+                            }, 3000);
+                        }
+                    }
                 });
             </script>
         </div>
