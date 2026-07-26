@@ -53,3 +53,7 @@
 ## 2026-07-10 - [Off-screen Mobile Menu Focus Leak]
 **Learning:** Fixed-position mobile menus styled with off-screen positioning (e.g., `right: -100%`) can still receive focus and be navigated by keyboard users via the Tab key when closed. This creates a confusing experience as the page's focus indicator disappears into the invisible sidebar.
 **Action:** Apply `visibility: hidden` and a transition on the visibility property to off-screen elements when closed, and switch to `visibility: visible` when open, effectively removing off-screen links from the tab order.
+
+## 2026-07-26 - [Form Redirect Fallback with Interactive Clipboard Backup]
+**Learning:** For static lead-gen forms redirecting to external services (WhatsApp or Email), deep-linking can fail silently if the native client isn't configured, or if popups are blocked. Providing a visible fallback "Copy Request Message" container on the success card with a readonly textarea and an interactive copy button ensures users do not lose their typed input and can manually send it.
+**Action:** Always include a visual copy-to-clipboard container on terminal success states that transition to external protocol schemes, using a robust modern Clipboard API with a document.execCommand fallback, accompanied by temporary (3s) visual and aria-label changes to acknowledge the action.
