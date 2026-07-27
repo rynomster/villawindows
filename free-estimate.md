@@ -107,6 +107,10 @@ google_tag: true
                 <div class="success-icon">✓</div>
                 <h3>Request Prepared!</h3>
                 <p>Your estimate request has been prepared. If your WhatsApp or Email app didn't open automatically, please check your background apps.</p>
+                <div style="margin: 24px 0 16px;">
+                    <button type="button" id="copy-details" class="btn btn--outline" style="color: var(--color-primary); border-color: var(--color-primary);" aria-label="Copy request details to clipboard">Copy Request Details</button>
+                    <div id="copy-status" style="margin-top: 8px; font-size: 13.5px; font-weight: 500; color: var(--color-primary); min-height: 20px;" aria-live="polite"></div>
+                </div>
                 <p>We look forward to discussing your project with you.</p>
             </div>
 
@@ -115,6 +119,9 @@ google_tag: true
                     const form = document.getElementById('estimate-form');
                     const whatsappBtn = document.getElementById('submit-whatsapp');
                     const emailBtn = document.getElementById('submit-email');
+                    const copyBtn = document.getElementById('copy-details');
+                    const copyStatus = document.getElementById('copy-status');
+                    let constructedMessageText = '';
 
                     function getFormData() {
                         const formData = new FormData(form);
@@ -149,6 +156,7 @@ Details: ${data.message || 'No additional details provided.'}`;
                     whatsappBtn.addEventListener('click', function() {
                         if (!form.reportValidity()) return;
                         const data = getFormData();
+                        constructedMessageText = constructMessage(data);
 
                         if (window.trackLead) {
                             window.trackLead('whatsapp', {
@@ -159,7 +167,7 @@ Details: ${data.message || 'No additional details provided.'}`;
                             });
                         }
 
-                        const message = encodeURIComponent(constructMessage(data));
+                        const message = encodeURIComponent(constructedMessageText);
                         window.open(`https://wa.me/6421887934?text=${message}`, '_blank');
                         showSuccess();
                     });
@@ -167,6 +175,7 @@ Details: ${data.message || 'No additional details provided.'}`;
                     emailBtn.addEventListener('click', function() {
                         if (!form.reportValidity()) return;
                         const data = getFormData();
+                        constructedMessageText = constructMessage(data);
 
                         if (window.trackLead) {
                             window.trackLead('email', {
@@ -178,10 +187,27 @@ Details: ${data.message || 'No additional details provided.'}`;
                         }
 
                         const subject = encodeURIComponent(`Estimate Request: ${data.name} - ${data.suburb}`);
-                        const body = encodeURIComponent(constructMessage(data));
+                        const body = encodeURIComponent(constructedMessageText);
                         window.location.href = `mailto:trevor@villawindows.co.nz?subject=${subject}&body=${body}`;
                         showSuccess();
                     });
+
+                    if (copyBtn && copyStatus) {
+                        copyBtn.addEventListener('click', function() {
+                            if (!constructedMessageText) return;
+                            navigator.clipboard.writeText(constructedMessageText).then(function() {
+                                copyStatus.textContent = '✓ Copied successfully!';
+                                setTimeout(function() {
+                                    copyStatus.textContent = '';
+                                }, 3000);
+                            }).catch(function(err) {
+                                copyStatus.textContent = 'Failed to copy. Please select and copy manually.';
+                                setTimeout(function() {
+                                    copyStatus.textContent = '';
+                                }, 3000);
+                            });
+                        });
+                    }
                 });
             </script>
         </div>
