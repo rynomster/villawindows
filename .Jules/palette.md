@@ -53,3 +53,7 @@
 ## 2026-07-10 - [Off-screen Mobile Menu Focus Leak]
 **Learning:** Fixed-position mobile menus styled with off-screen positioning (e.g., `right: -100%`) can still receive focus and be navigated by keyboard users via the Tab key when closed. This creates a confusing experience as the page's focus indicator disappears into the invisible sidebar.
 **Action:** Apply `visibility: hidden` and a transition on the visibility property to off-screen elements when closed, and switch to `visibility: visible` when open, effectively removing off-screen links from the tab order.
+
+## 2026-07-27 - [Backup Copy-To-Clipboard for Deep Links]
+**Learning:** When form actions deep-link to external applications (like WhatsApp or default mail clients), browser restrictions, sandboxing, or configuration issues may block the launch. Providing an inline copy-to-clipboard backup button on the success card allows the user to manually capture the pre-constructed message, preventing frustration or lost leads.
+**Action:** Always implement an inline copy backup option with live success feedback on terminal success states that depend on external deep links.
