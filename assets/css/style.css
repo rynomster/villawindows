@@ -210,6 +210,10 @@ p {
   border-radius: 2px;
 }
 
+.lightbox-trigger:focus-visible {
+  outline-offset: -3px;
+}
+
 .bg-dark :focus-visible,
 .hero :focus-visible,
 footer :focus-visible,
@@ -335,6 +339,7 @@ footer :focus-visible,
 }
 
 .nav-links a:hover,
+.nav-links a:focus-visible,
 .nav-links a.active {
   border-bottom-color: currentColor;
 }
@@ -724,7 +729,6 @@ section.full-width {
 .card-link:focus-visible {
   color: var(--color-primary-hover);
   transform: translateX(var(--space-4));
-  outline: none;
 }
 
 /* ============================================================

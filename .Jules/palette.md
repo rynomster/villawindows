@@ -53,3 +53,7 @@
 ## 2026-07-10 - [Off-screen Mobile Menu Focus Leak]
 **Learning:** Fixed-position mobile menus styled with off-screen positioning (e.g., `right: -100%`) can still receive focus and be navigated by keyboard users via the Tab key when closed. This creates a confusing experience as the page's focus indicator disappears into the invisible sidebar.
 **Action:** Apply `visibility: hidden` and a transition on the visibility property to off-screen elements when closed, and switch to `visibility: visible` when open, effectively removing off-screen links from the tab order.
+
+## 2026-07-11 - [Focus Clipping inside Overflow Hidden]
+**Learning:** Keyboard focus indicators (`outline`) on interactive elements (such as gallery triggers or custom images) that reside inside parents with `overflow: hidden` are clipped and made completely invisible to keyboard/assistive users. Using an inset `outline-offset` (e.g., `-3px`) or styling the focus state of the container ensures focus outline indicators remain fully visible.
+**Action:** When designing interactive gallery items or tiles with `overflow: hidden`, always ensure focus outlines are positioned or offset inset so they are not clipped.
