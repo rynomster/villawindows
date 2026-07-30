@@ -2,7 +2,6 @@
 layout: default
 title: Free Estimate: Retrofit Double Glazing Auckland — Villa Windows
 description: Request a free estimate for retrofit double glazing, sash window repairs, or timber joinery maintenance in Auckland. Serving since 2010.
-google_tag: true
 ---
 
 <section class="hero hero--inner">
@@ -94,64 +93,37 @@ google_tag: true
                 </div>
 
                 <p style="font-size: 14px; color: var(--color-text-soft); margin-bottom: 24px;">
-                    <strong>Note:</strong> After clicking below, you can choose to send this via WhatsApp or Email. Please attach any photos of your windows to your message as they are very helpful for estimates.
+                    <strong>Note:</strong> Please email any photos of your windows separately to <a href="mailto:trevor@villawindows.co.nz" style="text-decoration: underline; color: var(--color-primary);">trevor@villawindows.co.nz</a> as they are very helpful for estimates.
                 </p>
 
                 <div class="hero-actions" style="margin-top: 32px; animation: none;">
-                    <button type="button" id="submit-whatsapp" class="btn btn--whatsapp" style="width: 100%;" aria-label="Send via WhatsApp (opens in a new tab)">Send via WhatsApp</button>
-                    <button type="button" id="submit-email" class="btn btn--outline" style="width: 100%; color: var(--color-primary); border-color: var(--color-primary);" aria-label="Send via Email (opens your email app)">Send via Email</button>
+                    <button type="submit" id="submit-btn" class="btn" style="width: 100%;" aria-label="Submit Free Estimate Request">Submit Request</button>
                 </div>
             </form>
-
-            <div id="estimate-success" class="form-success" style="display: none;" role="alert" tabindex="-1">
-                <div class="success-icon">✓</div>
-                <h3>Request Prepared!</h3>
-                <p>Your estimate request has been prepared. If your WhatsApp or Email app didn't open automatically, please check your background apps.</p>
-                <p>We look forward to discussing your project with you.</p>
-            </div>
 
             <script>
                 document.addEventListener('DOMContentLoaded', function() {
                     const form = document.getElementById('estimate-form');
-                    const whatsappBtn = document.getElementById('submit-whatsapp');
-                    const emailBtn = document.getElementById('submit-email');
+                    const submitBtn = document.getElementById('submit-btn');
 
-                    function getFormData() {
+                    form.addEventListener('submit', function(e) {
+                        e.preventDefault();
+
+                        if (!form.reportValidity()) return;
+
+                        // Disable button to prevent duplicate submissions
+                        submitBtn.disabled = true;
+                        submitBtn.textContent = 'Sending...';
+
                         const formData = new FormData(form);
-                        let data = {};
-                        formData.forEach((value, key) => data[key] = value);
-                        return data;
-                    }
+                        const data = {};
+                        formData.forEach((value, key) => {
+                            data[key] = value;
+                        });
 
-                    function constructMessage(data) {
-                        return `Hello Villa Windows, I'm interested in an estimate.
-
-Name: ${data.name}
-Phone: ${data.phone}
-Email: ${data.email}
-Suburb: ${data.suburb}
-Approx Windows: ${data['num-windows'] || 'Not specified'}
-Window Type: ${data['window-type']}
-Service: ${data.service}
-
-Details: ${data.message || 'No additional details provided.'}`;
-                    }
-
-                    function showSuccess() {
-                        form.style.display = 'none';
-                        const successMsg = document.getElementById('estimate-success');
-                        successMsg.style.display = 'block';
-                        successMsg.focus();
-                        // Scroll to the success message
-                        successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    }
-
-                    whatsappBtn.addEventListener('click', function() {
-                        if (!form.reportValidity()) return;
-                        const data = getFormData();
-
+                        // Track the lead in GA4
                         if (window.trackLead) {
-                            window.trackLead('whatsapp', {
+                            window.trackLead('form', {
                                 service_type: data.service,
                                 window_type: data['window-type'],
                                 suburb: data.suburb,
@@ -159,28 +131,40 @@ Details: ${data.message || 'No additional details provided.'}`;
                             });
                         }
 
-                        const message = encodeURIComponent(constructMessage(data));
-                        window.open(`https://wa.me/6421887934?text=${message}`, '_blank');
-                        showSuccess();
-                    });
-
-                    emailBtn.addEventListener('click', function() {
-                        if (!form.reportValidity()) return;
-                        const data = getFormData();
-
-                        if (window.trackLead) {
-                            window.trackLead('email', {
-                                service_type: data.service,
-                                window_type: data['window-type'],
+                        // Send to FormSubmit via AJAX
+                        fetch('https://formsubmit.co/ajax/trevor@villawindows.co.nz', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'Accept': 'application/json'
+                            },
+                            body: JSON.stringify({
+                                _subject: `New Estimate Request: ${data.name} - ${data.suburb}`,
+                                _captcha: "false",
+                                name: data.name,
+                                phone: data.phone,
+                                email: data.email,
                                 suburb: data.suburb,
-                                form_name: 'free_estimate'
-                            });
-                        }
-
-                        const subject = encodeURIComponent(`Estimate Request: ${data.name} - ${data.suburb}`);
-                        const body = encodeURIComponent(constructMessage(data));
-                        window.location.href = `mailto:trevor@villawindows.co.nz?subject=${subject}&body=${body}`;
-                        showSuccess();
+                                "approx-windows": data['num-windows'] || 'Not specified',
+                                "window-type": data['window-type'],
+                                service: data.service,
+                                message: data.message || 'No details provided.'
+                            })
+                        })
+                        .then(response => {
+                            if (response.ok) {
+                                // Redirect to Thank You page
+                                window.location.href = "{{ '/thank-you/' | relative_url }}";
+                            } else {
+                                throw new Error('Form submission failed');
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Error submitting form:', error);
+                            alert('There was an error submitting your request. Please try again or contact us directly at trevor@villawindows.co.nz.');
+                            submitBtn.disabled = false;
+                            submitBtn.textContent = 'Submit Request';
+                        });
                     });
                 });
             </script>
