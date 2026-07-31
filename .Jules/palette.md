@@ -1,3 +1,7 @@
+## 2026-07-31 - [Clipped Focus Outlines in Overflow-Hidden Containers]
+**Learning:** Interactive triggers embedded inside parent elements styled with `overflow: hidden` (e.g. image gallery items) will have their default focus-visible outlines clipped or entirely hidden from sight. Applying an inset outline using negative `outline-offset` keeps the focus indicator fully visible.
+**Action:** When adding keyboard focus states inside parent cards or blocks with hidden overflow, always specify a negative outline offset (like `outline-offset: -3px`) to prevent visual clipping.
+
 ## 2026-06-29 - [Custom Lightbox Accessibility]
 **Learning:** Custom lightboxes often neglect keyboard navigation and focus management. Simply showing an overlay is not enough; it must behave like a modal dialog (Escape to close, focus trapping, and restoring focus to the trigger).
 **Action:** When implementing or fixing lightboxes, always ensure they have a `role="dialog"`, `aria-modal="true"`, and a script to handle focus and keyboard events.

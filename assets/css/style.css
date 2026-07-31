@@ -1365,6 +1365,9 @@ footer {
 }
 
 .lightbox-trigger { cursor: zoom-in; }
+.lightbox-trigger:focus-visible {
+  outline-offset: -3px;
+}
 
 @media (max-width: 768px) {
   .lightbox-caption {
