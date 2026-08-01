@@ -99,17 +99,27 @@ description: Request a free estimate for retrofit double glazing, sash window re
                 <div class="hero-actions" style="margin-top: 32px; animation: none;">
                     <button type="submit" id="submit-btn" class="btn" style="width: 100%;" aria-label="Submit Free Estimate Request">Submit Request</button>
                 </div>
+
+                <div id="form-error" class="form-error" role="alert" tabindex="-1" style="display: none; background: #fff5f5; border: 1px solid #feb2b2; color: #9b2c2c; padding: 16px; border-radius: 3px; margin-top: 20px; font-size: 14px; line-height: 1.5; outline: none;">
+                    <strong>Submission failed:</strong> There was an error submitting your request. Please try again or email us directly at <a href="mailto:trevor@villawindows.co.nz" style="color: #9b2c2c; text-decoration: underline; font-weight: 600;">trevor@villawindows.co.nz</a>.
+                </div>
             </form>
 
             <script>
                 document.addEventListener('DOMContentLoaded', function() {
                     const form = document.getElementById('estimate-form');
                     const submitBtn = document.getElementById('submit-btn');
+                    const errorDiv = document.getElementById('form-error');
 
                     form.addEventListener('submit', function(e) {
                         e.preventDefault();
 
                         if (!form.reportValidity()) return;
+
+                        // Hide previous error if any
+                        if (errorDiv) {
+                            errorDiv.style.display = 'none';
+                        }
 
                         // Disable button to prevent duplicate submissions
                         submitBtn.disabled = true;
@@ -161,7 +171,15 @@ description: Request a free estimate for retrofit double glazing, sash window re
                         })
                         .catch(error => {
                             console.error('Error submitting form:', error);
-                            alert('There was an error submitting your request. Please try again or contact us directly at trevor@villawindows.co.nz.');
+
+                            if (errorDiv) {
+                                errorDiv.style.display = 'block';
+                                errorDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                                errorDiv.focus();
+                            } else {
+                                alert('There was an error submitting your request. Please try again or contact us directly at trevor@villawindows.co.nz.');
+                            }
+
                             submitBtn.disabled = false;
                             submitBtn.textContent = 'Submit Request';
                         });
