@@ -53,3 +53,7 @@
 ## 2026-07-10 - [Off-screen Mobile Menu Focus Leak]
 **Learning:** Fixed-position mobile menus styled with off-screen positioning (e.g., `right: -100%`) can still receive focus and be navigated by keyboard users via the Tab key when closed. This creates a confusing experience as the page's focus indicator disappears into the invisible sidebar.
 **Action:** Apply `visibility: hidden` and a transition on the visibility property to off-screen elements when closed, and switch to `visibility: visible` when open, effectively removing off-screen links from the tab order.
+
+## 2026-07-11 - [Inline Accessible Error Cards vs. Native Alerts]
+**Learning:** Directing users to browser-native `alert()` dialogs upon asynchronous form submission failure is extremely disruptive, lacks visual context with the design system, and resets/breaks focus flow for assistive technologies. Implementing a styled container with `role="alert"` and `tabindex="-1"` allows us to programmatically focus and smoothly scroll the message into view, ensuring a seamless keyboard navigation flow and immediate announcement by screen readers.
+**Action:** Avoid native `alert()` for form validation or submission feedback. Use inline accessible cards with proper ARIA alerts, high-contrast typography, focus management, and soft-scrolling behavior to guide users back to correct their input or reach backup actions.
