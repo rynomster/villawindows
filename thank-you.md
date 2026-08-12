@@ -2,8 +2,17 @@
 layout: default
 title: Thank You: Free Estimate Request Submitted — Villa Windows
 description: Thank you for requesting a free estimate from Villa Windows. We will be in touch shortly to discuss your timber joinery project.
-google_tag: true
 ---
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18249910617"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-18249910617');
+</script>
 
 <section class="hero hero--inner">
     <div class="hero-media">
