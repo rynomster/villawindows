@@ -25,6 +25,10 @@ description: Request a free estimate for retrofit double glazing, sash window re
             <h2 class="contact-heading">Project Details</h2>
             <p>Please provide some details about your project below. This helps us provide a more accurate initial assessment.</p>
 
+            <div id="form-error" role="alert" tabindex="-1" style="display: none; padding: 16px; margin-bottom: 24px; background: #fff2f2; border: 1px solid #e53935; border-radius: var(--radius-sm, 4px); color: #c62828; font-size: 15px; line-height: 1.5;">
+                <strong>Submission Error:</strong> <span id="form-error-message">There was an error submitting your request. Please try again or contact us directly at <a href="mailto:trevor@villawindows.co.nz" style="color: #c62828; text-decoration: underline;">trevor@villawindows.co.nz</a>.</span>
+            </div>
+
             <form id="estimate-form" class="estimate-form" style="margin-top: 32px;">
                 <div class="form-group">
                     <label for="name">Full Name *</label>
@@ -111,6 +115,9 @@ description: Request a free estimate for retrofit double glazing, sash window re
 
                         if (!form.reportValidity()) return;
 
+                        const errorCard = document.getElementById('form-error');
+                        if (errorCard) errorCard.style.display = 'none';
+
                         // Disable button to prevent duplicate submissions
                         submitBtn.disabled = true;
                         submitBtn.textContent = 'Sending...';
@@ -161,7 +168,11 @@ description: Request a free estimate for retrofit double glazing, sash window re
                         })
                         .catch(error => {
                             console.error('Error submitting form:', error);
-                            alert('There was an error submitting your request. Please try again or contact us directly at trevor@villawindows.co.nz.');
+                            if (errorCard) {
+                                errorCard.style.display = 'block';
+                                errorCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                errorCard.focus();
+                            }
                             submitBtn.disabled = false;
                             submitBtn.textContent = 'Submit Request';
                         });
