@@ -96,6 +96,11 @@ description: Request a free estimate for retrofit double glazing, sash window re
                     <strong>Note:</strong> Please email any photos of your windows separately to <a href="mailto:trevor@villawindows.co.nz" style="text-decoration: underline; color: var(--color-primary);">trevor@villawindows.co.nz</a> as they are very helpful for estimates.
                 </p>
 
+                <div id="estimate-error" role="alert" tabindex="-1" style="display: none; background-color: #fdf2f2; border: 1px solid #f8b4b4; border-radius: 8px; padding: 16px; margin-bottom: 24px; color: #981b1b; font-size: 14px; line-height: 1.5; outline: none;">
+                    <p style="font-weight: 600; margin: 0 0 6px 0; color: #981b1b;">Submission Error</p>
+                    <p style="margin: 0;">There was a problem submitting your request. Please try again or contact Trevor directly at <a href="mailto:trevor@villawindows.co.nz" style="color: #981b1b; text-decoration: underline; font-weight: 600;">trevor@villawindows.co.nz</a> or call <a href="tel:+6421887934" style="color: #981b1b; text-decoration: underline; font-weight: 600;">021 887 934</a>.</p>
+                </div>
+
                 <div class="hero-actions" style="margin-top: 32px; animation: none;">
                     <button type="submit" id="submit-btn" class="btn" style="width: 100%;" aria-label="Submit Free Estimate Request">Submit Request</button>
                 </div>
@@ -105,11 +110,16 @@ description: Request a free estimate for retrofit double glazing, sash window re
                 document.addEventListener('DOMContentLoaded', function() {
                     const form = document.getElementById('estimate-form');
                     const submitBtn = document.getElementById('submit-btn');
+                    const errorCard = document.getElementById('estimate-error');
 
                     form.addEventListener('submit', function(e) {
                         e.preventDefault();
 
                         if (!form.reportValidity()) return;
+
+                        if (errorCard) {
+                            errorCard.style.display = 'none';
+                        }
 
                         // Disable button to prevent duplicate submissions
                         submitBtn.disabled = true;
@@ -161,7 +171,11 @@ description: Request a free estimate for retrofit double glazing, sash window re
                         })
                         .catch(error => {
                             console.error('Error submitting form:', error);
-                            alert('There was an error submitting your request. Please try again or contact us directly at trevor@villawindows.co.nz.');
+                            if (errorCard) {
+                                errorCard.style.display = 'block';
+                                errorCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                errorCard.focus();
+                            }
                             submitBtn.disabled = false;
                             submitBtn.textContent = 'Submit Request';
                         });
