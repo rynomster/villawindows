@@ -25,6 +25,11 @@ description: Request a free estimate for retrofit double glazing, sash window re
             <h2 class="contact-heading">Project Details</h2>
             <p>Please provide some details about your project below. This helps us provide a more accurate initial assessment.</p>
 
+            <div id="estimate-error" class="info-box" style="display: none; margin-top: 24px; border-color: #d9534f; background-color: rgba(217, 83, 79, 0.08);" role="alert" tabindex="-1">
+                <p style="color: #d9534f; font-weight: 600; margin-bottom: 4px;">Submission Error</p>
+                <p style="color: var(--color-text-body); margin-bottom: 0;">There was an error submitting your request. Please try again or contact us directly at <a href="mailto:trevor@villawindows.co.nz" style="text-decoration: underline; color: var(--color-primary);">trevor@villawindows.co.nz</a>.</p>
+            </div>
+
             <form id="estimate-form" class="estimate-form" style="margin-top: 32px;">
                 <div class="form-group">
                     <label for="name">Full Name *</label>
@@ -105,11 +110,16 @@ description: Request a free estimate for retrofit double glazing, sash window re
                 document.addEventListener('DOMContentLoaded', function() {
                     const form = document.getElementById('estimate-form');
                     const submitBtn = document.getElementById('submit-btn');
+                    const errorCard = document.getElementById('estimate-error');
 
                     form.addEventListener('submit', function(e) {
                         e.preventDefault();
 
                         if (!form.reportValidity()) return;
+
+                        if (errorCard) {
+                            errorCard.style.display = 'none';
+                        }
 
                         // Disable button to prevent duplicate submissions
                         submitBtn.disabled = true;
@@ -161,7 +171,11 @@ description: Request a free estimate for retrofit double glazing, sash window re
                         })
                         .catch(error => {
                             console.error('Error submitting form:', error);
-                            alert('There was an error submitting your request. Please try again or contact us directly at trevor@villawindows.co.nz.');
+                            if (errorCard) {
+                                errorCard.style.display = 'block';
+                                errorCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                errorCard.focus();
+                            }
                             submitBtn.disabled = false;
                             submitBtn.textContent = 'Submit Request';
                         });
